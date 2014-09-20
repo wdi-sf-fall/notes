@@ -6,6 +6,6 @@
 
 The following is a topical organization of the lesson notes.
 * prep_work
-  * [install fest] (/week_00_prep_work/day_1/install_fest/)
-  * [intro_git](/week_00_prep_work/day_1/dawn_intro_git/)
-  * [intro_terminal](/week_00_prep_work/day_1/dawn_intro_terminal)
+  * [install fest] (/week_00_prep_work/installfest/)
+  * [intro to git](/week_00_prep_work/intro_to_git/)
+  * [intro to terminal](/week_00_prep_work/intro_to_terminal)
