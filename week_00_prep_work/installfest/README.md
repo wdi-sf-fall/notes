@@ -128,6 +128,11 @@ gem install rails
 ```
 If this causes issues on your machine, try running `sudo gem install rails` instead
 
+
+##Sublime text editor
+
+Got to: [Sublime website](http://www.sublimetext.com/) and follow install instructions.
+
 ===
 
 #Ubuntu Instructions 
@@ -172,11 +177,15 @@ git config --global user.email YOUR-EMAIL-ADDRESS
 git config --global credential.helper cache
 ```
 
+##Sublime text editor
+
+Got to: [Sublime website](http://www.sublimetext.com/) and follow install instructions.
 
 ===
 
 #Windows Users
 
+Note: Using Windows is not recommened for this class.
 
 **Ruby Installer:**
 
