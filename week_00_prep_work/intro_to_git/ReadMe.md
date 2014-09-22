@@ -7,10 +7,11 @@
 **Objectives**
 
 - Define version control systems
-- Learn how to manage files with git and github
-- Understand how to collaborate with others
-- Understand git branching
- 
+- Identify main git commands to manage files
+- Distinguish bewteen local and remote repositories
+- Create git repository on github and collaborate with others 
+- Show how to setup and use git branches
+- Apply git commands and github UI to create and manage repositories from scratch
 
 **Motivation**
 
