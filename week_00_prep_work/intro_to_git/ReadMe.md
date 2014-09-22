@@ -296,6 +296,53 @@ Note: for lab assignments and mini projects, using branches is overkill. It's fi
 
 [Lab 2](https://gist.github.com/neurosaurus/2b5013313c2fa28eab89)
 
+###Pretty git prompt
+
+A shell prompt that shows git branch status.
+
+1) Copy code snippet below in a new file ~/bin/branch.rb 
+
+```
+# encoding: utf-8
+branches = STDIN.read.chomp
+if !branches.empty?
+  branch = branches.split("\n").map(&:strip)[0].split(' ').map(&:strip)[-1]
+  second_line = branches.split("\n").map(&:strip)[1]
+  is_clean = second_line == "nothing to commit, working directory clean"
+  if !branches.empty?
+    if is_clean
+      puts " ✓ #{branch}"
+    else
+      puts "\e[0;31m ✗ #{branch}"
+    end
+  end
+end
+```
+
+Save file
+
+
+2) Add this to top of .bash_profile
+
+```
+txtblk='\[\e[0;30m\]' # Black
+txtred='\[\e[0;31m\]' # Red
+txtgrn='\[\e[0;32m\]' # Green
+txtylw='\[\e[0;33m\]' # Yellow
+txtblu='\[\e[0;34m\]' # Blue
+txtpur='\[\e[0;35m\]' # Purple
+txtcyn='\[\e[0;36m\]' # Cyan
+txtwht='\[\e[0;37m\]' # White
+txtrst='\[\e[0m\]'    # Text Reset
+
+function branch
+{
+  git status 2> /dev/null | ruby ~/bin/branch.rb
+}
+PS1='\[\033[00;34m\][\[\033[01;34m\]\w \[\033[00;34m\]]\[\033[01;32m\]$(branch) ∴ \[\033[00m\]'
+```
+
+**Restart Terminal**
 
 
 
