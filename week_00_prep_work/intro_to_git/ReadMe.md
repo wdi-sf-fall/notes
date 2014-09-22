@@ -165,6 +165,7 @@ Let's delete a file for good
   	git rm <file>
   	git commit -a -m'deleted file'
 
+**Note (important): Git repositories may not contain other git repositories.**
 
 ##Github
 
