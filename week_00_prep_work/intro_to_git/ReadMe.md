@@ -98,7 +98,7 @@ Let's say you're done for now and want to save a version.
 
 **Let's look of what we just did**
 
-[DIAGRAM](PIC: http://git-scm.com/figures/18333fig0106-tn.png)
+[Git states](http://git-scm.com/figures/18333fig0106-tn.png)
 
 - working directory; that's the project's root folder (git_intro)
 - staging area: now file is tracked in git (virtual)
