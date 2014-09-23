@@ -133,7 +133,7 @@ If this causes issues on your machine, try running `sudo gem install rails` inst
 
 Got to: [Sublime website](http://www.sublimetext.com/) and follow install instructions.
 
-Sublime command line shortcut. Add line below to ~/.bash_profile and restart Termainal application.
+Sublime command line shortcut. Add line below to ~/.bashrc and restart Termainal application.
 
 	alias subl='/Applications/Sublime\ Text\ 2.app/Contents/MacOS/Sublime\ Text\ 2 $1'
 
