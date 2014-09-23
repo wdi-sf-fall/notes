@@ -322,7 +322,7 @@ end
 Save file
 
 
-2) Add this to top of .bash_profile
+2) Add this to top of .bashrc
 
 ```
 txtblk='\[\e[0;30m\]' # Black
