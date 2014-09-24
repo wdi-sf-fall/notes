@@ -210,7 +210,7 @@ Reads: *Upload the code in my local repository, which is known as master, to git
 
 Check if changes made it to github. 
 
-**4) Now change a file and push changes to github **
+**4) Now change a file and push changes to github**
 
   	make change
 	git commit -m 'my comment' .
