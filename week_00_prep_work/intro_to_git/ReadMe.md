@@ -17,11 +17,11 @@
 
 Have you ever worked on a paper or any document collaboratively with others? What have you noticed? What was the workflow like? What did work, what didn't?
 
-Now enter software programming. Programming is a highly team based activity. That's why I love programming: A project is always more fun when you’ve got friends working with you. Sometimes very large teams work on a single project. Google: 'how many engineers work on Mac OS".
+Now enter software programming. Programming is a highly team based activity. That's why I love programming: A project is always more fun when you’ve got friends working with you. Sometimes very large teams work on a single project. We as developers need tools that support collaborative working. Enter **Version Control Systems**.
 
 **What is version control, and why should you care?**
 
-So how do you collaborate in software projects, and what are some useful workflows and best practices?
+So how do you collaborate in software projects?
 
 In the most fundamental way, version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
 
@@ -30,12 +30,12 @@ More specifically, a VCS allows you to:
 - revert files back to a previous state
 - revert the entire project back to a previous state
 - review changes made over time
-- collaborate on a set of files with others!!
+- collaborate on a set of files with others
 - see who last modified something that might be causing a problem
 
 Plus it functions as a backup system, a safe place for all your work. Using a VCS means that if you screw things up or lose files, you can generally recover easily. In addition, you get all this for very little overhead.
 
-There are many VCS, and git has become the VCS of choice for most software teams. Do you know other VCS?
+There are many VCS. Git and GitHub have become the VCS of choice for most software teams. Do you know other VCS?
 
 ##Definitions
 
@@ -47,13 +47,13 @@ Git and github provide a framework, tools and workflows for collaboration.
 
 **github**
 
-It's a social network build around git. I has has completely changed the way we, as programmers, work. GitHub is now the largest online storage space of collaborative works.
+Is a social network build around git. I has has completely changed the way we, as programmers, work. GitHub is now the largest online storage space of collaborative works.
 
 	git and github together is a distributed version control system
 
 [DVCS diagram](http://git-scm.com/figures/18333fig0103-tn.png)
 
-We're going to talk about git first. git is local (Computer A). Nearly every operation is local. Most operations in Git only need local files and resources to operate - generally no information is needed from another computer on your network.
+We're going to talk about git first. git is local (Computer A), that's your laptop. Nearly every operation is local. Most operations in Git only need local files and resources to operate - generally no information is needed from another computer on your network.
 
 Github is the "Server Computer", we get to it in the second part of this lecture.
 
@@ -61,109 +61,114 @@ Github is the "Server Computer", we get to it in the second part of this lecture
 
 A word about folder management.
 
-Create "Code" folder in your home diretcory. This is the place for all source code that you create at GA (projects, labs, homework). Let's talk about folder structure.
+Recommendation: Create "Code" folder in your home diretcory. This is the place for all source code that you create at GA (projects, labs, homework). Let's talk about folder structure.
 
 Options:
 
 * By time
-* By project
+* By topic
 * A combination of both
 
-Discuss approach. What works for you? I recommend that you decide on a structure in the first week and stick to it.
+Discuss approach. What works for you? I recommend that you decide on a structure in the first week and stick to it. We found that organizing folders by time works for most.
+
+**1) Let's get started and create a project with a single file**
 
 Create file that contains your name and contact info. Example:
 
-	~/Code/week0/git_intro/my_contact.txt
+	~/Code/week0/project_git/my_contact.txt
 
-This is our first 'project'. Let's put it under version control. First, *cd* into git_intro folder. 
+**2) Create a git repository **
 
-Check that git is installed
-
-  	git --version
+First, *cd* into project_git folder. 
 
 The first step is creating a version database, i.e. a repository
 
   	git init
+  	
+You do this only once per project. Let's check the status of our newly created repo:
 
-Now add files to the repo - this is also called staging. You can add files individually or the entire directory, including sub folders.
+	git status
+		
+**3) Let's put it under git management**
+
+You can add files individually or the entire directory, including sub folders.
 
   	git add my_contact.txt 
   	
-  	git add . (to add everything in the directory)
+  	git add . (adds everything in the current folder)
 
-The files and folders are now under git management, or tracked.
+The file is now **tracked** by git. Run *git status* to see for yourself.
 
-Let's say you're done for now and want to save a version.
+**4) Add file to git repository **
 
-  	git commit -m 'initial commit'
+Let's say you're happy with your work and want to save a version. This is called **committing**: 
 
-**Let's look of what we just did**
+  	git commit -m 'my first commit' my_contact.txt
+  	
+  	git commit -m 'my first commit . (commits everything in the current folder)
+  	
+The file now has a unique version in git and can be recovered if lost. Make sure everything is *clean*:  	
 
-[Git states](http://git-scm.com/figures/18333fig0106-tn.png)
+	git status
 
-- working directory; that's the project's root folder (git_intro)
-- staging area: now file is tracked in git (virtual)
-- git repository: a snapshot of your committed work (where is it?)
+**5) Let's make changes**
 
-Now let's go and change the and check status:
+Go add a line to the contatcs file, or make any change, and save. Then run:
 
   	git status my_contact.txt
 
-check differences, what changed since last commit
+How do we find out what changed?
 
   	git diff my_contact.txt
 
-Now *stage* change (note: you use the *add* command to begin tracking new files or to stage files)
+We're happy with the changes, so let's commit:
 
-  	git add my_contact.txt
+	git commit -m 'added phone number' .
 
-Now commit first change. Your staging area is set up the way you want it, you can commit your changes. Remember that anything that is still unstaged - any files you have created or modified that you haven't run *git add* on since you edited them - will not be committed.
-
-  	git commit -m 'comment'
-
-**Note Staging is optional**: Although it can be amazingly useful for crafting commits exactly how you want them, the staging area is sometimes a bit more complex than you need in your workflow. If you want to skip the staging area, Git provides a simple shortcut. Providing the -a option to the git commit command makes Git automatically stage every file that is already tracked before doing the commit, letting you skip the git add part.
-
-Let's try this out:
-
-- Create a new file in git_intro
-- Add it to git (start tracking it)
-- git status
-- change the file
-- git status - discuss the output
-- git diff - there are two versions
-- commit the latest, skip staging
-		
-		git commit -a -m'a commit skipping staging'
+**6) Discard changes**
 	
-check log - shows the version history, let's take a look
+What if you make an unwanted change and want to unmodify a file?
 
-  	git log <file>
+	git checkout my_contact.txt 
+	
+You can also go back to a specific version in history. First, find version number:
 
-getting help
+	git log
+	
+and revert	
 
-  	git help <command> - super useful
+	git revert <version number>	
 
-**My personal workflow looks something like this**
+**7) Recover work **
 
-- Do some programming.
-	- git status <file> or . to see which files I changed.
-	- git diff <file> or . to see exactly what I modified.
-	- git commit -m 'message' <file> or . to commit
-
-Remember that each file in your working directory can be in one of two states: tracked or untracked. Tracked files are files that were in the last snapshot; they can be unmodified, modified, or staged. Untracked files are everything else.
-
-Now lets blow away out work!
+Now lets blow everything away!
 
 	rm *.*
 
-Let's get it back
+And get it back
 
 	git checkout .
+
+**8) Deleting files**
 				
 Let's delete a file for good
 
   	git rm <file>
   	git commit -a -m'deleted file'
+
+**To summarize **
+
+- Do some programming.
+- git add files that become part of your program (track)
+- git commit files that are *done for now*
+- Do some more programming.
+- git status <file> or . to see which files changed.
+- If uncertain, use git diff to see exactly what changed
+- git commit files I'm happy with with (commit)
+- git checkout to dicsard local changes (unmodifiy)
+- Do some more programming.
+
+This is the most simple workflow, things get a bit more complex when you start sharing code and manage larger code bases. But this is a good start.
 
 **Note (important): Git repositories may not contain other git repositories.**
 
