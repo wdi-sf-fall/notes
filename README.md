@@ -1,6 +1,5 @@
 # WDI FALL 14 NOTES
 ## Distributed Lesson Materials
-.
 
 ###  Topical Index
 
