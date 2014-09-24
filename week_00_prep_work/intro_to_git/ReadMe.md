@@ -176,59 +176,62 @@ This is the most simple workflow, things get a bit more complex when you start s
 
 Now, everything is still local, on your computer.
 
-So far we have looked solely at local repositories, remember most of what you do in git is local. However, in order to share your code and collaborate, you need to create a remote repository.
+So far we have looked only at local repositories, remember most of what you do in git is local. However, in order to share your code and collaborate, you need to create a remote repository.
 
-Remote repositories are versions of your project that are hosted on the Internet or network somewhere. You can have several of them, each of which generally is either read-only or read/write for you. Collaborating with others involves managing these remote repositories and pushing and pulling data to and from them when you need to share work. Plus: remote repositories functions as backups, they cannot get lost, like your laptop. It's like saving 'in the cloud'.
+Remote repositories are versions of your project that are hosted on the Internet or network somewhere. You can have several of them, each of which generally is either read-only or read/write for you. Collaborating with others involves managing these remote repositories and pushing and pulling data to and from them when you need to share work. Plus: remote repositories functions as backups, they cannot get lost, unlike your laptop. It's like saving 'in the cloud'.
 
-Enter Github - a place to host and share remote repositories.
+Enter Github - a place to host and share remote repositories. Go to github.com and explore.
 
-Go to github.com and explore. Some interesting repositories:
+**Check your git configuration**
 
-- https://github.com/ruby - ruby source code
-- https://github.com/facebook - facebook on github
-- https://github.com/google - google on github
+ Make sure git email email matches github account email.
 
-Now check git configuration:
+	git config -l | grep user
 
-- git config --global user.name
-- git config --global user.email
-- git config -l | grep user
+**1) Put local repo up on github** 
 
-Ok, good to go. Let's put our local repo on your github.
+Create github repo, name it 'project_git' (it could have any name, but why not be consistent?). 
 
-Create repo, name it 'git_intro' (it could have any name, but why not be consistent?)
+**2) Link up github repo with local repo**
 
-  	git remote add origin git@github.com:wdi-sf-fall/git_intro.git
+Read hints that github provides after creating repo. Execute this command in the local project directory.
 
-Reads: *Link the remote repository git_intro to my local repo/workspace. The remote repo shall be known as 'origin'*
+  	git remote add origin git@github.com:<your github handle>/project_git.git
 
-Push changes to remote/github - you may have to authenticate. Note: you can setup password caching [see here](https://help.github.com/articles/set-up-git)
+Reads: *Link the remote repository project_git to my local repo/workspace. The remote repo shall be known as 'origin'*
+
+**3) Push changes to github**
+
+Note: you may have to authenticate for the first time. You can setup password caching [see here](https://help.github.com/articles/set-up-git) (that was part of install fest)
 
 	  git push origin master
 
 Reads: *Upload the code in my local repository, which is known as master, to github (origin)*
 
-Check if changes made it to github. Now make a local change. **5 min**
+Check if changes made it to github. 
+
+**4) Now change a file and push changes to github **
 
   	make change
-  	git add .
 	git commit -m 'my comment' .
 	git push origin master
 
-Did the changes make it to github?
+Verify that new version shows up on github.
 
-Let's be adventurous. Delete the git_intor folder on your local computer/
+**5) Cloning: Download an entire project from github**
 
-	rm -rf git_intro 
+Delete your project!
+
+	rm -rf project_git 
 
 ... and get it back from github:
 
-	git clone ... (grab url from git repo page, either SSH or HTTPS)
+	git clone ... (grab clone url from git repo page)
 
 
 ###Activity (15 min)
 
-The real power of Git comes out when you are collaborating with others on a project.
+The real power of git comes out when you are collaborating with others on a project.
 
 If you own a repo, you can ask others to collaborate with you as contributors.
 
@@ -236,11 +239,11 @@ Get into pairs, one is A the other is B
 
 A makes B collaborator on their repository
 
-  Github -> Repos page ->Settings > Collaborators
+	Github -> Repos page -> Settings > Collaborators
 
-B clones repository of A on to their local machine
+B clones A's repository to their local machine. Make sure to clone into a new folder as to not overwrite your own 'project_git' repo.
 
-  	git clone <repo>
+  	git clone <repo clone url>
 
 B makes a change
 
@@ -252,7 +255,6 @@ A picks up changes
 
   	git pull origin master
 
-This is a very simplistic workflow. In the real world, things are a bit more complex and we will get there in time.
 
 ##Branching
 
