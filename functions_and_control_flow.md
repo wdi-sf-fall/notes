@@ -102,6 +102,38 @@ for (var thing in car) {
 }
 ```
 
+### Truthy vs. Falsey
+
+What happens if we put something other than a Boolean as the conditional
+in an **if statement**?
+
+[http://james.padolsey.com/javascript/truthy-falsey/](http://james.padolsey.com/javascript/truthy-falsey/)
+
+```
+var person = nil;
+if (person) {
+    console.log("this will not be printed");
+} else {
+    console.log("this will be printed");
+}
+```
+
+```
+var num = 0;
+if (num) {
+    console.log("this will not be printed");
+} else {
+    console.log("this will be printed");
+}
+```
+
+```
+var num = 5;
+if (num) {
+    console.log("this will be printed");
+}
+```
+
 Functions
 ---------
 
