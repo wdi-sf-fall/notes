@@ -22,7 +22,9 @@ A useful system of services (file transfer, email, chat, web), we are mainly con
 
 **Client**
 
-A program that you use to run applications and access services, usually a web browser.
+A program that you use to run applications and access services, usually a web browser. 
+
+**We as "full stack" web developers usually build both, the Client application running in the browser  and the Server/Service application hosted in the "backend".**
 
 [Le Internet](https://github.com/wdi-sf-fall/notes/blob/master/week_01_fundamentals/day_1_web_basics/dusk_web_intro/InternetAndNetworking.png)
 	
