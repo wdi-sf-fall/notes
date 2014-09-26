@@ -24,7 +24,7 @@ A useful system of services (file transfer, email, chat, web), we are mainly con
 
 A program that you use to run applications and access services, usually a web browser.
 
-[]Le Internet](https://github.com/wdi-sf-fall/notes/blob/master/week_01_fundamentals/day_1_web_basics/dusk_web_intro/InternetAndNetworking.png)
+[Le Internet](https://github.com/wdi-sf-fall/notes/blob/master/week_01_fundamentals/day_1_web_basics/dusk_web_intro/InternetAndNetworking.png)
 	
 ##World Wide Web
 
