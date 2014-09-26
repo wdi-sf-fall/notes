@@ -1,6 +1,6 @@
-The Internet and Networking
+#The Internet and Networking
 
-Let's start with the history of the Internet - from the early beginnings to 1990. There's been written a lot about the early days of the Internet and there are a number of good documentaries. I found this 8 min clip very instructive and fun:
+A briefthe history of the Internet - from the early beginnings to 1990. There's been written a lot about the early days of the Internet and there are a number of good documentaries. I found this 8 min clip very instructive and fun, enjoy:
 
 - https://www.youtube.com/watch?v=9hIQjrMHTv4
 
@@ -18,7 +18,7 @@ Let's look at the main components of a computer network
     
 **Application**
 
-A useful system of services (databases, email, web), we are mainly concerned with web applications on the **World Wide Web**
+A useful system of services (file transfer, email, chat, web), we are mainly concerned with web applications on the **World Wide Web**
 
 **Client**
 
@@ -54,8 +54,9 @@ The main parts of an URL are:
 
 Example:
 
-http://www.chase.com/account/history?num=112122&page=3
-PROTOCOL HOST      PATH            QUERY PARAMETERS
+	http://www.chase.com/account/history?num=112122&page=3
+
+	PROTOCOL    HOST          PATH        QUERY PARAMETERS
 
 Another piece of the URL is the port. A port is a specific door in the server. By default, the web port is 80 - other ports are used for other services: email, file transfer, more … The port number is tagged on to the server name, separated with ':', for example *www.example.com:8080*
 
@@ -81,11 +82,11 @@ Find out your ip address (Mac only):
 
 	ipconfig getifaddr en1
 
-TCP/IP is the basis of all internet communication: web, phone, email, video conferencing, movie streaming - one the lowest level, everything is handled by TCP/IP.  
+TCP/IP is the basis of all internet communication: web, phone, email, video conferencing, movie streaming - on the lowest level, everything is handled by TCP/IP.  
 
 #### TCP/IP activity: traceroute & netcat
 
-**traceroute**
+**traceroute and ping**
 
 Follow the path of a client/server request through the Internet:
 
@@ -94,18 +95,19 @@ Follow the path of a client/server request through the Internet:
 
 **netcat -> chat server out of the box**
 
-*man netcat* to see what it does. Let's connect two computers and exchange packets! 
+*man nc* to see what it does. Let's connect two computers and exchange packets! 
 
-Get into pairs, one person is A (the Server), the other person is B (the Client)
+Get into pairs, one person is the Server, the other person is the Client
 
-Person A: find out your IP address and share it with Person B. 
-Now:
+Server, find out your IP address and share it with Client.
 
-Person A (Server), in your shell, create server that listens for data:
->  nc -l 3333 <enter> 
+In your shell, start listening for data:
 
-Person B (Client), in your shell, create a client connecting to the server:
-> nc <server ip address> 3333 <enter>
+	>  nc -l 3333
+
+Client, in your shell, connect to Server using its IP address:
+
+	> nc <server ip address> 3333
 
 Now start typing … packets of information are exchanged between client and server using the tcp protocol.
 
@@ -141,6 +143,8 @@ Here's a list of all status codes: http://en.wikipedia.org/wiki/List_of_HTTP_sta
 
 **HTTP requests/responses have a header and a body**
 
+#curl or telnet here
+
 Headers are made up of key/value pairs and conatin meta data about the request/response. Example:
 
 REQUEST HEADER FORMAT:
@@ -163,10 +167,21 @@ RESPONSE HEADER FORMAT:
 
 So the purpose of a web server is to respond to HTTP requests. And we are going to learn how to write applications running on web servers that respond to HTTP requests … web applications!
 
+Other types of responses:
+
+JSON:
+
+http://www.omdbapi.com/?t=Sharknado
+
+
+XML
+
+http://www.omdbapi.com/?t=True%20Grit&y=1969&r=xml
+
 
 #### HTTP activity: 
 
-**telnet**
+**telnet and curl**
 
 In your shell:
 
@@ -175,18 +190,6 @@ In your shell:
 
 Talk http to google. Request google.com home page, see what you get back. Inspect the HTTP Response header on top.
 
-**Chrome console**
 
-The console is going to be your friend.
-
-Load any web site in your browser and open the console: View -> Developer -> JavaScript Console
-
-Let's look at some tabs:
-
-- Elements: this is the html document and css styles that make up the page
-
-- Network: Examine http requests that the browser sends to the server. 
-
-- Console - a place to talk Javascript to the page, that's for later
 
 
