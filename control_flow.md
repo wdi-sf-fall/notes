@@ -1,4 +1,4 @@
-JavaScript Functions & Control Flow
+JavaScript Control Flow
 ===================================
 
 Control Flow
@@ -139,24 +139,3 @@ if (num) {
 1. Using the assignment operator(=) instead of the equality operator(===)
 2. Infinite loops!
 3. for..in without hasOwnProperty
-
-Functions
----------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
