@@ -1,7 +1,6 @@
 # WDI FALL 14 NOTES
 ## Distributed Lesson Materials
 
-
 ###  Topical Index
 
 The following is a topical organization of the lesson notes.

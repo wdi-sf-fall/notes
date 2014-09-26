@@ -59,7 +59,7 @@ If you are not running Maverik, you will need to install Command Line tools that
 Open up the application Terminal and run the command below to install Homebrew
 
 ```
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 ![image](./install_brew.png)
