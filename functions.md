@@ -117,7 +117,7 @@ Scope (i.e., Variable Scope)
 
 Which variables can be seen/used from what places in our program.
 
-Variables declared outside of functions are said to be in the Global Scope.
+Variables declared outside of all functions are said to be in the Global Scope.
 
 Variables declared inside of functions are scoped locally to that function.
 
