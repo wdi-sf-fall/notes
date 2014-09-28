@@ -1,6 +1,6 @@
 #The Internet and Networking
 
-A briefthe history of the Internet - from the early beginnings to 1990. There's been written a lot about the early days of the Internet and there are a number of good documentaries. I found this 8 min clip very instructive and fun, enjoy:
+A brief history of the Internet - from the early beginnings to 1990. There's been written a lot about the early days of the Internet and there are a number of good documentaries. I found this 8 min clip very instructive and fun, enjoy:
 
 - https://www.youtube.com/watch?v=9hIQjrMHTv4
 
@@ -26,11 +26,10 @@ A program that you use to run applications and access services, usually a web br
 
 **We as "full stack" web developers usually build both, the Client application running in the browser  and the Server/Service application hosted in the "backend".**
 
-[Le Internet](https://github.com/wdi-sf-fall/notes/blob/master/week_01_fundamentals/day_1_web_basics/dusk_web_intro/InternetAndNetworking.png)
 	
 ##World Wide Web
 
-The World Wide Web is a collection of documents, made up of HTML, that lives on servers of the Internet. For now, I'm not going to talk about the structure of HTML pages: syntax / forms / css / meta data. That's a different lesson for another day.
+The World Wide Web is a collection of documents, made up of HTML, that lives on servers of the Internet. For now, I'm not going to talk about the structure of HTML pages: syntax / forms / css / meta data. That's a for another day.
 
 HTML is the basis for almost every web page, it can contain text, images, video - html is what glues everything together - links between the pages makes the web *web-like*. 
 
@@ -65,7 +64,7 @@ Another piece of the URL is the port. A port is a specific door in the server. B
 
 #Protocols
 
-We already mentioned protocols. A computer communication protocol is a description of the rules computers must follow to communicate with each other. The main protocol on the Internet is TCP/IP
+A computer communication protocol is a description of the rules computers must follow to communicate with each other. The main protocol on the Internet is TCP/IP
 
 ##TCP/IP
 
