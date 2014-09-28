@@ -210,4 +210,4 @@ In your shell:
 	curl www.reddit.com
 
 
-###[Lab][https://github.com/wdi-sf-fall/notes/blob/master/week_01_fundamentals/day_1_web_basics/dusk_web_intro/lab.md]
+###[Lab](https://github.com/wdi-sf-fall/notes/blob/master/week_01_fundamentals/day_1_web_basics/dusk_web_intro/lab.md)
