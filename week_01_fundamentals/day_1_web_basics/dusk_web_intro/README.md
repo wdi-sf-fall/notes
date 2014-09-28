@@ -18,7 +18,7 @@ Let's look at the main components of a computer network
     
 **Application**
 
-A useful system of services (file transfer, email, chat, web), we are mainly concerned with web applications on the **World Wide Web**
+A useful system of services (email, chat, ssh, web), we are mainly concerned with web applications on the **World Wide Web**
 
 **Client**
 
@@ -30,7 +30,7 @@ A program that you use to run applications and access services, usually a web br
 	
 ##World Wide Web
 
-The World Wide Web is a collection of documents, made up of HTML, that lives on servers of the Internet. In this lesson, I'm not going to talk about the structure of HTML pages: syntax / forms / css / meta data. That's a different lesson for another day.
+The World Wide Web is a collection of documents, made up of HTML, that lives on servers of the Internet. For now, I'm not going to talk about the structure of HTML pages: syntax / forms / css / meta data. That's a different lesson for another day.
 
 HTML is the basis for almost every web page, it can contain text, images, video - html is what glues everything together - links between the pages makes the web *web-like*. 
 
@@ -44,13 +44,13 @@ And here is the first ever web page:
 
 Now let's talk about the major pieces of the web:
 
-**URLs**
+###URLs
 
 A URL is a path to a specific server and a certain document on that server. We are all familiar with URLs.
 
 The main parts of an URL are:
 
-- protocol  (http means the web .. there are others like ftp)
+- protocol  (http means the web .. there are others, like ftp)
 - host (name of the server, translated to an IP address)
 - path (document that that is being requested)
 - query params (aka GET parameters) - extra info that the server gets. 
@@ -63,11 +63,11 @@ Example:
 
 Another piece of the URL is the port. A port is a specific door in the server. By default, the web port is 80 - other ports are used for other services: email, file transfer, more … The port number is tagged on to the server name, separated with ':', for example *www.example.com:8080*
 
-##What are protocols?
+#Protocols
 
 We already mentioned protocols. A computer communication protocol is a description of the rules computers must follow to communicate with each other. The main protocol on the Internet is TCP/IP
 
-**TCP/IP**
+##TCP/IP
 
 TCP/IP is the communication protocol for communication between computers on the Internet.  
 
@@ -75,9 +75,11 @@ It stands for *Transmission Control Protocol / Internet Protocol*.
 
 TCP/IP defines how computers should be connected to the Internet, and how data should be transmitted between them. Web browsers, for example, use TCP/IP to communicate with Web servers. TCP takes care of:
 
-- Packet Switching
-- Guaranteed Delivery
-- Routing
+- **Packet Switching:** *messages are divided into packets before they are sent. Each packet is then transmitted individually and can even follow different routes to its destination. Once all the packets forming a message arrive at the destination, they are recompiled into the original message*
+	
+- **Guaranteed Delivery:** *All bytes received will be identical with bytes sent and in the correct order*
+
+- **Routing:** *Forward packets to the right desitination through a network*
 
 Each server on the internet has an IP address that uniquely identifies the server in the network.
 
@@ -87,24 +89,23 @@ Find out your ip address (Mac only):
 
 TCP/IP is the basis of all internet communication: web, phone, email, video conferencing, movie streaming - on the lowest level, everything is handled by TCP/IP.  
 
-#### TCP/IP activity: traceroute & netcat
+#### ping, traceroute & netcat
 
 **traceroute and ping**
 
 Follow the path of a client/server request through the Internet:
 
-- traceroute www.whitehouse.gov 
-- traceroute www.taz.de
+	ping www.whitehouse.gov 
 
-**netcat -> chat server out of the box**
+	traceroute www.whitehouse.gov 
 
-*man nc* to see what it does. Let's connect two computers and exchange packets! 
+**netcat**
+
+*man nc* to see what it does. Let's chat via TCP! 
 
 Get into pairs, one person is the Server, the other person is the Client
 
-Server, find out your IP address and share it with Client.
-
-In your shell, start listening for data:
+Server, find out your IP address and share it with Client. In your shell, start listening for data:
 
 	>  nc -l 3333
 
@@ -115,19 +116,22 @@ Client, in your shell, connect to Server using its IP address:
 Now start typing … packets of information are exchanged between client and server using the tcp protocol.
 
 
+
 ## Hypertext Transfer Protocol
 
 HTTP is a layer above TCP. 
 
-It specifically handles the exchange of documents -> HTML documents / web pages.
+It specifically handles the exchange of documents. In our worls that's HTML documents, i.e. web pages.
 
-**HTTP REQUEST AND HTTP RESPONSE**
+**HTTP REQUEST and RESPONSE**
 
-So by typing in a url and hitting GO in your browser, what happens …
+So by typing in a url and hitting GO in your browser, what happens?
 
-In order to get a document, a browser needs to send a request to a server - that's an HTTP request. The request is routed through the internet to the server handling the request. The server executes a program and responds with an HTTP response, usually the web page that was requested.
+In order to get a document, a browser needs to send a request to a server - that's an HTTP request. Using TCP, the request is routed through the internet to the server handling the request. The server executes a program and responds with an HTTP response, usually the web page that was requested.
 
-There are different types of HTTP Requests - they are expressed as verbs - quick overview: We get into more detail when we talk about APIs and how to consume services on the Internet.
+*Diagram*
+
+There are different types of HTTP Requests - they are expressed as verbs - quick overview: We will get into more detail once we talk about APIs and how to consume services on the Internet.
 
 * `GET` - request a document/resource, the most common request type
 * `POST` - create a resource on the server, for example creating a facebook update
@@ -136,7 +140,7 @@ There are different types of HTTP Requests - they are expressed as verbs - quick
 
 more info: http://www.tutorialspoint.com/http/http_methods.htm
 
-HTTP request have status codes, You may know:
+HTTP responses have status codes, You may know:
 
 - 404 - page not found
 - 500 - internal server error
@@ -146,53 +150,65 @@ Here's a list of all status codes: http://en.wikipedia.org/wiki/List_of_HTTP_sta
 
 **HTTP requests/responses have a header and a body**
 
-#curl or telnet here
+Headers are made up of key/value pairs and contain meta data about the request/response. Example:
 
-Headers are made up of key/value pairs and conatin meta data about the request/response. Example:
+Example of REQUEST HEADER:
 
-REQUEST HEADER FORMAT:
+	GET /hello.htm HTTP/1.1
+	User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
+	Host: www.tutorialspoint.com
+	Accept-Language: en-us
+	Accept-Encoding: gzip, deflate
+	Connection: Keep-Alive
 
-	Host: www.google.com
-	User-Agent: chrome
-	There's more ...
 
+Example of RESPONSE HEADER: 
 
-RESPONSE HEADER FORMAT: 
-
-	Status: -> HTTP/1.1 200 OK 
-	Headers - like request
-	Date: 
-	Server: apache
-	Content-type: type of document being returned, so browser knows what to do
-	Content-length: how long is the document (not required?
+	HTTP/1.1 200 OK
+	Date: Mon, 27 Jul 2009 12:28:53 GMT
+	Server: Apache/2.2.14 (Win32)
+	Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT
+	ETag: "34aa387-d-1568eb00"
+	Vary: Authorization,Accept
+	Accept-Ranges: bytes
+	Content-Length: 88
+	Content-Type: text/html
 
 **The BODY of the response contains the actual document, usually that's HTML**
 
 So the purpose of a web server is to respond to HTTP requests. And we are going to learn how to write applications running on web servers that respond to HTTP requests … web applications!
 
-Other types of responses:
+Stop: Install JSONView Chrome extension.
+
+A little preview: There are other type of responses ...
 
 JSON:
 
-http://www.omdbapi.com/?t=Sharknado
+	http://www.omdbapi.com/?t=Sharknado
 
 
 XML
 
-http://www.omdbapi.com/?t=True%20Grit&y=1969&r=xml
+	http://www.omdbapi.com/?t=True%20Grit&y=1969&r=xml
 
 
-#### HTTP activity: 
+### HTTP tools: 
 
-**telnet and curl**
+
+####Telnet
 
 In your shell:
 
 	telnet www.google.com 80
-	GET / HTTP/1.1
+	GET /intl/en/about/
 
-Talk http to google. Request google.com home page, see what you get back. Inspect the HTTP Response header on top.
+Talk http to google. Request google.com 'about' page, see what you get back. Inspect the HTTP Response header on top.
 
+####curl
+
+In your shell:
+
+	curl www.reddit.com
 
 
 
