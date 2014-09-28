@@ -92,7 +92,7 @@ TCP/IP is the basis of all internet communication: web, phone, email, video conf
 
 **traceroute and ping**
 
-Follow the path of a client/server request through the Internet:
+Is server alive and follow the path of a client/server request through the Internet:
 
 	ping www.whitehouse.gov 
 
