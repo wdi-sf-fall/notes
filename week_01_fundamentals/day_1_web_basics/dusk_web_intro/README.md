@@ -33,7 +33,7 @@ The World Wide Web is a collection of documents, made up of HTML, that lives on 
 
 HTML is the basis for almost every web page, it can contain text, images, video - html is what glues everything together - links between the pages makes the web *web-like*. 
 
-The World Wide Web emerged in the early nineties. The first web page was build at CERN (European Organization for Nuclear Research) by Time Berners Lee, he is credited with the invention of the web - he implemented the first successful communication between a Hypertext Transfer Protocol (HTTP) client and server via the Internet. So here's a pic of the first web server (note the sticker on the box):
+The World Wide Web emerged in the early nineties. The first web page was build at CERN (European Organization for Nuclear Research) by Tim Berners Lee, he is credited with the invention of the web - he implemented the first successful communication between a Hypertext Transfer Protocol (HTTP) client and server via the Internet. So here's a pic of the first web server (note the sticker on the box):
 
 	http://en.wikipedia.org/wiki/File:First_Web_Server.jpg 
 
