@@ -24,7 +24,7 @@ A useful system of services (email, chat, ssh, web), we are mainly concerned wit
 
 A program that you use to run applications and access services, usually a web browser. 
 
-**We as "full stack" web developers usually build both, the Client application running in the browser  and the Server/Service application hosted in the "backend".**
+**We as "full stack" web developers are concerned with both, the Client application running in the browser and the Service application hosted on a Server.
 
 	
 ##World Wide Web
@@ -96,7 +96,11 @@ Is server alive and follow the path of a client/server request through the Inter
 
 	ping www.whitehouse.gov 
 
-	traceroute www.whitehouse.gov 
+	traceroute www.whitehouse.gov
+	
+	or how about:
+	
+	traceroute 216.81.59.173 
 
 **netcat**
 
@@ -120,21 +124,21 @@ Now start typing … packets of information are exchanged between client and ser
 
 HTTP is a layer above TCP. 
 
-It specifically handles the exchange of documents. In our worls that's HTML documents, i.e. web pages.
+It specifically handles the exchange of documents. In our world that's HTML documents, i.e. web pages.
 
 **HTTP REQUEST and RESPONSE**
 
 So by typing in a url and hitting GO in your browser, what happens?
 
-In order to get a document, a browser needs to send a request to a server - that's an HTTP request. Using TCP, the request is routed through the internet to the server handling the request. The server executes a program and responds with an HTTP response, usually the web page that was requested.
-
 *Diagram*
+
+In order to get a document, a browser needs to send a request to a server - that's an HTTP request. Using TCP, the request is routed through the internet to the server handling the request. The server executes a program and responds with an HTTP response, usually the web page that was requested.
 
 There are different types of HTTP Requests - they are expressed as verbs - quick overview: We will get into more detail once we talk about APIs and how to consume services on the Internet.
 
 * `GET` - request a document/resource, the most common request type
-* `POST` - create a resource on the server, for example creating a facebook update
-* `PUT` OR `PATCH` - update a resource, for example updating your bank account
+* `POST` - create a resource on the server, for example creating creating a blog entry
+* `PUT` OR `PATCH` - update a resource, for example updating an existing blog posting
 * `DELETE` - destroy a resource, for example deleting a todo list item
 
 more info: http://www.tutorialspoint.com/http/http_methods.htm
@@ -176,19 +180,6 @@ Example of RESPONSE HEADER:
 **The BODY of the response contains the actual document, usually that's HTML**
 
 So the purpose of a web server is to respond to HTTP requests. And we are going to learn how to write applications running on web servers that respond to HTTP requests … web applications!
-
-Stop: Install JSONView Chrome extension.
-
-A little preview: There are other type of responses ...
-
-JSON:
-
-	http://www.omdbapi.com/?t=Sharknado
-
-
-XML
-
-	http://www.omdbapi.com/?t=True%20Grit&y=1969&r=xml
 
 
 ### HTTP tools: 
