@@ -24,7 +24,7 @@ A useful system of services (email, chat, ssh, web), we are mainly concerned wit
 
 A program that you use to run applications and access services, usually a web browser. 
 
-**We as "full stack" web developers are concerned with both, the Client application running in the browser and the Service application hosted on a Server.
+**We as "full stack" web developers are concerned with both, the Client application running in the browser and the Service application hosted on a Server.**
 
 	
 ##World Wide Web
