@@ -44,8 +44,8 @@
 ##Javascript Console
 - Allows you to easily interface with your app to run JS commands and display log messages for help with debugging
 - Shortcut to open JS console & bring focus to console
-	- Mac: Cmd + Opt + J
-	- Linux: Ctrl + Shift + J
+  - Mac: Cmd + Opt + J
+  - Linux: Ctrl + Shift + J
 - Use Tab for autocompletion!
 
 ##What's a Data Type?
@@ -180,6 +180,20 @@ var myString = "Greetings y'all!"
 
 The main note to make here is that these variables should always have the `var` keyword and use `camelCase`
 
+##undefined & null
+
+**undefined**: Represents a value that hasn't been defined
+
+```
+var notDefinedYet;
+```
+
+**null**: Represents an explicitly empty value
+
+```
+var dogsRule = null;
+```
+
 ## Objects Everywhere
 
 In Javascript we just discussed two types of values we can use. We call these values objects, which for now just means that in addition to storing some data you also get to use some helpful methods when you are working with them.
@@ -201,7 +215,7 @@ In Javascript we just discussed two types of values we can use. We call these va
 1..toString()
 ```
 
-### Arrays 
+## Arrays 
 
 Unfortunately, strings and numbers are not enough for most programming purposes. 
 What is needed are collections of data that we can use efficiently, Arrays. Think of an Array like a sorted list that you can keep tons of stuff in.
@@ -234,7 +248,7 @@ To check how many friends you have, you can use ```.length```
 To add more friends, you can use ```.push```
 
 Remember: 
-	- Arrays will always preserve ordering which means they will remember the order in which you added or defined things. Not everything in JavaScript preserves ordering, so remember this special property of Arrays.
+  - Arrays will always preserve ordering which means they will remember the order in which you added or defined things. Not everything in JavaScript preserves ordering, so remember this special property of Arrays.
 
 ### Exercises
 
@@ -360,7 +374,7 @@ var foods = [
 
 ```
 
-### Objects
+## Objects
 
 Think of the friend example from earlier. What if you also wanted to store more than just names? Like an address book for all your friends. Would you want to use an array for this?
 
@@ -385,7 +399,7 @@ But the computer could give it back to you like this:
 ```
 
 So:
-#### creating objectings
+#### creating objects
 
 
 ```
