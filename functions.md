@@ -13,13 +13,13 @@ Students will be able to
 Motivation
 ----------
 
-> *Functions are the best part of JavaScript.*
+> *The best thing about JavaScript is its implementation of functions.*
 >
 > **Douglas Crockford, JavaScript: The Good Parts**
 
 <!-- -->
-> *The task of being a programmer is organizing your code into
->functions.*
+> *Generally, the craft of programming is the factoring of a set of
+> requirements into a set of functions and data structures.*
 >
 > **Douglas Crockford, JavaScript: The Good Parts**
 
@@ -78,8 +78,7 @@ Parameters (Arguments)
 ----------
 
 Parameters are placeholders that allow you to pass values into a
-function.  Arguments are the things that get passed. The terms are
-more or less used interchangeably.
+function.
 
 ```
 var sayHello = function (friend) {
@@ -87,8 +86,6 @@ var sayHello = function (friend) {
 };
 sayHello("Tim");
 ```
-
-Friend is a parameter, Tim is an argument.
 
 Return Values
 -------------
@@ -111,6 +108,19 @@ var add = function (num1, num2) {
 var sum = add(2, 3);
 console.log("2 + 3 = " + sum);
 ```
+
+Exercises
+---------
+1. Define a function max() that takes two numbers as arguments and
+   returns the largest of them. Use the if-then-else construct
+   available in Javascript.
+
+2. Define a function maxOfThree() that takes three numbers as
+   arguments and returns the largest of them.
+
+3. Write a function findLongestWord() that takes an array of words and
+   returns the length of the longest one.
+
 
 Scope (i.e., Variable Scope)
 ----------------------------
@@ -140,6 +150,7 @@ car.model = "Mustang";
 car.start = function () {
     console.log("vroom");
 };
+car.start();
 ```
 
 `car.start` is a *function*. It is also a *method* since it is attached to
@@ -177,6 +188,5 @@ generally computer science-y questions that interviews love to ask.
 
 A function can be created and run (i.e., invoked) in the same step.
 This is a pattern you may run across and it can look very odd at
-first. However, stay in the pocket, don't get rattled, and realize
-that it is simply creating a function and running it all in one step.
-You got this.
+first. However,  realize that it is simply creating a function and
+running it all in one step.

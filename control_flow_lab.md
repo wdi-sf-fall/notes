@@ -3,9 +3,10 @@ Control Flow lab
 
 # If / else
 
-Create an array of food items. Then create an if/else statement that
-logs "You have lots of food" to the console if there are more than 3
-items in the array and logs "You don't have very much food" otherwise.
+Create an array of foods. Then create an if/else statement that
+prints "You have no food" if they array is empty, "You have one food"
+if there is exactly 1 item in the list, and "You have lots of food"
+otherwise.
 
 # While
 
@@ -24,7 +25,7 @@ to
 Take one down, pass it around, 0 bottles of beer on the wall..."
 
 Make sure your loop stops at 0, or else you'll get stuck in an
-infinite loop! Forever!
+infinite loop! Forever! (Hit Ctrl-c if this happens).
 
 Bonus: Get the pluralization correct.  "1 bottle of beer" instead of
 "1 bottles of beer."

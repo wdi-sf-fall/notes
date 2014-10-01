@@ -28,6 +28,8 @@ if (false) {
 ```
 
 ```
+var x = 4;
+//var x = 5;
 if (x === 5) {
     console.log("x equals 5");
 }
@@ -35,23 +37,27 @@ if (x === 5) {
 
 ```
 var isTasty;
+var food = "vegetables";
+//var food = "pizza";
 if (food === "pizza") {
     isTasty = true;
 } else {
     isTasty = false;
 }
+console.log("Is the food tasty?", isTasty);
 ```
 
 ```
-var message = "you have ";
-if (foods.length === 0) {
-    message += "no food";
-} else if (foods.length === 1) {
-    message += "one food";
+var course = "wdi";
+if (course === "uxdi") {
+    console.log("Hello, User Experience Designer!");
+} else if (course === "fewd") {
+    console.log("Hello, Front-End Developer");
+} else if (course === "wdi") {
+    console.log("Hello, Immersed Student")
 } else {
-    message += "several foods";
+    console.log("Who are you?")
 }
-console.log("message", message)
 ```
 
 ### While ###
@@ -110,7 +116,7 @@ in an **if statement**?
 [http://james.padolsey.com/javascript/truthy-falsey/](http://james.padolsey.com/javascript/truthy-falsey/)
 
 ```
-var person = nil;
+var person = null;
 if (person) {
     console.log("this will not be printed");
 } else {
@@ -138,4 +144,3 @@ if (num) {
 
 1. Using the assignment operator(=) instead of the equality operator(===)
 2. Infinite loops!
-3. for..in without hasOwnProperty
