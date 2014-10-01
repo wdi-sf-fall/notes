@@ -25,7 +25,6 @@ A useful system of services (email, chat, ssh, web), we are mainly concerned wit
 A program that you use to run applications and access services, usually a web browser. 
 
 **We as "full stack" web developers are concerned with both, the Client application running in the browser and the Service application hosted on a Server.**
-
 	
 ##World Wide Web
 
@@ -202,3 +201,12 @@ In your shell:
 
 
 ###[Lab](https://github.com/wdi-sf-fall/notes/blob/master/week_01_fundamentals/day_1_web_basics/dusk_web_intro/lab.md)
+
+alias
+
+Feels like a warm up day, reviews, a little bit of everything, after tomorrow we introduce stuff more formally. Today is kind of free play, opne forum.
+brief history of internet
+
+introduce terminology, make sure we get it right
+
+Answer any questions about Internet you always wondered about.
