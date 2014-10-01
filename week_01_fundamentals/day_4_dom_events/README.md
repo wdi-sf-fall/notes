@@ -1,7 +1,9 @@
 
 #Intro to DOM and Events
 
-Grab HTML snippet in today's notes direcory and save it to your local workspace:
+Fork this repo and clone it from your github:
+
+	git@github.com:wdi-sf-fall/dom_day_lab.git
 
 **Excercise 1: (5 min)**
 
