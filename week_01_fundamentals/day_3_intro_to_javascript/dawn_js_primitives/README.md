@@ -32,9 +32,8 @@
 * Created in 10 days in May 1995 by [Brendan Eich](http://en.wikipedia.org/wiki/Brendan_Eich)
 * It's an exciting time to learn Javascript! It's the language that enables web pages to respond to user interaction beyond the basic level.
 * The language today is viewed quite differently than how it was 10 years ago
-* 
 
-[The famous Douglas Crockfor gives a thorough introduction of Javascript](https://www.youtube.com/watch?v=t7_5-XYrkqg)
+[The famous Douglas Crockford gives a thorough introduction of Javascript](https://www.youtube.com/watch?v=t7_5-XYrkqg)
 
 ## Why Should YOU Care About Javascript
 * Can use the same language on the front-end and the backend with Node.js
@@ -63,7 +62,7 @@ Comments come in two forms
   * multiline comments
   
   ```
-  /**
+  /*
     These 
     are
     comments on
@@ -86,7 +85,7 @@ Numbers are one of the *types* of **values** we want to be able to interact and 
    2.718, 3.14, .5, .25, etc
   ```
 
-In JS, these are the same **type** of object, which it calls *Numbers*, so if you know floats and integers don not go looking for them.
+In JS, these are the same **type** of object, which it calls *Numbers*, so if you know floats and integers do not go looking for them.
 
 ## Strings
 
@@ -217,7 +216,7 @@ var dogsRule = null;
 
 ## Objects Everywhere
 
-In Javascript we just discussed two types of values we can use. We call these values objects, which for now just means that in addition to storing some data you also get to use some helpful methods when you are working with them.
+In Javascript we just discussed types of values we can use. We call these values objects, which for now just means that in addition to storing some data you also get to use some helpful methods when you are working with them.
 
 * If you want to turn a number into a string you can use a helpful method called `toString`.
 
