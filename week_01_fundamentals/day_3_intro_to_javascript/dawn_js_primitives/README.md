@@ -1,7 +1,7 @@
 # Javascript Primitives
 ## Intro to Programming fundamentals
 
-http://3.bp.blogspot.com/-uPZ2b48viTk/TflhMaivRHI/AAAAAAAABC8/dYV8_fPjFTs/s1600/JavaScript-the-good-parts.jpg
+![JS, the Good Parts](http://3.bp.blogspot.com/-uPZ2b48viTk/TflhMaivRHI/AAAAAAAABC8/dYV8_fPjFTs/s1600/JavaScript-the-good-parts.jpg "JS, the Good Parts")
 
 
 ## Objectives
