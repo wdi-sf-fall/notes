@@ -208,6 +208,8 @@ var greeting = 'Hello' + name;
 var notDefinedYet;
 ```
 
+A variable that has not been assigned a value is of type undefined. A method or statement also returns undefined if the variable that is being evaluated does not have an assigned value. A function returns undefined if a value was not returned.
+
 **null**: Represents an explicitly empty value
 
 ```
@@ -490,6 +492,17 @@ x = 'hi';
   - Store the following into variables: number of children, partner's name, geographic location, job title.
   - Output your fortune to the screen like so: "You will be a X in Y, and married to Z with N kids."
 
+###TypeError vs ReferenceError
+What is the difference between:
+
+```
+TypeError: ... is undefined
+```
+and
+
+```
+ReferenceError: ... is not defined
+```
 
 ##Useful JS Tools
 * [Mozilla Javascript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
