@@ -96,6 +96,14 @@ Strings are collections of letters and symbols known as **Characters**, and we u
 "John", "Jane"
 ```
 
+## Boolean
+A boolean represents logical values **true** or **false**
+
+```
+var catsAreGreat = true;
+var dogsRule = false;
+```
+
 ## Values and Expressions
 Values are the simplest components in JavaScript. ```1``` is a value, ```true``` is a value, ```"hello"``` is a value, ```function() {}``` is a value.
 
@@ -169,7 +177,7 @@ Having made some expressions it becomes evident we want to store these values.
 
 To store values we use things called **variables**. 
 
-The word 'variable' means 'can change' and is used because variables can store many different types of values and can change their value many times.
+The word 'variable' means 'can change' and is used because variables can store many different types of values and can change their value many times. 
 
 ```
 var myNumber = 1;
@@ -179,6 +187,19 @@ var myString = "Greetings y'all!"
 ```
 
 The main note to make here is that these variables should always have the `var` keyword and use `camelCase`
+
+Variables can also store the result of any "expression".
+For example:
+
+```
+var x = 2 + 2;
+```
+or
+
+```
+var name = 'Tripta';
+var greeting = 'Hello' + name;
+```
 
 ##undefined & null
 
@@ -452,6 +473,15 @@ John, Doe, 36, 1234 Park st.
   Harriet, Doe, 32, 1324 Park st.
 
 ```
+
+## Loose Typing
+JS figures out the type based on value, and the type can change:
+
+```
+var x;
+x = 2;
+x = 'hi';
+``` 
 
 ##Yet Another Exercise
 ###The Fortune Teller
