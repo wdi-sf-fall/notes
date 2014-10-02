@@ -57,6 +57,8 @@ Why is this not working?
 
 Write JavaScript that changes the greeting text to "Hi Planet Earth". Make it part of your *web app*
 
+Seems trivial. But it might not work as expected. Why?
+
 **Select by tag name**
 
 	all_li_elems = document.getElementsByTagName("li")
