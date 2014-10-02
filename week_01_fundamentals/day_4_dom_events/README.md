@@ -71,7 +71,7 @@ Get elements by tag name is very unspecific. You can go after specific CSS selec
 		
 **Exercise 3: (15 min)**
 		
-Add JavaScript that displays all *li* elements to "yellow". Put your code in a function and call it.
+Add JavaScript that renders *li* elements in "yellow". Put your code in a function and call it.
 
 ** Accessing and changing element attributes**
 
