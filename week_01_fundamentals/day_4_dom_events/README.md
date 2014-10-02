@@ -1,6 +1,12 @@
 
 #Intro to DOM and Events
 
+##Learning Objectives
+
+- Apply proper principles to select DOM elements using JavaScript.
+- Demonstrate ability to bind events to single and multiple DOM elements.
+- Build your first *web app*
+
 Fork [this repo](https://github.com/wdi-sf-fall/dom_day_lab) and clone it.
 
 **Excercise 1: (5 min)**
