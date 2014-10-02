@@ -1,9 +1,7 @@
 
 #Intro to DOM and Events
 
-Fork this repo and clone it from your github:
-
-	git@github.com:wdi-sf-fall/dom_day_lab.git
+Fork [this repo](https://github.com/wdi-sf-fall/dom_day_lab) and clone it.
 
 **Excercise 1: (5 min)**
 
@@ -20,8 +18,6 @@ Google "DOM document api", pick the MDN documentation. Inspect a few properties,
 	document.URL
 	document.head
 	document.links (what does it return?)
-
-Question: What makes them properties? 
 	
 How to change the DOM? Select elements and manipulate them.
 
@@ -29,29 +25,37 @@ How to change the DOM? Select elements and manipulate them.
 
 	var greeting_div = document.getElementById("greeting");
 	
-Now change the text:
+What's the greeting?
+	
+	greeting_div.innerHTML
+	
+Change it:
 
-	greeting_div.innerHtml = "Wow, I'm different now"
+	greeting_div.innerHTML = "Wow, something changed."
 
-Or the style:
+Change styling:
 
 	greeting_div.style.backgroundColor = "yellow"
+	greeting_div.style.color = "red"
+	greeting_div.style.height = "100px"
+	etc.
+
 	
 Properties can be a getter and setter. What does this mean?
 
 **Select by class**
 
 	var content_div = document.getElementsByClassName("content");
+
+Change it:
 	
-	content_div.innerText = "I can change,too";
+	content_div.innerHTML = "I can change,too";
 
-Why is this not working? Answer:
-
-	content_div[0].innerHTML = "ha!"
+Why is this not working?
 
 **Exercise 2: (5 min) ** 
 
-Write JavaScript that changes the greeting text to "Hi Planet Earth"
+Write JavaScript that changes the greeting text to "Hi Planet Earth". Make it part of your *web app*
 
 **Select by tag name**
 
@@ -66,12 +70,8 @@ Get elements by tag name is very unspecific. You can go after specific CSS selec
 	document.querySelectorAll("div#essentials > ul > li")
 		
 **Exercise 3: (15 min)**
-	
-Let's say we want to change the background of all list items? How? Hint:
-
-	document.querySelectorAll("li")
-	
-Add JavaScript that changes all li elements to yellow. Put your code in a function and call it.
+		
+Add JavaScript that displays all *li* elements to "yellow". Put your code in a function and call it.
 
 ** Accessing and changing element attributes**
 
@@ -100,7 +100,7 @@ document.getElementById("myDiv").onclick = function() { };
 document.getElementById("myDiv").onmouseover = function() { };
 ```
 
-Let's attach a click handler to image. Let's try in console first. Try mouseover.
+Let's attach a click handler to image element. Let's try in console first.
 
 #####addEventListener
 
@@ -120,14 +120,15 @@ document.querySelectorAll(".li").addEventListener("click", function() {
 
 **Exercise 6: 20 min** 
 
-a) Loop through each li element and attach a click handler that sets the class attribute to "selected". Remember that you already have a function that loops over li items. Why not repurpose it?
+Improve your web app:
 
-b) How do we know wich item was clicked? **this** is set to the DOM element that received the event. Can you print it out to console?
+a) Loop through each *li* element and attach a click handler that sets the class attribute to "selected". Remember that you already have a function that loops over *li*  elements. Why not repurpose it?
+
+b) How do we know which item was clicked? **this** is set to the DOM element that received the event. Print **this** out in console.
 
 c) Change the image to reflect what was clicked.
 
-d) Bonus: Add a "Reset" button that removes "selected" class from all list items
-
+d) Bonus: Add a "Reset" button that unselects all essentials and displays *panic.jpeg* image.
 
 
 
