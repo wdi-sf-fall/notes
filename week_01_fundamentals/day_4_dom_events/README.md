@@ -118,7 +118,7 @@ document.querySelectorAll(".li").addEventListener("click", function() {
 }
 ```
 
-**Exercise 6: 20 min** 
+**Exercise 6: 30 min** 
 
 Improve your web app:
 
