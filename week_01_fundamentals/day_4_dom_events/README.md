@@ -53,7 +53,7 @@ Change it:
 
 Why is this not working?
 
-**Exercise 2: (5 min) ** 
+**Exercise 2: (5 min)** 
 
 Write JavaScript that changes the greeting text to "Hi Planet Earth". Make it part of your *web app*
 
@@ -63,7 +63,7 @@ Write JavaScript that changes the greeting text to "Hi Planet Earth". Make it pa
 
 **Preferred: select using CSS selectors**
 	
-Get elements by tag name is very unspecific. You can go after specific CSS selectors, just like you would in stylesheets:
+Get elements by tag name or class is very unspecific. You can go after specific CSS selectors, just like you would in stylesheets:
 
 	document.querySelectorAll("li")
 	document.querySelectorAll("li.selected")
@@ -73,7 +73,7 @@ Get elements by tag name is very unspecific. You can go after specific CSS selec
 		
 Add JavaScript that renders *li* elements in "yellow". Put your code in a function and call it.
 
-** Accessing and changing element attributes**
+**Accessing and changing element attributes**
 
 	document.querySelector("img").getAttribute("src")
 	document.querySelector("img").setAttribute("src","./images/beer.jpeg")
@@ -100,7 +100,7 @@ document.getElementById("myDiv").onclick = function() { };
 document.getElementById("myDiv").onmouseover = function() { };
 ```
 
-Let's attach a click handler to image element. Try in console first.
+Let's attach a click handler to he image element. Try in console first.
 
 #####addEventListener
 
