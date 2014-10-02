@@ -75,6 +75,13 @@ while (i < 5) {
    console.log("i is " + i);
    i++;
 }
+
+// Will print out:
+// >i is 0
+// >i is 1
+// >i is 2
+// >i is 3
+// >i is 4
 ```
 
 ### For ###
@@ -85,6 +92,13 @@ A **for loop** is a fancy **while loop**.
 for (var i = 0; i < 5; i++) {
     console.log("i is " + i);
 }
+
+// Will _also_ print out:
+// >i is 0
+// >i is 1
+// >i is 2
+// >i is 3
+// >i is 4
 ```
 
 Very commonly, you will use it to loop through an array.
@@ -94,6 +108,11 @@ var foods = ["pizza", "tacos", "ice cream"];
 for (var i = 0; i < foods.length; i++) {
     console.log("i like " + foods[i]);
 }
+
+// Will print out:
+// >i like pizza
+// >i like tacos
+// >i like ice cream
 ```
 
 ### For...in ###
@@ -110,6 +129,11 @@ var car = {
 for (var thing in car) {
     console.log("my car has " + car[thing] + " " + thing);
 }
+
+// Will print out:
+// > my car has 4 wheels
+// > my car has 2 doors
+// > my car has 5 seats
 ```
 
 ### Exercises ###
