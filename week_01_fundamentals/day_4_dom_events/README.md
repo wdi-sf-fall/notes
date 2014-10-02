@@ -100,7 +100,7 @@ document.getElementById("myDiv").onclick = function() { };
 document.getElementById("myDiv").onmouseover = function() { };
 ```
 
-Let's attach a click handler to image element. Let's try in console first.
+Let's attach a click handler to image element. Try in console first.
 
 #####addEventListener
 
