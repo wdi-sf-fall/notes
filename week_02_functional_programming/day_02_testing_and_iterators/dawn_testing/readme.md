@@ -49,7 +49,7 @@ For now, don't worry about the "main" portion, pay more attention to the "test" 
 
 ##### Node_modules folder
 
-* Whenever you run `npm-install NAME_OF_PACKAGE` successfully, one of two things will happen. Either a node_modules folder will be created with your package inside of it, or if you have an existing node_modules folder (which was created when you ran `npm-install` earlier), the package will be added to that folder. Only one node_modules folder will exist in the root directory of your application.
+* Whenever you run `npm-install NAME_OF_PACKAGE` successfully, one of two things will happen. Either a node_modules folder will be created with your package inside of it, or if you have an existing node_modules folder (which was created when you ran `npm-install ANOTHER_PACKAGE` earlier), the package will be added to that folder. Only one node_modules folder will exist in the root directory of your application.
 
 # Let's talk about Testing
 
