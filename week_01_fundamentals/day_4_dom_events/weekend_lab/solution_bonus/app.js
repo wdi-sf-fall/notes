@@ -34,7 +34,7 @@ var contains = function(a1, a2){
         counter = counter+1;
       }
     };
-    if (counter === 3){
+    if (counter === a2.length){
       contains = true;
       break;
     }
