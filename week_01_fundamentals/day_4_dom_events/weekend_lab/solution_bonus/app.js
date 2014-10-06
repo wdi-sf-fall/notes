@@ -80,12 +80,15 @@ var clickHandler = function(){
 };
 
 var newGame = function () {
-  for(var i=0; i<tiles.length; i++) {
-    tiles[i].innerHTML="";
-  }
-  players[0].tiles = [];
-  players[1].tiles = [];
-  moves = 0;
+  // for(var i=0; i<tiles.length; i++) {
+  //   tiles[i].innerHTML="";
+  //   tiles[i].className="";
+  // }
+  // players[0].tiles = [];
+  // players[1].tiles = [];
+  // moves = 0;
+  // currentPlayer = {};
+  window.location.href = window.location.href
 };
 
 var registerHandlers = function() {
