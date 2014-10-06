@@ -23,7 +23,7 @@ Before we begin talking about testing our code, we first need to introduce a few
 
  	* The package.json holds various metadata relevant to the project and is your go to place to see information about the app as well as any dependencies you have installed (using npm install --save). If you leave off the --save when you install a package, it will not be added to your package.json file. Best practice is to include the `--save` flag when you run `npm-install` so that you can quickly tell what dependencies your app has and so can others when they look at your code.
 
- 	* If you have not seen JSON before. JSON stands for JavaScript Object Notation and it is a data-interchange format that is easy to read and write (because it looks almost identical to a JavaScript object). We will work with JSON a bit more later, but for now you can read more about it [here](http://en.wikipedia.org/wiki/JSON) and [here](http://www.w3schools.com/json/)
+ 	* If you have not seen JSON before, JSON stands for JavaScript Object Notation and it is a data-interchange format that is easy to read and write (because it looks almost identical to a JavaScript object). We will work with JSON a bit more later, but for now you can read more about it [here](http://en.wikipedia.org/wiki/JSON) and [here](http://www.w3schools.com/json/)
 
  	* To create a package.json, run `npm-init`. This will prompt you with a bunch of questions and some instructions. You can either press enter to go with a default or type in something different for each prompt (make sure the name of your app is one word or escapes an empty space). At the end, you will see your package.json file and the prompt asking you `Is this ok? (yes)`. If you type in 'y' or 'yes' it will create the file for you. Here is an example of one:
 
@@ -59,7 +59,7 @@ When you read about testing you will see terms like unit testing, integration te
 
 #### Mocha
 
-Mocha and is a testing framework to test your code: it can use different assertion libraries. Testing frameworks are used to organize and execute tests.
+Mocha is a testing framework to test your code and it can use different assertion libraries. Testing frameworks are used to organize and execute tests.
 
 To install mocha:
 
