@@ -58,7 +58,7 @@ for (var i = 0; i < friends.length; i++) {
 
 // cool new way, with the .forEach iterator
 friends.forEach(function (buddy) {
-    console.log("Hello, " + friends[i] + "!");
+    console.log("Hello, " + buddy + "!");
 });
 
 // both output the same thing
