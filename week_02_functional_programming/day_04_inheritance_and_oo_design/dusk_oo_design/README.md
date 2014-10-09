@@ -27,7 +27,7 @@ OO Analysis and Design aims to create a model of the system's functional require
 
 You are asked to write a rental management application. Let's keep it **very simple**. 
 
-**requirements**
+**Let's gather requirements**
 
 The User should be able to:
 
