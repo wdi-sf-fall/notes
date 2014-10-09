@@ -14,6 +14,7 @@ OO Analysis and Design aims to create a model of the system's functional require
 - Describe how objects interact.
 - Define the behavior -> `methods`
 - Define the data/state -> `properties`
+- 80 / 20 rule
 
 
 ###Let's Model a real world problem
