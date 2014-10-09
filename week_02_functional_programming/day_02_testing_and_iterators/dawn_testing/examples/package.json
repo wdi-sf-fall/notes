@@ -1,0 +1,14 @@
+{
+  "name": "firsttest",
+  "version": "0.0.0",
+  "description": "firsttest",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha spec/test.js -R spec"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^1.9.2"
+  }
+}
