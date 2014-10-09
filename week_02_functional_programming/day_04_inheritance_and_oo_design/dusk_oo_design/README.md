@@ -17,7 +17,7 @@ OO Analysis and Design aims to create a model of the system's functional require
 
 - Gather requirements. Work with a `domain expert`. Think in terms of "The User should be able to .."
 - Identify objects base on *User Stories*, requirements, ...
-- Draw basic Object model - what are the main relationships? Think `is a` versus `has_a`. (Vehicle, Car, Motorcycle ... Engine, Wheel)
+- Draw basic Object model - what are the main relationships? Think `is a`, `has one`, `has many`. (Vehicle, Car, Motorcycle ... Engine, Wheel)
 - Describe how objects interact.
 - Define the behavior -> `methods`
 - Define the data/state -> `properties`
