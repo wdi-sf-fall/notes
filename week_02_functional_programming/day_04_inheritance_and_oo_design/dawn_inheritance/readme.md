@@ -50,26 +50,6 @@ Given the following example let's create a Student class that inherits from Pers
 
 Why do we reset the constructor? See [this](http://stackoverflow.com/questions/8453887/why-is-it-necessary-to-set-the-prototype-constructor) answer.
 
-### Shape Exercises:
-
-1. Create a Square class that should take in 2 sides
-2. Create a Rectangle class that inherits from it
-
-* Try implementing the following:
-
-   | Quadrilateral |
-   | :---- |
-   | perimeter |
-   | Sides: 4 |
-      	   	   
-  Note: the `Quadrilateral` constructor should take four side lengths.
-
-*  Use your `inherit` function to have `Rectangle` inherit from `Quadrilateral`. 
-* The following should inherit from `Rectangle`, `square`.
-
-* Update the `prototypes` of `Rectangle` and `Square` above so they have more specific methods. `Rectangle` needs an `Area` method and a better `Perimeter` method. `Square` also needs a better `Area` method and  a better `Perimeter` method.
-
-
 ### Pitfalls/Side Effects - different properties for different classes
 
 When we inherit in JS we have to watch out for in the wild.
