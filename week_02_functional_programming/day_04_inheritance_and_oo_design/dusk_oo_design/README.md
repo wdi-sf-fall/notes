@@ -51,7 +51,7 @@ Go through the narrative and highlight nouns (person, place, thing), as candidat
 
 Ask yourself how things are related. Look for common scenarios / patterns.
 
-Create a class diagram that represents you model.
+Create a class diagram that represents your model.
 
 
 
