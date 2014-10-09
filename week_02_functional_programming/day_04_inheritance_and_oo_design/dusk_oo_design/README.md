@@ -31,23 +31,23 @@ You are asked to write a rental management application. Let's keep it **very sim
 
 The User should be able to:
 
-  - set up a building -> enter address
-	- set up units -> enter sqft, number, rent
-	- assign a building manager
-	- keep track of tenants
-	- see list of available units
-	- move tenant in/out a unit
-	- check annual income $$!
-	- check total sqft rented
+- set up a building -> enter address
+- set up units -> enter sqft, number, rent
+- assign a building manager
+- keep track of tenants
+- see list of available units
+- move tenant in/out a unit
+- check annual income $$!
+- check total sqft rented
 	
 Some rules:
 
-	- A building must have a manager
-	- A tenant must have references	
-	- Manager is not allowed to live in building
-	- A tenant can not be a Manager
-	- a Unit has only one Tenant, or none
-	- Manager and tenants have names and contact info
+- A building must have a manager
+- A tenant must have references	
+- Manager is not allowed to live in building
+- A tenant can not be a Manager
+- a Unit has only one Tenant, or none
+- Manager and tenants have names and contact info
 
 That's a good start.
 
