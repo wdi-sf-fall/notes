@@ -1,0 +1,14 @@
+{
+  "name": "testConstructors",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec spec/test.js "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^1.9.2"
+  }
+}
