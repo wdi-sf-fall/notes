@@ -5,12 +5,6 @@
 
 OO Analysis and Design aims to create a model of the system's functional requirements that is independent of implementation. Requirements are organized around objects. Objects integrate both behavior -> `methods` and state -> `instance variables` or `properties`. They are modeled after the real world objects that the system interacts with. 
 
-###Quick review:
-
-- What's an object, what's a class / prototype?
-- What's inheritance?
-
-Let's explore the process of designing an object-oriented (OO) application.
 
 ###Condensed OO Design steps:
 
@@ -28,6 +22,8 @@ You are asked to write a rental management application. Let's keep it **very sim
 
 **Let's gather requirements**
 
+####Stories:
+
 The User should be able to:
 
 - set up a building -> enter address
@@ -39,7 +35,7 @@ The User should be able to:
 - check annual income $$!
 - check total sqft rented
 	
-Some rules:
+####Rules:
 
 - A building must have a manager
 - A tenant must have references	
