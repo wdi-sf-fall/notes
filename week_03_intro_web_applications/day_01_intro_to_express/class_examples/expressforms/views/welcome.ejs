@@ -1,0 +1,10 @@
+<h1>Welcome to our page!</h1>
+
+<% allMyUsers.forEach(function(user){ %>
+<a href="/user/<%= user.id%>"><%= user.id%></a>
+<br>
+<%= user.username%>
+<br>
+<%= user.password%>
+<br>
+<% })%>

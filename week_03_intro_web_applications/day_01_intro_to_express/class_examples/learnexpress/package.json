@@ -1,0 +1,16 @@
+{
+  "name": "learnexpress",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^1.0.0",
+    "express": "^4.9.7",
+    "locus": "^0.1.0"
+  }
+}
