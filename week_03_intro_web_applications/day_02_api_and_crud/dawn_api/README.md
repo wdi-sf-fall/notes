@@ -63,11 +63,6 @@ Where else in computing do we see the term "interface"?
 
 [http://expressjs.com/4x/api.html](http://expressjs.com/4x/api.html)
 
-### Google Products API
-
-- Remember that big blob of JSON from first week of class?
-- That was saved data from the actual Google Products API.
-
 ## OMDB API Exercise
 
 ### Requirements
