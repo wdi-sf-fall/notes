@@ -22,6 +22,7 @@ app.get('/books', function(req, res){
 app.get('/books/new', function(req, res){
   res.render('books/new');
 });
+
 app.get('/books/:id', function(req, res){
   var index = req.params.id;
   var book = books[index];
