@@ -11,7 +11,7 @@
 
 - Set up Node/Express app
     - Clone repo from [https://github.com/wdi-sf-july/omdb_api](https://github.com/wdi-sf-july/omdb_api)
-- Set up form & route to for a movie search
+- Set up form & route for a movie search
 - Have handler call OMDB API
 - Render results in a template
 
