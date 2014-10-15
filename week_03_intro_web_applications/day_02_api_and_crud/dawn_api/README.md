@@ -63,6 +63,16 @@ Where else in computing do we see the term "interface"?
 
 [http://expressjs.com/4x/api.html](http://expressjs.com/4x/api.html)
 
+### Twitter has an API
+
+[https://dev.twitter.com/rest/public](https://dev.twitter.com/rest/public)
+
+### Last night's homework?
+
+Your app.js file created an API that your client-side code
+communicated with.  It, however, may not have been a very well defined
+API :)
+
 ## OMDB API Exercise
 
 ### Requirements
