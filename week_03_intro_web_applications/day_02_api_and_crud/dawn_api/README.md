@@ -88,7 +88,7 @@ http://www.omdbapi.com/ for movies matching the search term.
 - The home page should use an .ejs template to display a `<form>`.
 - The form should have an input box that accepts a search term.
 - When the user submits the form, create an Express route to catch it.
-- Use the `route` module to make a request to http://omdbapi.com for
+- Use the `request` module to make a request to http://omdbapi.com for
   movies matching the search term.
 - Process the JSON results and display movie info on the page using
   another .ejs template.
