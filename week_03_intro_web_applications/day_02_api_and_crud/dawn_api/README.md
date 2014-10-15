@@ -10,7 +10,7 @@
 ## Building from yesterday's lesson
 
 - Set up Node/Express app
-    - Clone repo from [https://github.com/wdi-sf-fall/omdb_api](https://github.com/wdi-sf-fall/omdb_api)
+    - Clone repo from [https://github.com/wdi-sf-fall/omdb_in_class](https://github.com/wdi-sf-fall/omdb_in_class)
 - Set up form & route for a movie search
 - Have handler call OMDB API
 - Render results in a template
@@ -97,5 +97,5 @@ http://www.omdbapi.com/ for movies matching the search term.
 
 - http://omdbapi.com/
 - https://github.com/mikeal/request
-- https://github.com/wdi-sf-fall/omdb_api
+- https://github.com/wdi-sf-fall/omdb_in_class
 
