@@ -33,7 +33,7 @@ Postgres and other SQL databases are relational. They are designed for storing a
 Give table a foreign key
 
 ```
-sql
+
  create table person (
       id serial primary key,
       name text,
