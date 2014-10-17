@@ -152,3 +152,69 @@ SELECT person.name, pet.name FROM person
   CROSS JOIN pet
 ```
 
+##many to many relationships
+
+
+**Students / Courses** is a "many-to-many" relationship; each student is linked to enrolled courses, while each course can of course have many students. To represent this, there is a `courses_student` table, a `student` table, and a `course` table to show the combinations which apply. 
+
+To join twice and understand whether you're getting all the rows or just the ones with matches in all the tables can be confusing, so this is about showing you some examples.
+
+In pqsl, run:
+
+```
+\i many_to_many/setup.sql
+```
+
+Explore `students_example` database.
+
+Which students are enrolled in which courses?
+
+Get all courses:
+
+```
+SELECT c.id, c.title FROM courses AS c;
+```
+	
+OK, so we have some courses, looking at the relationship diagram, we can see we need to link across to `courses_students` table using the `id` of each course.	
+
+```
+SELECT c.id, c.title, cs.student_id FROM courses AS c
+  JOIN courses_students AS cs
+  ON cs.course_id = c.id;
+```
+
+I have aliased the table names to c and cs respectively. This is so that they are less in the way of us reading the important bits!   
+
+There is now a join between two tables. The query doesn't specify what kind of join it is, but the default join type is `INNER JOIN`. You might notice that not all of the courses appear - only the ones where there are matching records in the `courses_students` table will match this query. (Math and History are not very popular).
+
+To get more than the student_id, we need to join on the `students` table to get the details.
+
+```
+SELECT c.id, c.title, cs.student_id,s.name FROM courses AS c
+   JOIN courses_students AS cs
+   ON cs.course_id = c.id 
+   JOIN students AS s
+   ON cs.student_id = s.id;
+```   
+   
+A many-to-many relationship join across three tables! This means two joins: one between the first table and the linking table, and another from the result of that query to the other end of the relationship. Each join operates between two data sets, which are the resultset you have so far, and the new table that is being joined. 
+
+Now you have this result, you can start adding whatever `WHERE` clauses you need to get exactly the information you're after.
+
+How about those "lost" courses, the ones without students? Or students that are not enrolled in any course?
+
+```
+SELECT c.id, c.title, cs.student_id,s.name FROM courses AS c
+   LEFT JOIN courses_students AS cs
+   ON cs.course_id = c.id 
+   RIGHT JOIN students AS s
+   ON cs.student_id = s.id;
+```   
+
+```
+SELECT c.id, c.title, cs.student_id,s.name FROM courses AS c
+   JOIN courses_students AS cs
+   ON cs.course_id = c.id 
+   RIGHT JOIN students AS s
+   ON cs.student_id = s.id;
+```   	
