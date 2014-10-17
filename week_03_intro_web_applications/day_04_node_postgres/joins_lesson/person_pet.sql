@@ -39,7 +39,7 @@ CREATE TABLE pet (
        VALUES ('Goldy', 'Fish', 1, 2);
 
   INSERT INTO pet (name, breed, age, person_id)
-      VALUES ('Czar', 'Cat', 10, 4);  
+      VALUES ('Czar', 'Cat', 10, NULL);  
 
 
 \d+ person

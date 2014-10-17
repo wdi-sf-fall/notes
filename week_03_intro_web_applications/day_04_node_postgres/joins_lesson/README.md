@@ -30,51 +30,16 @@ Postgres and other SQL databases are relational. They are designed for storing a
 
 ![foreign_key](foreign_key.png)
 
-Give table a foreign key
-
-```
-
- create table person (
-      id serial primary key,
-      name text,
-      age integer
-    );
-
-   create table pet (
-      id serial primary key,
-      name text,
-      age integer,
-      breed text,
-      person_id integer
-    );
-
-INSERT INTO person ( name, age)
-	VALUES ('Zed', 37);
-
-INSERT INTO person ( name, age)
-	VALUES ('Bobby', 7);
-	
-INSERT INTO person ( name, age)
-	VALUES ('John', 17);
-        
-INSERT INTO pet (name, breed, age, person_id)
-	VALUES ( 'Fluffy', 'Unicorn', 1000, 1);
-
-INSERT INTO pet (name, breed, age, person_id)
-	VALUES ('Rocko', 'Dog', 4, 2);
-
-INSERT INTO pet (name, breed, age, person_id)
-	VALUES ('Gigantor', 'Robot', 25, 1);
-
-INSERT INTO pet (name, breed, age, person_id)
-	VALUES ('Goldy', 'Fish', 1, 2);
-	
-INSERT INTO pet (name, breed, age, person_id)
-	VALUES ('Czar', 'Cat', 10, 4);	
-
-```
 
 ###Doing our first Join 
+
+Setup sample database. In pqsl, run:
+
+```
+\i many_to_many/setup.sql
+```
+
+Take a few minutes to make sure tables were created and contain data.
 
 The most common case is **`INNER JOIN`: Fetches data if present in both the tables.**
 
@@ -91,7 +56,7 @@ Note that the type-part of the JOIN clause is optional, in which case the defaul
 
 ###Other Types of Joins  
 
-In our example, A is person and B is pet
+**A is person and B is pet**
 
 ![SQL Joins Diagram](http://lh5.ggpht.com/-fnOQYPFr8D0/UagAzBIgMvI/AAAAAAAABbo/3fBL5Fm3Y9Y/SQL%252520JOINs.jpg)  
 
