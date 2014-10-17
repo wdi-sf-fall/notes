@@ -113,7 +113,7 @@ SELECT person.name, pet.name FROM person
 
 ```
 SELECT person.name, pet.name FROM person
-  CROSS JOIN pet
+  CROSS JOIN pet;
 ```
 
 ##many to many relationships
