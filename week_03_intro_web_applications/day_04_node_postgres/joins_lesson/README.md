@@ -79,6 +79,21 @@ SELECT person.name, pet.name from person
 ```
 
 
+`RIGHT (OUTER) JOIN`: Fetches data if present in the right table.  
+
+```
+SELECT person.name, pet.name FROM person 
+  RIGHT JOIN pet
+  ON person.id = pet.person_id;
+```  
+
+```
+SELECT person.name, pet.name FROM person 
+  RIGHT JOIN pet
+  ON person.id = pet.person_id
+  WHERE person.id IS NULL;
+```
+
 `FULL (OUTER) JOIN`: Fetches data if present in either of the two tables.
 
 ```
@@ -93,22 +108,6 @@ SELECT person.name, pet.name FROM person
   ON person.id = pet.person_id
   WHERE person.id IS NULL OR  pet.person_id IS NULL;
 ```
-
-
-`RIGHT (OUTER) JOIN`: Fetches data if present in the right table.  
-
-```
-SELECT person.name, pet.name FROM person 
-  RIGHT JOIN pet
-  ON person.id = pet.person_id
-  WHERE person.id IS NULL;
-```
-
-```
-SELECT person.name, pet.name FROM person 
-  RIGHT JOIN pet
-  ON person.id = pet.person_id;
-```  
 
 `Cross Join`:  Joins everything to everything
 
