@@ -4,7 +4,7 @@
 
 #### ORM
 
-An ORM (Object Relational Mapper) is a piece/layer of software that helps map your code Objects to your database. It's a completely ordinary library written in your language that encapsulates the code needed to manipulate the data, so you don't use SQL anymore, but directly an object of your language. For our case, this means we can just use JavaScript to execute SQL queries (very similar to what we build over the weekend lab!)
+An ORM (Object Relational Mapper) is a piece/layer of software that helps map objects to our database. This means we can just use JavaScript to create and work with our data instead of writing raw SQL queries (the concept is very similar to what we build with the weekend lab!)
 
 You can read some more about the benefits of using an ORM [here](http://stackoverflow.com/questions/1279613/what-is-an-orm-and-where-can-i-learn-more-about-it)
 
@@ -14,20 +14,20 @@ From the Sequelize docs "To put it in a nutshell, it's an ORM (Object-Relational
 
 - Represent models and their data.
 - Represent associations between these models.
-- Validate models before they get persisted to the database.
+- Validate data before they gets persisted to the database.
 - Perform database operations in an object-oriented fashion.
 
 #### Model
 
-A model is a class that maps to the data relation (table) and potentially bridge tables. You can think of a model as the blueprint (class) for what each row of data is going to contain. Unlike a migration, you perform CRUD on instances of your models.
+A model is a class that maps to the data relation (table) and potentially bridges tables. You can think of a model as the blueprint (class) for what each row of data is going to contain. Unlike a migration, you perform CRUD on instances of your models.
 
 #### Migration
 
- Migrations (also known as ‘schema evolution’ or ‘mutations’) are a way of changing your database schema from one version into another. You can think of a migration as the creation or changes you want to make to a database table. Before you can start manipulating your models, you need to create and run a migration. Examples of migrations are creating, deleting and altering tables (and their existing columns).
+ Migrations (also known as ‘schema evolution’ or ‘mutations’) are a way of changing your database schema from one version into another. You can think of a migration as the creation or changes you want to make to a database table or column. Before you can start manipulating your models, you need to create and run a migration. Examples of migrations are creating, deleting and altering tables (and their existing columns).
 
 #### Sequelize-cli and the alias sqlize
 
-We are going to be using the sequelize-cli so that we can easily run commands in the terminal to initialize our project and to create migrations and models. This requires us to first install the package using `npm install --save sequelize-cli`, and then in order to run a command we need to type `node_modules/.bin/sequelize`. Unfortunately this is a bit annoying so first thing we should do is create an alias so that we don't have to remember/type this.
+We are going to be using the sequelize-cli so that we can easily run commands in the terminal to initialize our project and to create migrations and models. This requires us to first install the sequelize-cli (CLI stands for Command Line Interface) using `npm install --save sequelize-cli`, and then in order to run a command we need to type `node_modules/.bin/sequelize`. This is a bit annoying to type over and over so first thing we should do is create an alias so that we don't have to remember/type this.
 
 ### Setup part 1 - getting the sqlize alias (you only have to do this once)
 
@@ -67,7 +67,7 @@ Create a database and initialize a sequelize project
 
 ### Setup part 3 - config.json, models and migrations:
 
-In sublime we should now see a bunch of new folders. We now have config, migrations and models. This was created for us when we ran `sqlize init`. Let's start in the config folder and open up the config.json file. This file contains information about the database we are using as well as how to connect. We have three settings, one for development (what we will use now), test(for testing our code), and production(when we deploy our code on AWS/Heroku). Let's change the config.json so it looks like this (we will not be using the test or production environments, so just ignore those for now - all that matters is "development").
+In sublime we should now see a bunch of new folders. We now have config, migrations and models. This was created for us when we ran `sqlize init`. Let's start in the config folder and open up the config.json file. This file contains information about the database we are using as well as how to connect. We have three settings, one for development (what we will use now), test(for testing our code), and production(when we deploy our app on AWS/Heroku). Let's change the config.json so it looks like this (we will not be using the test or production environments, so just ignore those for now - all that matters is "development").
 
 ```
 {
@@ -98,7 +98,7 @@ In order to create a model, we start with `sqlize model:create` and then specify
 
 Here is an example of a command to generate a User model with a first_name, last_name and age along with a corresponding migration.
 
-`sqlize model:create --name User --attributes first_name:string,last_name:string,age:integer`
+`sqlize model:create --name User --attributes first_name:string, last_name:string, age:integer`
 
 This will generate the following migration
 
@@ -161,13 +161,13 @@ module.exports = function(sequelize, DataTypes) {
 
 ```
 
-## What is this associate thing in my model?
+## What is this "associate" thing in my model?
 
-In this function, we specify any relations between our models (hasMany or belongsTo). We'll discuss this more in class, but always remember, the association goes in the model and the foreign keys go in the migration.
+In this function, we specify any relations/associations (one to one, one to many or many to many) between our models (hasMany or belongsTo). We'll discuss this more in class, but always remember, the association goes in the model and the foreign keys go in the migration.
 
 ## Validations
 
-Sequelize has a bunch of validations we can add to our models to ensure that our data has met certain criteria before add it to our database. To include validations in your model, wrap them in a validate object. An examples of this is:
+Sequelize has a bunch of validations we can add to our models to ensure that our data has met certain criteria before add it to our database. To include validations in your model, wrap them in a validate object. An examples of this is validating an email address (making sure it has a @ etc. as well as ensuring that it is never null):
 
 ```
 module.exports = function(sequelize, DataTypes) {
@@ -197,7 +197,7 @@ module.exports = function(sequelize, DataTypes) {
 
 ## Running a migration
 
-Whenever we generate a migration, we have to run the migration to execute the `up`method. To do this, run in terminal `sqlize db:migrate`
+Whenever we generate a migration, we have to run the migration to execute the `up`method (which we have in our migration - when we undo a migration we run the down method). To do this, run in terminal `sqlize db:migrate`
 
 ## CRUD with Sequelize (Using our User model)
 
