@@ -45,11 +45,12 @@ if you type in `which sqlize` and you see your alias, you have done this correct
 
 Let's build our first app using Sequelize! First we need to create a node app and include our dependencies. __All in terminal__:
 
-Create a new folder and add an app.js and .gitignore
+Create a new folder and add an app.js and .gitignore and initialize the repository
 
 - mkdir firstapp
 - touch app.js
 - touch .gitignore
+- git init
 
 Add the text 'node_modules in our .gitignore
 
