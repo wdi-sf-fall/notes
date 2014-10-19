@@ -96,9 +96,9 @@ Once this is complete, let's move to the models folder.
 
 In order to create a model, we start with `sqlize model:create` and then specify the name of the model using the `--name` flag. Make sure your models are __always__ in the singular (remember table name in plural, model name in singular). After passing in the --name flag followed by the name of your model, you can then add an --attributes flag and pass in data about your model. When you generate your model, you will also generate a corresponding migration. You only need to do this once for your model. Remember, if you want to make changes to your model after generating it - all you have to do is make a change and save it. If you want to make changes to your migrations, you have to re-run them (either by undoing the migration or by creating a new one that alters the migration).
 
-Here is an example of a command to generate a User model with a first_name, last_name and age along with a corresponding migration.
+Here is an example of a command to generate a User model with a first_name, last_name and age along with a corresponding migration. Make sure you do __not__ have any spaces for each of the attributes and their data types
 
-`sqlize model:create --name User --attributes first_name:string, last_name:string, age:integer`
+`sqlize model:create --name User --attributes first_name:string,last_name:string,age:integer`
 
 This will generate the following migration
 
