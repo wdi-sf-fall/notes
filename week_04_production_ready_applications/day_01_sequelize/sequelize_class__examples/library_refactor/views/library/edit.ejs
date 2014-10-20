@@ -1,0 +1,9 @@
+<% include ../partials/header %>
+
+  <form action="/books/<%= book.id %>?_method=put" method="post">
+    <input name="book[title]" value="<%= book.title %>">
+    <input name="book[author]" value="<%= book.author %>">
+    <input type="submit" value="Save">
+  </form>
+
+<% include ../partials/footer %>

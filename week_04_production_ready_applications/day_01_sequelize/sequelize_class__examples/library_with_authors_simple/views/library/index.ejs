@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+
+  <a href="/authors">See all authors</a>
+
+  <h1>Books list</h1>
+
+
+  <% allBooks.forEach(function(book,index){ %>
+
+  <h2>Book <%= index+1%></h2>
+    Title:<%= book.title %>
+
+  <br>
+    Genre: <%= book.genre %>
+
+  <br>
+    <a href="/authors/<%= book.AuthorId%>/books">Learn about the author</a>
+
+
+
+
+  <% }); %>
+
+
+
+<% include ../partials/footer %>

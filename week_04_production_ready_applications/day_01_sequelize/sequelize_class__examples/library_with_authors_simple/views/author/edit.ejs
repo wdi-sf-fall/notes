@@ -1,0 +1,9 @@
+<% include ../partials/header %>
+
+  <form action="/authors/<%= author.id %>?_method=put" method="post">
+    <input name="author[name]" value="<%= author.name %>" autofocus>
+    <input name="author[age]" value="<%= author.age %>">
+    <input type="submit" value="Save">
+  </form>
+
+<% include ../partials/footer %>

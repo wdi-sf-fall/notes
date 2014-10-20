@@ -1,0 +1,13 @@
+<% include ../partials/header %>
+  <form action="/authors" method="post">
+    <p>
+    <label for="name">Name</label>
+      <input type="text" name="author[name]" id="name" autofocus>
+    </p>
+    <p>
+      <label for="age">Age:</label>
+      <input type="text" name="author[age]" id="age">
+    </p>
+    <input type="submit" value="Save">
+  </form>
+<% include ../partials/footer %>

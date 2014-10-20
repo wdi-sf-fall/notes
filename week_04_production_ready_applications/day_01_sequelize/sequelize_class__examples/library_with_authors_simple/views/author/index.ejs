@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+
+  <p>
+    <a href="/books">See all books</a>
+  </p>
+
+  <h1>Authors Page</h1>
+  <a href="/authors/new">Add a new author</a>
+  <% allAuthors.forEach(function(author,index){ %>
+  <h2>
+  <%= index +1%> - <%= author.name %>, <%= author.age%>
+  </h2>
+
+  <a href="/books/<%= author.id%>/new">Add a book</a>
+  <br>
+  <a href="/authors/<%= author.id%>/books">See <%= author.name %>'s books</a>
+  <br>
+  <a href="/authors/<%= author.id %>/edit">Edit this author</a>
+
+
+  <form action="/authors/<%= author.id %>?_method=delete" method="post">
+    <input type="submit" value="Delete this author">
+  </form>
+
+
+
+  <% }); %>
+
+
+
+<% include ../partials/footer %>

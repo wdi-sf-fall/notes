@@ -1,0 +1,11 @@
+<% include ../partials/header %>
+
+<% if(typeof errMsg !== 'undefined'){ %>
+<h3 style="color:red;"><%= errMsg %></h3>
+<% } %>
+  <form action="/books/new" method="post">
+    <input name="book[title]" placeholder="title" value="<%= title%>" autofocus>
+    <input name="book[author]" placeholder="author" value="<%= author%>">
+    <input type="submit" value="Save">
+  </form>
+<% include ../partials/footer %>

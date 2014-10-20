@@ -1,0 +1,22 @@
+{
+  "name": "sequelize_examples",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.9.8",
+    "ejs": "^1.0.0",
+    "sequelize": "^2.0.0-rc2",
+    "pg": "^3.6.0",
+    "sequelize-cli": "^0.3.3",
+    "lodash": "^2.4.1",
+    "method-override": "^2.3.0",
+    "body-parser": "^1.9.0",
+    "locus": "^0.1.0"
+  }
+}
