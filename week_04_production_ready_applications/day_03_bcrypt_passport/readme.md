@@ -48,5 +48,5 @@ This module allows us to store a tiny piece of session information in a cookie. 
 
 #### Connect Flash 
 
-We use this express module to render flash messages that display errors
+We use this express module to render messages to notify our user of any errors or successes (failure to login or a message after logging in)
 
