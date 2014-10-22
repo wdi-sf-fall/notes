@@ -69,7 +69,7 @@ When you leave the bar and come back, the bartender checks your hand again to ma
 
 #### Cookie Session
 
-This module allows us to store a tiny piece of session information in a cookie. This is how we are able to maintain state if our server goes down. This module depends on cookie-parser so we need to not only run `npm install --save cookie-session` but also `npm install --save cookie-session`. Serializing creates a session for us which is great for persisting accross pages. But when happens when our server goes down or we restart it? Without a cookie, we would have to force our user to log in again, which is not the best user experience - so in order to maintain state even when a server goes down, we use a cookie.
+This module allows us to store a tiny piece of session information in a cookie. This is how we are able to maintain state if our server goes down. This module depends on cookie-parser so we need to not only run `npm install --save cookie-session` but also `npm install --save cookie-parser`. Serializing creates a session for us which is great for persisting accross pages. But when happens when our server goes down or we restart it? Without a cookie, we would have to force our user to log in again, which is not the best user experience - so in order to maintain state even when a server goes down, we use a cookie.
 
 #### Connect Flash 
 
