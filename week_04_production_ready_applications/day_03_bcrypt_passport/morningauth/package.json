@@ -1,0 +1,22 @@
+{
+  "name": "morningauth",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^1.0.0",
+    "method-override": "^2.3.0",
+    "body-parser": "^1.9.0",
+    "lodash": "^2.4.1",
+    "express": "^4.9.8",
+    "sequelize": "^2.0.0-rc2",
+    "bcrypt": "^0.8.0",
+    "pg": "^3.6.2",
+    "sequelize-cli": "^0.3.3"
+  }
+}

@@ -1,0 +1,25 @@
+<% include partials/header %>
+
+<h1>Sign up form</h1>
+  <p style ="color:red;">
+    <% if(message){ %>
+    <%= message%>
+    <% } %>
+  </p>
+  <br>
+  <form action="/signup" method ="POST">
+    <p>
+      <label for="user">Username:</label>
+      <input type="text" name="username" id="user" autofocus>
+    </p>
+    <p>
+      <label for="pass">Password:</label>
+      <input type="password" name="password" id="pass">
+    </p>
+    <p>
+      <input type="submit" value="Sign up!" class = "btn btn-primary">
+    </p>
+  </form>
+  <a href="/login">Already have an account? Log in here</a>
+
+<% include partials/footer %>

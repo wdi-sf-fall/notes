@@ -1,0 +1,14 @@
+<% include partials/header %>
+
+<h1>Welcome to our awesome website</h1>
+  <p>
+    <% if(message){ %>
+    <%= message%>
+    <% } %>
+  </p>
+
+<a href="/signup" class ="btn btn-primary btn-lg">Sign up</a>
+
+<a href="/login" class ="btn btn-primary btn-lg">Log in</a>
+
+<% include partials/footer %>
