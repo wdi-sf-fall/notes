@@ -1,0 +1,23 @@
+<% include partials/header.ejs %>
+
+	<h1>Login </h1>
+
+	<% if (message.length > 0) { %>
+		<div class = "alert alert-danger">
+		<%= message %>
+		</div>
+	<% } %>
+		<form action="/login" method = "post">
+
+			<p>
+				<label for="user">Username:</label> <input type="text" name="username" id="user" autofocus value = <%=username %>>
+			</p>
+			<p>
+				<label for="pass">Password:</label> <input type="password" name="password" id="pass">
+			</p>
+			<p>
+				<input type="submit" value="Log In" class ="btn btn-primary ">
+			</p>
+		</form>
+		<a href="/signup">Don't have an account? Create one here</a>
+<% include partials/footer.ejs %>
