@@ -22,6 +22,7 @@
     "pg": "^3.6.2",
     "sequelize-cli": "^0.3.3",
     "sequelize": "^2.0.0-rc2",
-    "connect-flash": "^0.1.1"
+    "connect-flash": "^0.1.1",
+    "morgan": "^1.4.1"
   }
 }

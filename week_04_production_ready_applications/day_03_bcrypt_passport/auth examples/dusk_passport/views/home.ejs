@@ -1,14 +1,7 @@
 <% include partials/header.ejs%>
-	<%  if (!isAuthenticated){ %>
-		<br>
-		<div class="alert alert-warning">
-		<a href="/login">You must be logged in to view this page</a>
-		</div>
-	<%  } else {%>
 
-	<h1>Hello, <%= user.username %> - welcome to our website!</h1>
+  <h1>Hello, <%= user.username %> - welcome to our website!</h1>
 
 	<a href="/logout" class = "btn btn-danger btn-lg">Log out here</a>
 
-	<%  }%>
 <% include partials/footer.ejs%>
