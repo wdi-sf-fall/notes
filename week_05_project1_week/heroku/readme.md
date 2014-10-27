@@ -19,6 +19,7 @@
 		5. touch .gitignore
 		6. echo "node_modules" >> .gitignore
 	```
+		
 1. Create a Procfile 
 	- In terminal, run `touch Procfile`
 	- make sure it is named "Procfile" (no extention) 
