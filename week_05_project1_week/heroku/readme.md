@@ -15,7 +15,7 @@
 		1. mkdir FOLDER_NAME_FOR_YOUR_APP
 		2. cd FOLDER_NAME_FOR_YOUR_APP
 		3. touch app.js
-		4. npm init (you can press enter for everything and then yes at the end)
+		4. npm init (you can press enter for everything)
 		5. touch .gitignore
 		6. echo "node_modules" >> .gitignore
 	```
@@ -27,11 +27,12 @@
 2. Open sublime, and in the Procfile write ```web: node app.js``` or in terminal type `echo "web: node app.js" >> Procfile`
 3. Commit your changes before adding a node_modules folder
 ```
-	1. git init 
-	2. git add -A
-	3. git commit -m "First commit" 
+	- git init 
+	- git add -A
+	- git commit -m "First commit" 
 ```
-4. Begin installing your required dependencies (express, body-parser, method-override, ejs etc.)
+
+4. Begin installing your required dependencies `npm install --save express ejs body-parser method-override` etc.
 3. In your app.js file, where you get your server started, include the port number in your app.listen function. Example - 
 ```app.listen(process.env.PORT || 3000)``` - this ensures that when we set the PORT config variable, heroku will run on it (we will set the PORT to 80 for heroku)
 4. Your package.json file is __crucial__ - when you deploy your application, heroku will check the package.json file for all dependencies so whenever you install anything with npm make sure to use --save. You can always check your package.json to see if you are missing anything. 
