@@ -2,8 +2,8 @@
 
 
 ### Before you do anything...
-1. Make sure you have an account with heroku (remember your username and password....you're going to need it pretty soon) - [https://id.heroku.com/signup/www-home-top
-](http://)
+1. Make sure you have an account with heroku (remember your username and password....you're going to need it pretty soon) - [https://id.heroku.com/signup/www-header](https://id.heroku.com/signup/www-header)
+
 2. Make sure you have installed the heroku toolbelt - [https://toolbelt.heroku.com/](https://toolbelt.heroku.com/)
 
 ### To start:
