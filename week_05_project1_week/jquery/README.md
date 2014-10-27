@@ -4,7 +4,7 @@
 
 ###Goals
 
-In this session you will learn to :
+In this session you will learn to:
 
 - appreciate jQuery
 - include jQuery in your project
@@ -15,7 +15,7 @@ In this session you will learn to :
 
 ###Intro
 
-As developers, we are always looking for ways to make our job easier, more efficent and more fun.
+As developers, we are always looking for ways to make our job easier, more efficent and more fun. We learned that we can add functionality to our apps by using `libraries`.
 
 *Q: What's a library?*
  
@@ -25,8 +25,14 @@ As developers, we are always looking for ways to make our job easier, more effic
 
 Today we will introduce you to jQuery, a small, and feature-rich JavaScript library. It makes things like DOM manipulation, event handling, animation much simpler with an easy-to-use API that works across a multitude of browsers.
 
+#####Agenda:
 
-###Installation
+- How to Include jQuery
+- Explore jQuery on a live site
+- Redo earlier project in jQuery
+- Demo a jquery widget
+
+###Including jQuery library
 
 **jQuery is a client-side library**
 
@@ -60,11 +66,8 @@ document.getElementsByTagName('body');
 document.querySelectorAll('a');
 document.querySelector('img');
 ```  
-
-#### Fun with jQuery
-
-jQuery is an alternative to the standard DOM functions. It provides a set of straight forward functions. Let's explore jQuery, go to reddit.
-
+   
+jQuery provides an alternative to the standard DOM functions, and much more. Let's explore ... go to reddit.
 
 #####Example: Make all images disappear.
 
@@ -136,45 +139,46 @@ newP.remove()
 ##### Example: Animation
   
 ```
-// get a list of all posts, they are in siteTable in div elements
-var allPosts = $('body #siteTable > div');
+// get a list of all posts, they are in siteTable in div elements.
+// Good practice: Prepend $ to indicate that it's a jQuery object.
+var $allPosts = $('body #siteTable > div');
 
 // the first is the top post, duh
-var topPost = allPosts.first();
+var $topPost = $allPosts.first();
 
 // Let's make sure, what's the rank?
-topPost.find('.rank').text()
+$topPost.find('.rank').text()
 
 // What's the title
-topPost.find('.title').text()
+$topPost.find('.title').text()
 
 // Let's change it
-topPost.find('.title').text('WDI students are pretty awesome')
+$topPost.find('.title').text('WDI students are pretty awesome')
 
 // And it's gone
-topPost.animate({height: 'toggle' }, 5000);
+$topPost.animate({height: 'toggle' }, 5000);
 
 //Fade ...
-topPost.animate({{ opacity: 0.25 }, 5000);
+$topPost.animate({ opacity: 0.25 }, 5000);
 
 ```
 
 
-### Event handler
+### Events
 
 Event handling is one of the nicest aspects of jQuery because it makes the process easy and consistent across browsers. jQuery provides the high level .bind() and .unbind() functions to generically attach and detach event handlers on matched sets. In addition most of the common events like click, key and mouse events have dedicated handler functions like .click(), .mousedown(), change() and .keydown(). jQuery event handlers simply take a function as a parameter and jQuery tracks these handlers so that they can also be unbound later.
 
 #### Example: hover and click
 
 ```
-var allPosts = $('body #siteTable > div');
+var $allPosts = $('body #siteTable > div');
 
-allPosts
+$allPosts
 .not(":first")
 .hover( function() {
     $(this).css({'background-color': 'red'});
 })
-.click( function(e) {
+.bind('click', function(e) {
     alert("That's Rank: " + $(this).find('.rank').text());
 })
 ```
