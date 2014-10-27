@@ -12,12 +12,12 @@
 1. In terminal, set up your initial folder structure
 	
 	```
-		1. mkdir FOLDER_NAME_FOR_YOUR_APP
-		2. cd FOLDER_NAME_FOR_YOUR_APP
-		3. touch app.js
-		4. npm init (you can press enter for everything)
-		5. touch .gitignore
-		6. echo "node_modules" >> .gitignore
+	1. mkdir FOLDER_NAME_FOR_YOUR_APP
+	2. cd FOLDER_NAME_FOR_YOUR_APP
+	3. touch app.js
+	4. npm init (you can press enter for everything)
+	5. touch .gitignore
+	6. echo "node_modules" >> .gitignore
 	```
 		
 1. Create a Procfile 
@@ -26,11 +26,12 @@
 	- make sure your Procfile is in the same folder as your app.js file) 
 2. Open sublime, and in the Procfile write ```web: node app.js``` or in terminal type `echo "web: node app.js" >> Procfile`
 3. Commit your changes before adding a node_modules folder
-```
-	- git init 
-	- git add -A
-	- git commit -m "First commit" 
-```
+
+	```
+	1. git init 
+	2. git add -A
+	3. git commit -m "First commit" 
+	```
 
 4. Begin installing your required dependencies `npm install --save express ejs body-parser method-override` etc.
 3. In your app.js file, where you get your server started, include the port number in your app.listen function. Example - 
