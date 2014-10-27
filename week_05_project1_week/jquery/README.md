@@ -6,7 +6,6 @@
 
 In this session you will learn to:
 
-- appreciate jQuery
 - include jQuery in your project
 - apply jQuery selectors to manipulate DOM elements in code
 - add and remove DOM elements with jQuery
@@ -15,7 +14,7 @@ In this session you will learn to:
 
 ###Intro
 
-As developers, we are always looking for ways to make our job easier, more efficent and more fun. We learned that we can add functionality to our apps by using `libraries`.
+As developers, we are always looking for ways to make our job easier, more efficent and more fun. We learned that we can add functionality to our apps by including 3rd party `libraries`.
 
 *Q: What's a library?*
  
@@ -27,7 +26,6 @@ Today we will introduce you to jQuery, a small, and feature-rich JavaScript libr
 
 #####Agenda:
 
-- How to Include jQuery
 - Explore jQuery on a live site
 - Redo earlier project in jQuery
 - Demo a jquery widget
@@ -48,7 +46,7 @@ In order to use jQuery, include a script tag on your page. You have two options.
 
 2) Download library and host it on your server.
 
-Usually libraries are *minified*, that is function and variable names are shortened and stripped of white spaces. The smaller the library the faster it loads.
+Usually libraries are *minified*, that is functions and variable names rtc. are shortened and the code is stripped of white spaces. The smaller the library the faster it loads. jQuery is only about 32k.
 
 **Explore cdnjs, look at minified and non minified jQuery**
 
@@ -86,9 +84,11 @@ In jQuery, this is a one-liner:
 $('img').hide()
 ```
 
-What just happened here? **Select and Manipulate**
+What just happened here? 
 
-- Select element: `$('img')` **returns a jQuery selection** (array)
+**Select and Manipulate:**
+
+- Select element: `$('img')`
 - Manipulate: `$('img').hide()` 
 
 `$` - The global jQuery function. Can also be "jQuery"
@@ -97,7 +97,7 @@ What just happened here? **Select and Manipulate**
 
 `hide()` - Built-in jQuery method that operates on the collection
 
-#####Finding elements with css selectors and `$`:
+#####Finding elements using css selectors:
               
 `$('p')`  **selects** `<p>Welcome!</p>`
 
@@ -121,7 +121,9 @@ p.style.fontSize = '100px';
 document.getElementById('header-bottom-left').appendChild(p);​
 ```
 
-Let's do this in jQuery: **Create, Manipulate & Inject**
+Let's do this in jQuery: 
+
+**3 Steps: Create, Manipulate & Inject**
 
 ```
 var newP = $('<p>Hello WDI!!!!!</p>');
