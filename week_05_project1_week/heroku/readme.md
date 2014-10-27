@@ -18,7 +18,6 @@
 		4. npm init (you can press enter for everything and then yes at the end)
 		5. touch .gitignore
 		6. echo "node_modules" >> .gitignore
-
 	```
 1. Create a Procfile 
 	- In terminal, run `touch Procfile`
