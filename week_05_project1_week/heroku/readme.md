@@ -40,8 +40,8 @@
 	``` heroku config:set PORT=80 --app YOUR_APPLICATION_NAME```
 8. Add your remote to push to heroku (YOUR_APPLICATION_NAME is the name of the app you created on heroku.com)
 	``` heroku git:remote -a YOUR_APPLICATION_NAME ```
-9. In terminal, type in heroku ps:scale web=1
 10. Make sure you add/commit any additional changes ``` git commit -am "a nice message"``` and then push to heroku! ``` git push heroku master```
+9. In terminal after you deploy your app, type in `heroku ps:scale web=1 --app YOUR_APPLICATION_NAME`
 11. If you are having an issue with your RSA key or it is prompting you to type a password, enter in terminal ``` ssh-keygen -t rsa``` and press enter until you are brought back to your terminal prompt. When that is done, type in ```heroku keys:add``` and try ```git push heroku master``` again.
 12. If there are no errors, check out your app by going to the url provided at the end of the push or type in ```heroku open```
 
