@@ -4,7 +4,7 @@
 
 ###Goals
 
-In this session you will learn to:
+In this session you will learn how to:
 
 - include jQuery in your project
 - apply jQuery selectors to manipulate DOM elements in code
