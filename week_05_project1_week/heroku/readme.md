@@ -4,11 +4,11 @@
 ### Before you do anything...
 1. Make sure you have an account with heroku (remember your username and password....you're going to need it pretty soon) - [https://id.heroku.com/signup/www-home-top
 ](http://)
-2. Make sure you have installed the heroku toolbelt - [https://toolbelt.heroku.com/](http://)
+2. Make sure you have installed the heroku toolbelt - [https://toolbelt.heroku.com/](https://toolbelt.heroku.com/)
 
 ### To start:
 
-0. Create an app on heroku [https://dashboard.heroku.com/](https://) and click on create new app (always best to give it a name) and then click Create app and then Finish up.
+0. Create an app on heroku [https://dashboard.heroku.com/](https://dashboard.heroku.com/) and click on create new app (always best to give it a name) and then click Create app and then Finish up.
 1. In terminal, set up your initial folder structure
 	
 	```
