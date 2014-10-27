@@ -107,8 +107,8 @@ Always, always, always start by looking at the heroku logs (in terminal, type ``
 1. Did you __commit__ your most recent changes and push them to heroku? If you made any changes or installed any new modules, heroku will not know about it until you run ```git push heroku master```
 2. Is your `config.json` file is set up correctly? Make sure the NODE_ENV is set to 'production' and then check to see that the information from your DATABASE_URL variable match what is in the `config.json`
 3. We can't use the alias sqlize anymore, so when you run your migrations make sure to run `heroku run node_modules/.bin/sequelize SEQUELIZE_COMMAND`
-4. Did you accidentally forget to create config variables for your keys? Remember to add your keys using heroku config:set VARIABLE_NAME=VALUE
-5. Is there anything in your .gitignore file that heroku needs?
+4. Did you accidentally forget to create config variables for your keys? Remember to add your keys using `heroku config:set VARIABLE_NAME=VALUE`
+5. Is there anything in your `.gitignore` file that heroku needs?
 
 ### Heroku best practices
 
