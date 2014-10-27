@@ -17,20 +17,13 @@ In this session you will learn to :
 
 As developers, we are always looking for ways to make our job easier, more efficent and more fun.
 
-Today we will introduce you to jQuery, a small, and feature-rich JavaScript library. It makes things like DOM manipulation, event handling, animation much simpler with an easy-to-use API that works across a multitude of browsers.
-
-Short, jQuery allows you to write less code for common tasks, such as:
-
-- DOM Manipulation
-- Data Manipulation
-- Events
-- Effects & Animation
-
 *Q: What's a library?*
  
 *A: A collection of reusable methods for a particular purpose.*
 
 **What are some libraries that we know and that you most likely use in your projects?**
+
+Today we will introduce you to jQuery, a small, and feature-rich JavaScript library. It makes things like DOM manipulation, event handling, animation much simpler with an easy-to-use API that works across a multitude of browsers.
 
 
 ###Installation
@@ -47,7 +40,7 @@ In order to use jQuery, include a script tag on your page. You have two options.
 
 	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-2) Download library and host it on your server. That's basically the equivalent of `npm install`, but manually. You are the package manager.
+2) Download library and host it on your server.
 
 Usually libraries are *minified*, that is function and variable names are shortened and stripped of white spaces. The smaller the library the faster it loads.
 
@@ -58,7 +51,7 @@ Usually libraries are *minified*, that is function and variable names are shorte
 
 jQuery appeals so much to web designers also because it enables us to select DOM elements in code just like we do with CSS. Let's see it in action.
 
-Think back a couple of weeks when we introduced the DOM API:
+Think back a couple of weeks when we introduced the DOM API and the todo lab:
 
 ```
 document.getElementById('presentation');
