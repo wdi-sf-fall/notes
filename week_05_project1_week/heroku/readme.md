@@ -63,7 +63,7 @@
 	- I use this pattern - __dialect://USERNAME:PASSWORD@HOST:PORT/DATABASE__
 	- So using the sample URL from above, your config.json should look like this for production:
 	
-```
+	```
 	"production": 
 	{
 		"dialect": "postgres",
@@ -73,9 +73,11 @@
 		"port": "5432",
 		"database": "debb6gidjvnlpn"
 	}
-```
+	```
 
-Now run your migrations by typing in terminal ``` heroku run node_modules/.bin/sequelize db:migrate``` and you should have all your tables set up in a heroku hosted database
+5. Add and commit your changes using `git commit -am "adding production db"` and then push your changes to heroku using `git push heroku master`
+6. Now run your migrations by typing in terminal ``` heroku run node_modules/.bin/sequelize db:migrate``` and you should have all your tables set up in a heroku hosted database
+
 
 ### Connect to your heroku DB using psql
 
