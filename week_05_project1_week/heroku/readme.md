@@ -24,7 +24,7 @@
 	- In terminal, run `touch Procfile`
 	- make sure it is named "Procfile" (no extention) 
 	- make sure your Procfile is in the same folder as your app.js file) 
-2. Open sublime, and in the Procfile write ```web: node app.js``` or in terminal type `echo "web: node app.js" >> Procfile`
+	- in terminal type `echo "web: node app.js" >> Procfile`
 3. Commit your changes before adding a node_modules folder
 
 	```
@@ -96,14 +96,14 @@ Always, always, always start by looking at the heroku logs (in terminal, type ``
 
 1. Did you __commit__ your most recent changes and push them to heroku? If you made any changes or installed any new modules, heroku will not know about it until you run ```git push heroku master```
 2. Is your `config.json` file is set up correctly? Make sure the NODE_ENV is set to 'production' and then check to see that the information from your DATABASE_URL variable match what is in the `config.json`
-3. We can't use the alias sqlize anymore, so when you run your migrations make sure to run `heroku run node_modules/.bin/sequelize SEQUELIZE_COMMAND`
+3. We can't use the alias sqlize anymore, so when you run your migrations make sure to run `heroku run node_modules/.bin/sequelize db:migrate` or `sequelize db:migrate`
 4. Did you accidentally forget to create config variables for your keys? Remember to add your keys using `heroku config:set VARIABLE_NAME=VALUE`
 5. Is there anything in your `.gitignore` file that heroku needs?
 
 ### Heroku best practices
 
-- Store your secret information in config variables (this includes the password to your database!)
-	- To create a new config variable 	run this in terminal: `heroku config:set VARIABLE_NAME=VALUE --app YOUR_APPLICATION_NAME` 
+- Store your secret information in config variables (this includes the password to your database and secret keys!)
+	- To create a new config variable run this in terminal: `heroku config:set VARIABLE_NAME=VALUE --app YOUR_APPLICATION_NAME` 
 	- To remove a variable name run in terminal: `heroku config: unset VARIABLE_NAME --app YOUR_APPLICATION_NAME`
 	- To see all of your config variables run `heroku config`
 	- To reference your heroku variable in your code use  `process.env.VARIABLE_NAME` 
