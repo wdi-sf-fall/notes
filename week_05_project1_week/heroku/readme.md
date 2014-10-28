@@ -57,21 +57,11 @@
 	``` heroku addons:add heroku-postgresql:dev```
 2. This should create a DATABASE_URL config variable for you. If not, run ``` heroku config:set DATABASE_URL=(THE OTHER DB URL HEROKU HAS GIVEN) --app YOUR_APPLICATION_NAME```
 3. Set your NODE_ENV variable to 'production' by running this command in terminal: ```heroku config:set NODE_ENV='production' --app YOUR_APPLICATION_NAME``` 
-4. Make sure your production variables in config.json are set - ___this is very important___
-	- Here is the pattern for the URL and the information you need to put into your config.json file: do not include : or @ or / when inputting information 
-	- from my DATABASE_URL config variable: __postgres://rqxjyqeiamscql:GkcgTaqye4-dkctlaYf5DBWvBs@ec2-50-16-201-126.compute-1.amazonaws.com:5432/debb6gidjvnlpn__
-	- I use this pattern - __dialect://USERNAME:PASSWORD@HOST:PORT/DATABASE__
-	- So using the sample URL from above, your config.json should look like this for production:
+4. Make sure your production variables in config.json are set like this
 	
 	```
-	"production": 
-	{
-		"dialect": "postgres",
-		"username": "rqxjyqeiamscql",
-		"password": "GkcgTaqye4-dkctlaYf5DBWvBs",
-		"host": "ec2-50-16-201-126.compute-1.amazonaws.com",
-		"port": "5432",
-		"database": "debb6gidjvnlpn"
+	"production": {
+  		"use_env_variable": "DATABASE_URL"
 	}
 	```
 
