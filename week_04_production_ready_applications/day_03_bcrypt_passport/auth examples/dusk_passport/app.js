@@ -79,15 +79,18 @@ app.get('/home', routeMiddleware.checkAuthentication, function(req,res){
   res.render("home", {user: req.user});
 });
 
-// on submit, create a new users using form values
+// on submit, create a new users using form values and log them in if all goes well
 app.post('/submit', function(req,res){
 
   db.User.createNewUser(req.body.username, req.body.password,
   function(err){
     res.render("signup", {message: err.message, username: req.body.username});
   },
-  function(success){
-    res.render("index", {message: success.message});
+  // This allows the user to be logged in right after creating an account!
+  function(){
+    passport.authenticate('local')(req,res,function(){
+      res.redirect('/home')
+    });
   });
 });
 

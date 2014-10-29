@@ -45,7 +45,10 @@ module.exports = function (sequelize, DataTypes){
               }
             }
             else{
-              success({message: 'Account created, please log in now'});
+              // no need for a success message now that we are redirecting with passport
+              // if you want to send a message, use res.render in app.js
+              // success({message: 'Account created, please log in now'});
+              success();
             }
           });
         }
