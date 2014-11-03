@@ -126,20 +126,20 @@ Convert several examples from our
 
 ##### Syntax #####
 
-    def sayHello
+    def say_hello
         puts "Hello, World!"
     end
 
-    sayHello()
+    say_hello()
 
 ... is the same as ...
 
-    def sayHello
+    def say_hello
         puts "Hello, World!"
     end
 
     # note missing parentheses
-    sayHello
+    say_hello
 
 In Ruby, leaving the `()` off of a function call is acceptable. Since
 functions can't be passed as values (i.e., aren't first-class), Ruby
@@ -147,10 +147,10 @@ knows that we mean to call the function, so it calls it.
 
 ##### Parameters (Arguments) #####
 
-    def sayHello(friend)
+    def say_hello(friend)
         puts "Hello, #{friend}!"
     end
-    sayHello("Tim")
+    say_hello("Tim")
 
 ##### Return Values #####
 
