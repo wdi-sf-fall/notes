@@ -152,6 +152,14 @@ knows that we mean to call the function, so it calls it.
     end
     say_hello("Tim")
 
+... is the same as ...
+
+    def say_hello(friend)
+        puts "Hello, #{friend}!"
+    end
+    # note the lack of parentheses
+    say_hello "Tim"
+
 ##### Return Values #####
 
     def add(num1, num2)
