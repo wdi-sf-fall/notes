@@ -172,3 +172,26 @@ knows that we mean to call the function, so it calls it.
 Ruby will automatically return the value of the last evaluated
 expression.  This is called having "implicit returns". You are free to
 have an explicit return statement, but you don't have to.
+
+### Input / Output
+
+You've already seen how `puts` will output information to the screen.
+What if we want to accept user input? Let's try `gets`.
+
+    puts "Enter your name:"
+    you = gets
+    puts "Enter a friend's name:"
+    friend = gets
+    puts "Hello, #{friend}. #{you} says hi."
+
+That almost works as we want, but `gets` is reading in the newline
+character from when we pressed the Enter key. Generally, when reading
+user input we want to `chomp` the data. (See
+http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html)
+
+    puts "Enter your name:"
+    you = gets.chomp
+    puts "Enter a friend's name:"
+    friend = gets.chomp
+    puts "Hello, #{friend}. #{you} says hi."
+
