@@ -19,7 +19,7 @@
 * Loops
     * `until`, `while`, `times` ...
 * iterators,
-    * `.each`, `.map`, `for ... in`
+    * `.each`, `.map`, `.select`, ...
 
 #### Examples
 
