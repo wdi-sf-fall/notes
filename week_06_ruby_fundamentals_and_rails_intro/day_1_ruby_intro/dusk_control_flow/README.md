@@ -121,12 +121,6 @@ We will convert the examples from our
 
 * Block
     * used with `.each`, `.map`, etc.
-
-    ```
-    some_method do |param1, [param2, [...]]
-    # some code
-    end
-    ```
     * captures scope
 
 #### Examples
