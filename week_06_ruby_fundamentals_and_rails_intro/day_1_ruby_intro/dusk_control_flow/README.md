@@ -119,10 +119,6 @@ We will convert the examples from our
     * optional parameters must be specified
     * implicitly returns last evaluation
 
-* Block
-    * used with `.each`, `.map`, etc.
-    * captures scope
-
 #### Examples
 
 Convert several examples from our
