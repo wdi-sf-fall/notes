@@ -1,0 +1,27 @@
+class Car
+  attr_accessor :make, :model, :year
+  def initialize(make,model,year)
+    @make = make
+    @model = model
+    @year = year
+  end
+  def honk
+    puts "BEEP!"
+  end
+end
+
+class Motorcycle < Car
+  attr_accessor :color
+  def initialize(make, model, year,color)
+    super(make,model,year)
+    @color = color
+  end
+  def honk
+    puts "BEEP! BEEP!"
+  end
+end
+
+c = Car.new("Accord", "Honda", 2002)
+m = Motorcycle.new("Harley", "Sauce", 2012, "red")
+c.honk
+m.honk
