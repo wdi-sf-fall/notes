@@ -319,7 +319,7 @@ to achieve this we have to return a reference to the object after each method
 - DRY - Don't Repeat Yourself & reuse code functionality
 - Faster implementation time
 
-### Example - FIX
+### Example 
 
 ```
 class Foo < Test
@@ -331,7 +331,7 @@ end
 
 ### What is this "super" thing?
 
-Using super can DRY up our code by creating a copy of the parent class. In the example above, we do not need to specify `@name = name` because we can capture that from the super (or parent) class.
+Using super can DRY up our code by creating a copy of a parent method (very similar to call() in JavaScript). In the example above, we do not need to specify `@name = name` because we can capture that from the  parent class. When we call super inside a method, Ruby will go and run the same method that the parent has. So when the child class runs initialize and has super inside, super will call the initialize of the parent class
 
 ## Load/require
 
