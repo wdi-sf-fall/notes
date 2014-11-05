@@ -256,7 +256,7 @@ Go to [Cookbook App](http://localhost:3000) and take a look at the the new model
 
 **Excercise 2 :** 
 
-Let's add a second resource `Recipe` using scaffold generator. Here's the data model:
+Let's add a second resource `Recipe` using scaffold generator. We set up the one-to-many relationsship to `books` by including the foreign key `book_id`. Here's the data model:
 
 ```
 # Table name: recipes
@@ -334,10 +334,13 @@ What we've learned:
 
 Fork and clone this [repo](https://github.com/wdi-sf-fall/cookbook_app). Then run:
 
-`rake db:migrate` and `rake db:seed`
+	bundle install
+	rake db:migrate
+	rake db:seed
 
 Up next: 
 
+- Model association
 - Model validations
 - Forms: Making the Book / Recepie association in Views
 - many-to-many relationships: adding ingredients
