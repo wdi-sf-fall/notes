@@ -63,6 +63,7 @@ Having a **Controller** component helps manage which data resources are relevant
 * The `params` of a request, (Covered in **Express**)
 * Forms (**action**, **method**, and **form fields**)
 * render & redirects
+* ORM
 * `http://guides.rubyonrails.org`
 
 ### Lesson Road Map
