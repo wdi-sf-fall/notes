@@ -130,7 +130,7 @@ In the project root dir, run `rails server`, or short:
 	
 Go to [Cookbook App](http://localhost:3000)	
 	
-###App
+###app folder
 
 `/app` is the most important folder. It's the home for MVC components
 
@@ -146,7 +146,7 @@ Go to [Cookbook App](http://localhost:3000)
 	
 #####ApplicationController
 	
-Important: Controller names are **Plural**.
+Important: Controller names are **plural**.
 
 What's `protect_from_forgery`? Rails magic! A great example of out-of-the-box functionality.
 
@@ -154,7 +154,7 @@ It's a *CSRF countermeasure*, let's take a look at rails guides:
 
 *"To protect against forged requests, we introduce a required security token that our site knows but other sites don't know. We include the security token in requests and verify it on the server"* 
 
-### Assets
+### assets folder
 
 `app/assets` - A place for:
 
@@ -164,7 +164,7 @@ It's a *CSRF countermeasure*, let's take a look at rails guides:
 
 Automatically included in your app.
 
-### Config
+### config folder
 
 Pre-configured set of system and application settings - change only as neccessary.
 
