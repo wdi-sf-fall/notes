@@ -24,6 +24,8 @@ What do we want you to walk away with from Express?
 * Handling params in a request
 * Routing a request
 * Presenting a view with ejs
+* The CRUD concept and RESTfulness
+* Object / Relational mapping and migrations
 
 If you are familiar with those then you are prepared and will practice them again in Rails. Try not to worry about data or databases when reviewing these notes.
 
