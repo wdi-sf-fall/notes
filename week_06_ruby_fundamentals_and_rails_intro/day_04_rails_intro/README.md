@@ -17,14 +17,14 @@
 | :-- |
 | *I think Rails is one of those things that just makes sense once you start doing it*  |
 
-### Moving Away from Express
+### Moving Away from Node & Express
 
 What do we want you to walk away with from Express?
 
 * Handling params in a request
 * Routing a request
 * Presenting a view with ejs
-* The CRUD concept and RESTfulness
+* CRUD and RESTful resources
 * Object / Relational mapping and migrations
 
 If you are familiar with those then you are prepared and will practice them again in Rails. Try not to worry about data or databases when reviewing these notes.
@@ -53,13 +53,13 @@ Having a **Controller** component helps manage which data resources are relevant
 
 ![MVC Diagram](http://elibildner.files.wordpress.com/2012/06/screen-shot-2012-06-05-at-2-12-18-am.png)
 
-**Excercise (5 min): Talk amongst yourself if and how the Node/Express express framework maps to MVC**
+**Excercise (5 min): Talk amongst yourself how the Node/Express express framework supports MVC, or not.**
 	
 ### Related Materials/Information
 
 * Conventions over Configurations 
 * Models, Views, and Controllers 
-* HTTP (**GET, POST, PUT, Delete**) verbs
+* HTTP (**GET, POST, PUT, DELETE**) verbs
 * The `params` of a request, (Covered in **Express**)
 * Forms (**action**, **method**, and **form fields**)
 * render & redirects
@@ -137,7 +137,7 @@ Go to [Cookbook App](http://localhost:3000)
 
 `/app` is the most important folder. It's the home for MVC components
 
-- No models yet
+- No models (yet)
 - No views, but a `layout` (`erb` stands for embedded ruby)
 - A single controller: `ApplicationController`.  The **superclass** of all controllers in the system.
 
@@ -165,7 +165,7 @@ It's a *CSRF countermeasure*, let's take a look at rails guides:
 - javascripts
 - stylesheets
 
-Automatically included in your app.
+Automatically included in your app via the `Asset Pipeline`
 
 ### config folder
 
@@ -173,9 +173,7 @@ Pre-configured set of system and application settings - change only as neccessar
 
 Some highlights:
 
-- environments/
-- locales/en.yml
-- application.rb
+- environments/*
 - database.yml
 - **routes.rb**
 
@@ -190,7 +188,7 @@ Let's start with two objects and a simple association:
 
 The Rails models, as well as corresponding controllers and views, will be created by a scaffold generator program, which comes standard with each Rails project. 
 
-**Note:** **Objects**, that are part of the MVC pattern, such as `Book` or `Recepie`, are referred to as **resources** 
+**Note:** In a RESTful world, **objects** that are part of the MVC pattern, such as `Book` or `Recepie`, are referred to as **resources** 
 
 ###Books
 
@@ -200,16 +198,19 @@ Let's start with cook books. In rails, we can use generators to create code stub
 
 Generators take care of proper naming, i.e. controller names will be **plural** and model names will be **singular**
 
-**Scaffolding** generates a complete set of MVC objects, fully *CRUDed*. If you want a little bit more control over what's being generated, you have the option to generate models and controller individually:
+**Scaffolding** generates a complete set of MVC objects, fully *CRUDed*. If you want a little bit more control over what's being generated, you have the option to generate models and controllers individually.
 
-	rails g model ...
-	rails g controller ...
+	rails g model MODEL_NAME attr1:type attr2:type ... 
+	rails g controller CONTROLLER_NAME method1 method2
 	
 Use `rails g` to view a list of all generators.
+
+**Database Migration**
 
 To proceed with the cookbook application, we first need to migrate the database using `rake`.
 
 **Rake** is a tool you can use with Ruby projects. It allows you to use ruby code to define "tasks" that can be run in the command line. Use `rake -T` to see a list of build-in tasks.	
+
 Run the migration:
 
 	bundle exec rake db:migrate
@@ -237,6 +238,8 @@ Go to [Cookbook App](http://localhost:3000) and take a look at the the new model
 - Migration file
 - Tests!
 
+**Example: new route/controller/view mapping**
+
 **Excercise 1 :**
 
 1) Change the home page to display list off books instead of 'Rails welcome' page.
@@ -248,31 +251,8 @@ Go to [Cookbook App](http://localhost:3000) and take a look at the the new model
 - Add dummy text to 'about' and 'careers' views
 - Create links to 'about' and 'careers' in the nav bar
 
-### End of Part 1 - summary
 
-What we've learned:
-
-- High-level overview of Rails
-- Introduction to MVC
-- First taste of the REST architecture
-- Basic data modeling with Active Record
-
-
-##Part II - Extending cookbook app
-
-Fork and clone this [repo](https://github.com/wdi-sf-fall/cookbook_app). Then run:
-
-`rake db:migrate` and `rake db:seed`
-
-Up next: 
-
-- Adding `Recepie` resource
-- Create `Book` / `Recepie` association
-- Model validations
-- Exposing Book / Recepie association in Views
-- many-to-many relationships: adding ingredients
-
-### Adding Recipes
+### Adding 2nd resource: Recipe
 
 **Excercise 2 :** 
 
@@ -340,6 +320,28 @@ Book.where(chef: "markus").delete_all
 
 ```
  
+### End of Part 1 - summary
+
+What we've learned:
+
+- High-level overview of Rails
+- Introduction to MVC
+- First taste of the REST architecture
+- Basic data modeling with Active Record
+
+
+##Part II - Extending cookbook app
+
+Fork and clone this [repo](https://github.com/wdi-sf-fall/cookbook_app). Then run:
+
+`rake db:migrate` and `rake db:seed`
+
+Up next: 
+
+- Model validations
+- Forms: Making the Book / Recepie association in Views
+- many-to-many relationships: adding ingredients
+
 
 ###Active Record	- validations
 
