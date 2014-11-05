@@ -51,6 +51,7 @@ Having a **Controller** component helps manage which data resources are relevant
 
 ![MVC Diagram](http://elibildner.files.wordpress.com/2012/06/screen-shot-2012-06-05-at-2-12-18-am.png)
 
+**Excercise (5 min): Talk amongst yourself if and how the Node/Express express framework maps to MVC**
 	
 ### Related Materials/Information
 
