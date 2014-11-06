@@ -193,11 +193,6 @@ To get the ID for jumping back and forth use
 Then
 ```rake db:migrate VERSION=ID```
 
-Or
-```rake db:migrate:up VERSION=X```
-```rake db:migrate:down VERSION=X```
-up 
-
 ## Migration methods
 
 ```
@@ -239,7 +234,7 @@ We can check that the migration ran successfully.
 `rake db:migrate:status`
 
 We can also undo the migration if we didn't like it. (Not necessary
-now, but good to know.  If you do this, you can simple re-run the
+now, but good to know.  If you do this, you can simply re-run the
 migration with db:migrate).
 
 `rake db:rollback`
