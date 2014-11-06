@@ -332,35 +332,32 @@ This leads to the most complicated method yet to be talked about. For now we wil
 
 > Someone should now be able to submit a form to our site, right???
 
-### A fatal flaw
-
-It turns out that forms aren't so simple in Rails anymore. There are security concerns that rails is trying to handle from the very beginning. 
-
-> Recall that we indicated that `PlanesController` inherits from `ApplicationController`, which looks like the following:
-
->   class ApplicationController < ActionController::Base
-     # Prevent CSRF attacks by raising an exception.
-     # For APIs, you may want to use :null_session instead.
-     protect_from_forgery with: :exception
-    end
-> The line that says
-> 
->     protect_from_forgery with: :exception
-> means that our forms will have added layer of security. 
-
-
-To even get our rails app to accept our form it needs an `authenticity_token`, which we will casually add in and explain later.
+### Our first form
 
 `app/views/planes/new.html.erb`
 
-	  <form action="/planes" method="post">
-	    <input type="text" name="plane[name]">
-	    <input type="text" name="plane[kind]">
-	    <textarea name="plane[description]"></textarea>
-	    <%= token_tag form_authenticity_token %>
-	    
-	    <button> Save Plane </button>
-	  </form>
+```
+<%= form_for :planes do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :kind %><br>
+    <%= f.text_field :kind %>
+  </p>
+  
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+```
 
 Our form should now submit properly. However, we will see that rails makes handling all the things required in a form easier using something called *form helpers* later.
 
@@ -384,7 +381,7 @@ We just need to save the data being sent in the request. We might be tempted to 
 
 However, while this might be fine in rails `3.2` it won't fly in rails `4.0`, which has something called **strong parameters**. To follow this strong parameters convention we must change the way we accept params to something like one of the following.
 
-We can grab the `:plane` hash out of the `params` hash, and the tell it to permit the keys we want: `:name`, `:type`, and `:description`.
+We can grab the `:plane` hash out of the `params` hash, and the tell it to permit the keys we want: `:name`, `:kind`, and `:description`.
 
 `app/controllers/planes_controller.rb`
 
