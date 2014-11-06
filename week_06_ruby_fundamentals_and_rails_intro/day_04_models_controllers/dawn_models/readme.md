@@ -46,12 +46,13 @@ We've seen pry before as a nice REPL to write ruby in (with syntax highlighting 
 
 ## Creating a model
 
-`rails generate model snake_case_name`
+`rails generate model Taco`
 
-- Creates a model_name.rb file.
+- Creates a taco.rb file.
 - This also creates a migration file.
 - In our model we specify our validations and relationships.
 - File names, class names and table names really matter!
+- Always capitalize the first letter of your model and remember, models in the singular - tables in the plural!
 
 ## In-class Exercise
 
