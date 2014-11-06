@@ -79,7 +79,7 @@ REST stands for **REpresentational State Transfer**. We will demonstrate these p
 | Familiarize ourselves with the initial setup of a new application with the intent of making a *planes* application |
 
 
-* `$ rails new route_app -T -d postgresql`
+* `$ rails new route_app`
 * `$ cd route_app`
 * `$ rails s`
 
@@ -355,7 +355,7 @@ To even get our rails app to accept our form it needs an `authenticity_token`, w
 
 	  <form action="/planes" method="post">
 	    <input type="text" name="plane[name]">
-	    <input type="text" name="plane[type]">
+	    <input type="text" name="plane[kind]">
 	    <textarea name="plane[description]"></textarea>
 	    <%= token_tag form_authenticity_token %>
 	    
@@ -393,7 +393,7 @@ We can grab the `:plane` hash out of the `params` hash, and the tell it to permi
     ...
     
     def create
-      plane = params[:plane].permit(:name, :type, :description)
+      plane = params[:plane].permit(:name, :kind, :description)
       Plane.create(plane)
       redirect_to "/planes"
     end
