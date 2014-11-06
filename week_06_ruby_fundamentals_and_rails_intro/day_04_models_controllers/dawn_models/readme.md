@@ -117,9 +117,9 @@ When you generate a model in rails it will generate a matching migration
 `rails generate model MODEL_NAME column_name:data_type`
 
 In our migration we use a code block to add columns
-`t.column "first_name", :string, :limit => 50`
+`t.column "first_name", :string, limit: 50`
 or
-`t.string "first_name", :limit => 50`
+`t.string "first_name", limit: 50`
 
 Table column types
 
@@ -139,10 +139,10 @@ time
 Table column options
 
 ```
-:limit => size
-:default => value
-:null => true/false
-:precision => number
+limit:  size
+:default: value
+:null: true/false
+:precision:  number
 ```
 
 Also note that Rails automatically adds an ID column
@@ -255,7 +255,7 @@ migration with db:migrate).
 - user.new_record? returns true or false if it exists in the DB
 - user.first_name = "Elie"
 - user.first_name -> returns "Elie"
-- user = User.new(:first_name => "Elie", :last_name => "Schoppik")
+- user = User.new(first_name: "Elie", last_name: "Schoppik")
 - user.save -> saves to the DB
 - user.id -> 1
 
@@ -264,7 +264,7 @@ migration with db:migrate).
 
 1. Do all in 1 step
 
-- user = User.create(:first_name => "Elie", :last_name => "Schoppik") 
+- user = User.create(first_name: "Elie", last_name: "Schoppik") 
 
 #### Updating
 
@@ -279,7 +279,7 @@ Find/save
 Update
 
 1. user = User.find(1)
-2. user.update_attributes(:first_name => "taco")
+2. user.update_attributes(first_name: "taco")
 
 #### Delete
 
@@ -312,7 +312,7 @@ Where(conditions):
 this returns an ActiveRelation object and can also be chained
 
 - can pass in a hash, string or array
-  - User.where("first_name" => "Elie")
+  - User.where(first_name: "Elie")
   - User.where("first_name = ?", "Elie")
      - SQL injection safe
 - use .first to get the object instead of array
