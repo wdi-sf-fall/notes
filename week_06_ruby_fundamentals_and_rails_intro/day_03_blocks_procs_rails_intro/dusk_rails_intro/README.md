@@ -408,7 +408,7 @@ books/_form.html.erb:
 
 Assignment:
 
-- Introduce a new resource `Ingredient`. Here is the table schem:
+- Introduce a new resource `ingredient`. Here is the table schema:
 
 ```
 # Table name: ingredients
@@ -419,14 +419,17 @@ Assignment:
 #  image       :text
 ```
 
-- Add many-to-many relationship between `Ingredient` and `Recepie`
-- Change views to support assigning ingredients to recepies
+* Add many-to-many relationship between `ingredient` and `recipe`
+* Create and change views to support new model:
+	* Create views to add, delete, show and list ingredients
+	* Change the recipe new/edit form to support assigning ingredients	
+	* Show ingredients on recipe page
 
 Hints:
-
+- Research [rails guides](http://guides.rubyonrails.org/association_basics.html) find out how many-to-many realtionships work.
+- many-to-many relationships require a join table. A join table is not a model, just a table. You will need to create a *stand alone migration* that creates the join table, see [Migrations](http://guides.rubyonrails.org/migrations.html#creating-a-standalone-migrationl)
 - This [Stackflow article](http://stackoverflow.com/questions/19473044/rails-4-many-to-many-association-not-working)
-- Remember many-to-many in `Sequelize`. You will need a join table!
-- Create a stand alone migration for the join table. See [Rails guides](http://guides.rubyonrails.org/migrations.html#creating-a-standalone-migration)	
+
 
 
 
