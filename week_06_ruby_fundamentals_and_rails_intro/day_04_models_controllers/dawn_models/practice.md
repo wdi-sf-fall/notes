@@ -18,18 +18,17 @@ For this exercise, we'd like you to strengthen your Rails console skills. This e
 7. Validate that every first and last name cannot be empty
 7. Combine all of these individual validations into one validation (using validate and a hash) 
 8. Using the create syntax create a student named John Doe who is 33 years old
-9. Show if this new student entry is valid
+9. Show if this new student entry is valid (this command returns true or false)
 10. Show the number of errors for this student instance
-11. In one command, Change John Doe's name to Jonathan Doesmith 
-12. Clear the errors array
+11. In one command, Change John Doe's name to Jonathan Doe 
 13. Save Jonathan Doesmith
 15. Find all of the Students
 16. Find the student with an ID of 128 and if it does not exist, make sure it returns nil and not an error
 17. Find the first student in the table
 18. Find the last student in the table
 19. Find the student with the last name of Doesmith
-21. Find all of the students and limit the search to 5 students, starting with the 2nd student and finally, order the students in alphabetical order
-20. Delete Jonathan Doesmith
+21. Find all of the students and limit the search to 5 students, starting with the 2nd student and finally, order the students by first_name ascending.
+20. Delete Jonathan Doe
 
 
 
