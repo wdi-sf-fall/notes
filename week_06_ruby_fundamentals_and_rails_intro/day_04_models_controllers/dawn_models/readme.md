@@ -1,4 +1,4 @@
-# Models and Validation
+# Models and Validations
 
 ## Objectives
 
