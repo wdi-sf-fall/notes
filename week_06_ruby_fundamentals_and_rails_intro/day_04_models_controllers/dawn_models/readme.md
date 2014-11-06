@@ -42,7 +42,7 @@ joke)
 
 ## Creating a model
 
-`rails generate model CamelCaseName`
+`rails generate model snake_case_name`
 
 - Creates a model_name.rb file.
 - This also creates a migration file.
