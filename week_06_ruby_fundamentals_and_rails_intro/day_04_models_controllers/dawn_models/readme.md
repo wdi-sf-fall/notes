@@ -40,6 +40,10 @@ your last command so that it's `rake -T db`.  [Additional Reading](https://rubyg
 .yml - YAML, YAML Ain't Markup Language (recursive definition and a
 joke)
 
+### pry-rails
+
+We've seen pry before as a nice REPL to write ruby in (with syntax highlighting and indentation). When we move to rails console, IRB is not always the most friendly to work with and pry is a much nicer alternative. To enable pry for rails console, we have to install a gem called `pry-rails`. In your Gemfile, include this line `gem 'pry-rails'`. When that's done, in Terminal, run `bundle` (same as running `bundle install`)
+
 ## Creating a model
 
 `rails generate model snake_case_name`
