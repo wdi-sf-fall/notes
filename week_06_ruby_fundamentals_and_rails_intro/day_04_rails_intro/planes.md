@@ -8,77 +8,6 @@
 |   Student should be able to setup CRUD routing for a resource |
 |   Student should be able to explain the high level connection between the MVC pattern and RESTful routing for resources |
 
-
-| Note |
-| :--- |
-| This is a first introduction and high level overview of Rails. No one should expect to fully understand all the topics covered. We will discuss each topic more in specialized lessons this week. Then we will end the week with a comprehensive lesson to see them all together again. |
-
-## Past Feedback
-
-| Graham Wong (WDI SF Jan-March) via Hipchat|
-| :-- |
-| *I think [R]ails is one of those things that just makes sense once you start doing it*  |
-
-
-
-## Moving Away from Express
-
-What do we want you to walk away with from Express?
-
-* Handling params in a request
-* Routing a request
-* Presenting a view with ejs
-
-If you are familiar with those then you are prepared and will practice them again in Rails. Try not to worry about data or databases when reviewing these notes.
-
-
-## Why The Rails Workflow and Organization (Bullet)?
-
-In a bullet list, the why is as follows:
-  
-* to separate certain aspects of a larger applications
-* to familiarize ourselves with the most common pattern used to design web applications, **Model-View-Controller**
-* to facilitate workflow using conventions
-
-## Need More Motivation For Code Organization? 
-
-### Separating Concerns
-
-In writing a large application it is important to establish something known as **Separation of Concerns**, *writing modular code that focuses on one aspect within the application.* The benefit of this is similar to idea of **compartementalization** with respect to a production line, which allows for *more rapid development* by being able to **divide and conquer** the construction of a product. Comparments can focus on one task and optmize functional concerns far outside the scope of other compartments, but still work together to acheive the same product.  Ultimately it reduces the headache of debugging and controlling a large application that can ultimately grow to a level of complexity that no one person could ever fully comprehend (nor want or need to). 
-
-### Organizational Principles
-
-In order to manage the development of emerging aspects within a project it is important to construct a guideline that will shape how things are separated, a **design pattern**, which everyone can use to maintain **consistent** organization of different aspects. This is a *conventional* choice that helps to understandably scale a project. Part of the role of a developer is to become familiar with using design patterns, but this takes time (and trust), as different patterns emphaize an array of qualities: scalability, modularity, security, performance, et cetera.
-
-### Conventions To Focus On
-
-In Rails we see one of the most popular patterns of Web Application Design that has evolved over the years, **Model-View-Controller**. The **MVC** patterns seeks to separate components into **Data Concerns**, **Presentation Concerns**, and **Request and Response (or Action) Concerns** respectiveley:
-
-**MVC**
-
-| Component | Type of Concern |
-| :--- | :--- |
-| <b>M</b>odel | Data Concerns |
-| <b>V</b>iew | Presentation Concerns |
-|<b>C</b>ontrollers  | Request and Response (or Action) Concerns |
-
-Having a **Model** component helps avoid issues of mixing the logic of gathering or editing data with displaying it (*Views*) or determining what data is related to requests from app users (*Controllers*).
-
-Having a **View** dedicates one component just to specializing presentation of html to users using data without worrying about how data was retrieved (*Model*) or if it was relevant to a request made by a user (*Controller*).
-
-Having a **Controller** component helps manage which data resources are relevant to a request from a user, what to do with the data, and how to respond to a user without worrying about how to present an html response (*View*) or manage logic concerning data(*Model*).
-
-
-### Related Materials/Information
-
-* Conventions over Configurations 
-* Models, Views, and Controllers 
-* HTTP (**GET, POST, PUT, Delete**) verbs
-* The `params` of a request, (Covered in **Express**)
-* Forms (**action**, **method**, and **form fields**)
-* redirects
-
-
 ## Lesson Road Map
 
 We demonstrate routing by making an application to handle managing our favorite planes.
@@ -99,8 +28,6 @@ We demonstrate routing by making an application to handle managing our favorite 
     * make a **create route** for submitting new planes
     * make a **create method** for saving new planes and redirecting
     
-
-
 ## CRUD and REST
 
 **CRUD** stands for **Create**, **Read**, **Update**, **Delete**. These are the minimum and most common actions need for interacting with data in an application. For example someone needs to be able to *Create* their facebook profile, **Read** it, **Update** it, and if they're busy, **Delete** it.
