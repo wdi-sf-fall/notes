@@ -1,6 +1,5 @@
-# Intro to Rails
-## A Routing First Overview
 
+# A Routing Overview
 
 | Objective |
 | :----   |
