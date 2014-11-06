@@ -281,7 +281,7 @@ Let's create the `app/views/planes/new.html.erb` with a form that the user can u
 	
 	  <form action="/planes" method="post">
 	    <input type="text" name="plane[name]">
-	    <input type="text" name="plane[type]">
+	    <input type="text" name="plane[kind]">
 	    <textarea name="plane[description]"></textarea>
 	    
 	    <button> Save Plane </button>
@@ -407,7 +407,7 @@ or, (preferably) just say `.require(:plane)`
 	    ...
 	    
 	    def create
-	      plane = params.require(:plane).permit(:name, :type, :description)
+	      plane = params.require(:plane).permit(:name, :kind, :description)
 	      Plane.create(plane)
 	      redirect_to "/planes"
 	    end
@@ -444,7 +444,7 @@ Let's finally put some `erb` in our `index` view.
 	    
 	    <div>
 	      Name: <%= plane[:name] %> <br>
-	      Type: <%= plane[:type] %> <br>
+	      Kind: <%= plane[:kind] %> <br>
 	      Description: <%= plane[:description] %>
 	    </div>
 	  
