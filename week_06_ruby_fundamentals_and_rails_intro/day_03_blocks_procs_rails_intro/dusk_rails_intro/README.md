@@ -431,7 +431,16 @@ Hints:
 
 ### Lab Solution
 
-####1) Create join table for recipe and ingredients
+
+####1) Create ingredient resource
+
+Looks like a typical MVC resource, let's scaffold:
+
+	rails g scaffold ingredient name:string measurement:string image:text
+
+Verify that resource was created. How?
+
+####2) Create join table for recipe and ingredients
 
 Create *stand alone* migration and run it. There is a migration generator which will produce join tables if JoinTable is part of the name, see rails guides. Let's try this:
 
@@ -450,7 +459,29 @@ Inspect generated migration file:
 
 [API docs](http://apidock.com/rails/ActiveRecord/ConnectionAdapters/SchemaStatements/create_join_table) for **create_join_table** method
 
-Run migration:
+**Alternatively**: You can also create the table explicitly. To generate an empty migration file:
+
+	rails generate migration AddIngredientsRecipesTable
+
+
+Generates: 
+
+```
+class AddIngredientsRecipesTable < ActiveRecord::Migration
+  def change
+  end
+end
+```
+
+Now you add **create_table** statement directly:
+
+	create_table :ingredients_recipes, :id => false do |t|
+		t.integer :ingredient_id
+		t.integer :recipe_id
+	end
+ 
+
+Either way, when done, run migration:
 
 	rake db:migrate
 	
@@ -460,7 +491,7 @@ Verify that table was created in DB. In this project we use sqlite:
 	> .schema
 	
 	
-####2) Add many-to-many association in models
+####3) Add many-to-many association in models
 
 In [rails guides](http://guides.rubyonrails.org/association_basics.html): Choosing Between has_many :through and has_and_belongs_to_many
 
@@ -481,7 +512,7 @@ class Ingredient < ActiveRecord::Base
 end
 ```
 
-####3) Test in rails console
+####4) Test in rails console
 
 Fire up rails console:
 
@@ -499,7 +530,7 @@ SELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_recipes" ON "i
 
 Yes, it does.
 
-####4) Add seed data
+####5) Add seed data
 
 In /db/seed.rb, add seed data to test new relationship:
 
@@ -511,7 +542,7 @@ Run
 	
 Go to localhost:3000 and verify the UI, did the seed data stick?
  		
-####5) Make ingredients show up on recipe page
+####6) Make ingredients show up on recipe page
 
 	<div class="col-md-7 col-sm-7">
     <% @recipe.ingredients.each do |ingredient| %>
@@ -520,7 +551,7 @@ Go to localhost:3000 and verify the UI, did the seed data stick?
     <% end %>
 	</div>
 
-####6) Add ingredients to recipe add/edit form
+####7) Add ingredients to recipe add/edit form
 
 
 	<div class="input-group">
@@ -532,13 +563,13 @@ Go to localhost:3000 and verify the UI, did the seed data stick?
 	</div>
 
 
-####7) Add link to ingredients to nav bar
+####8) Add link to ingredients to nav bar
 
 Use **url_helper**!
 
 	<li><%= link_to('Ingredients', ingredients_path) %></li>
 
-####8) Style ingredient views
+####9) Style ingredient views
 
 ... that's not done :-( 
 
