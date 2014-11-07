@@ -378,17 +378,14 @@ books/show.html.erb:
 
 ```
 <% @book.recipes.each do |recipe| %>
-    <p>&nbsp;</p>
+
   <div class="row">
     <div class="col-md-5 col-sm-5">
       <p class="lead"><%= recipe.name %></p>
       <%= image_tag(recipe.image) %>
     </div>
-
-    <div class="col-md-7 col-sm-7">
-      <!-- Ingridients go here -->
-    </div>
    </div>
+
 <% end %>
 ```
 
@@ -399,6 +396,7 @@ books/_form.html.erb:
     <% Recipe.order(:name).each do |recipe| %>
        <span class="input-group-addon">
         <%= recipe.name %>
+        
         <%= check_box_tag 'book[recipe_ids][]', recipe.id, recipe.in?(@book.recipes), {class: "checkbox inline"} %>
         </span>
     <% end %>
@@ -429,6 +427,121 @@ Hints:
 - Research [rails guides](http://guides.rubyonrails.org/association_basics.html) find out how many-to-many realtionships work.
 - many-to-many relationships require a join table. A join table is not a model, just a table. You will need to create a *stand alone migration* that creates the join table, see [Migrations](http://guides.rubyonrails.org/migrations.html#creating-a-standalone-migrationl)
 - This [Stackflow article](http://stackoverflow.com/questions/19473044/rails-4-many-to-many-association-not-working)
+
+
+### Lab Solution
+
+####1) Create join table for recipe and ingredients
+
+Create *stand alone* migration and run it. There is a migration generator which will produce join tables if JoinTable is part of the name, see rails guides. Let's try this:
+
+	rails g migration CreateJoinTableRecipeIngredient recipie ingredient
+
+Inspect generated migration file:
+
+	class CreateJoinTableRecipeIngredient < ActiveRecord::Migration
+  		def change
+    		create_join_table :recipes, :ingredients do |t|
+      			# t.index [:recipe_id, :ingredient_id]
+      			# t.index [:ingredient_id, :recipe_id]
+    		end
+  		end
+	end
+
+[API docs](http://apidock.com/rails/ActiveRecord/ConnectionAdapters/SchemaStatements/create_join_table) for **create_join_table** method
+
+Run migration:
+
+	rake db:migrate
+	
+Verify that table was created in DB. In this project we use sqlite:
+
+	sqlite3 db/development.sqlite3 
+	> .schema
+	
+	
+####2) Add many-to-many association in models
+
+In [rails guides](http://guides.rubyonrails.org/association_basics.html): Choosing Between has_many :through and has_and_belongs_to_many
+
+Our join table is not an independent entity, i.e. a first class model, it's only a join table, hence we chose **has_and_belongs_to_many**
+
+In `/app/models`:
+
+```
+class Recipe < ActiveRecord::Base
+  belongs_to(:book)
+  has_and_belongs_to_many :ingredients
+end
+```
+
+```
+class Ingredient < ActiveRecord::Base
+	  has_and_belongs_to_many :recipes
+end
+```
+
+####3) Test in rails console
+
+Fire up rails console:
+
+	Recipe.first.ingredients
+
+	Ingredient.first.recipes
+	
+We don't get any errors, we're good to go. Inspect SQL, looks good?
+
+```
+SELECT  "recipes".* FROM "recipes"   ORDER BY "recipes"."id" ASC LIMIT 1
+SELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_recipes" ON "ingredients"."id" = "ingredients_recipes"."ingredient_id" WHERE "ingredients_recipes"."recipe_id" = ?  [["recipe_id", 22]]
+
+```	
+
+Yes, it does.
+
+####4) Add seed data
+
+In /db/seed.rb, add seed data to test new relationship:
+
+	r1.ingredients = [i1, i2, i4]
+
+Run
+
+	rake db:seed
+	
+Go to localhost:3000 and verify the UI, did the seed data stick?
+ 		
+####5) Make ingredients show up on recipe page
+
+	<div class="col-md-7 col-sm-7">
+    <% @recipe.ingredients.each do |ingredient| %>
+      <%= ingredient.name %>
+      <%= image_tag(ingredient.image,  size: "40x40") %>
+    <% end %>
+	</div>
+
+####6) Add ingredients to recipe add/edit form
+
+
+	<div class="input-group">
+    <% Ingredient.order(:name).each do |ingredient| %>
+      	<span class="input-group-addon"><%= ingredient.name %>
+      	<%= check_box_tag 'recipe[ingredient_ids][]', ingredient.id, ingredient.in?(@recipe.ingredients.to_a), {class: "checkbox inline"} %>
+      </span>
+    	<% end %>
+	</div>
+
+
+####7) Add link to ingredients to nav bar
+
+Use **url_helper**!
+
+	<li><%= link_to('Ingredients', ingredients_path) %></li>
+
+####8) Style ingredient views
+
+... that's not done :-( 
+
 
 
 
