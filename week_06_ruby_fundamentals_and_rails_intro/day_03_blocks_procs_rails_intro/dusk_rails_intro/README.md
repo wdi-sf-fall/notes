@@ -444,7 +444,7 @@ Verify that resource was created. How?
 
 Create *stand alone* migration and run it. There is a migration generator which will produce join tables if JoinTable is part of the name, see rails guides. Let's try this:
 
-	rails g migration CreateJoinTableRecipeIngredient recipie ingredient
+	rails g migration CreateJoinTableRecipeIngredient recipe ingredient
 
 Inspect generated migration file:
 
