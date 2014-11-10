@@ -82,7 +82,7 @@ Read more [here](http://guides.rubyonrails.org/action_controller_overview.html#s
 
 Unfortunately...not this: 
 
-[![Flash](http://img.youtube.com/vi/MS4_Z84-rRE/0.jpg)](https://www.youtube.com/watch?v=MS4_Z84-rRE)
+[![Flash](http://img.youtube.com/vi/MS4_Z84-rRE/0.jpg =300x300)](https://www.youtube.com/watch?v=MS4_Z84-rRE)
 
 The flash is a special part of the session which is cleared with each request. This means that values stored there will only be available in the next request, which is useful for passing error messages etc. It is accessed in much the same way as the session, as a hash (it's a FlashHash instance).
 
