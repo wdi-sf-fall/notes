@@ -149,3 +149,7 @@ config.action_view.field_error_proc = Proc.new { |html_tag, instance|
 ```
 
 Make sure to restart your server after including this change.
+
+### ignoring your secrets.yml file
+
+In your .gitignore, make sure to include `config/secrets.yml` as you do not want people seeing your secret keys for signing cookies. To generate new keys run `rake secret` and paste over your existing `secret_key_base`. Also make sure to restart your server for these changes to take effect.
