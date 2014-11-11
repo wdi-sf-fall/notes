@@ -1,0 +1,38 @@
+<div class="text-center">
+<h1>Please sign up to register for classes!</h1>
+
+<% if @student.errors.any? %>
+  <% @student.errors.full_messages.each do |error| %>
+    <p class = "text-danger"><%= error %></p>
+  <% end %>
+<% end %>
+
+<%= form_for(@student, url: signup_path) do |f|%>
+<p>
+  <%= f.label(:name)%>
+  <%= f.text_field(:name, autofocus: true) %>
+</p>
+<p>
+  <%= f.label(:username)%>
+  <%= f.text_field(:username) %>
+</p>
+
+<p>
+  <%= f.label(:password)%>
+  <%= f.password_field(:password) %>
+</p>
+
+<p>
+  <%= f.label(:password_confirmation, "Confirm password")%>
+  <%= f.password_field(:password_confirmation) %>
+</p>
+
+<p>
+  <%= f.submit("Sign up", class: "btn btn-primary")%>
+</p>
+
+<% end %>
+<p>
+  <%= link_to("Already have an account? Log in here", login_path) %>
+</p>
+</div>

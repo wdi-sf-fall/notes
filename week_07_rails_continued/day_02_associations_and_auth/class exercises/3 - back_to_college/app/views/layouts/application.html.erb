@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>College</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+</head>
+<body class = "container">
+
+<% flash.each do |key, value| %>
+  <% if key == "notice" %>
+    <%= content_tag :div, value, class: "text-center alert alert-warning" %>
+  <% elsif key == "alert" %>
+    <%= content_tag :div, value, class: "text-center alert alert-danger" %>
+  <% else %>
+    <%= content_tag :div, value, class: "text-center alert alert-success" %>
+  <% end %>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>
