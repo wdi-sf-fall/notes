@@ -18,7 +18,7 @@ While there are lots of different ways to authenticate users, we are going to us
 	rails g model User username password password_digest
 	```
 
-5. Validate that your user always has a username and that your post always has 
+5. Validate that your user always has a username 
 
 3. Run `rake db:create db:migrate`
 
