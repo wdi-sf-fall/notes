@@ -55,7 +55,7 @@ Here is an example of creating a user and immidiately logging them in with our s
 
 ```
 def create
-    @user = Student.create(user_params)
+    @user = User.create(user_params)
     if @user.save
       session[:user_id] = @user.id
       flash[:success] = "You are now logged in!"
