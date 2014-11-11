@@ -88,8 +88,8 @@ __In the migration__
 
 Always remember, the foreign keys go in the table that `belongs_to` others - so we put it in the enrollment table
 
-`t.references :course` <br>
-`t.references :student`
+`t.integer :course_id` <br>
+`t.integer :student_id`
 
 ```
 elie = Student.create(name: "Elie")
