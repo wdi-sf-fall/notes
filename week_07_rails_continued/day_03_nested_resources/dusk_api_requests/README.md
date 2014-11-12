@@ -19,7 +19,8 @@ Curl allows you to make requests from your terminal. It can be particularly help
 ##Advanced Binding
 Let's examine how we can use binding.pry to peak behind the scenes and get deeper understanding of how the methods we're using work.
 
-* Jump into a binding session and start examining some methods or hashes you typically use. Ie. `sessions` or `link_to`
+* gem `pry-rails`
+* Goal: Jump into a binding session and start examining some methods or hashes you typically use. Ie. `sessions` or `link_to`
 
 ##HTTParty Code Along
 Our controllers not only delegate our app's actions, but they can also request information from other applications' APIs.
@@ -28,7 +29,7 @@ In order to make API requests we need to learn about a few gems that can help us
 * gem 'httparty'
 * bundle
 * go back to binding.pry
-* hit the iTunes API in the session
+* Goal: hit the iTunes API in the session
 
 ```
 search_term = "perpetuum+mobile"
