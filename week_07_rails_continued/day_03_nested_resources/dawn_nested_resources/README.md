@@ -14,6 +14,8 @@ class we are going to finish it up, then add books, which will belong
 to authors.  In other words, a Book will be a _nested resource_ of an
 Author.
 
+[https://github.com/wdi-sf-fall/nested_resources](https://github.com/wdi-sf-fall/nested_resources)
+
 Routes
 ------
 
