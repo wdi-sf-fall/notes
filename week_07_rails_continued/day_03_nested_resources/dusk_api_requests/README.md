@@ -2,7 +2,7 @@ API Calls in Ruby/Rails
 
 ##Objectives
 
-* Introduction to curl
+* Make curl requests
 * Inspect the inner workings of Rails using binding.pry
 * Make an API request from the pry REPL using HTTParty
 * Parse an API's HTTP response into JSON
