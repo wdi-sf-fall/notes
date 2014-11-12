@@ -40,7 +40,7 @@ res["results"][0]["previewUrl"]
 ##Typheous Pair Programming
 Objective:
 
-* Build a page with an input that allows users to search music related queries
+* Build a page with an input that allows users to search music related queries via the iTunes API
 * Make an API request in your Rails controller using Typheous or HTTParty
 * As needed reference the iTunes APi [documentation](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
 * Parse the response into JSON
