@@ -9,19 +9,15 @@ PI Calls in Ruby/Rails
     
         
 ##Overview
-        We'll do a quick advanced lecture on binding, a code along to make a simple API request, and then a pair programming excersise to reinforce what we just learned.
-
-##Intro
-Our controllers not only delegate our app's actions, but they can also request information from other applications' APIs.
-
-In order to make API requests we need to learn about a few gems that can help us do that.
+We'll start with diving into a binding session, move on to a code along with a goal of making a simple API request, and then a pair programming excersise to reinforce what we just learned.
 
 ##Advanced Binding
-Let's examine how we can use binding.pry to peak behind the scenes on how specific methods work
+Let's examine how we can use binding.pry to peak behind the scenes and get deeper understanding of how the methods we're using work.
 `method(:link_to).parameters`
 
 ##HTTParty Code Along
-Inside pry:
+Our controllers not only delegate our app's actions, but they can also request information from other applications' APIs.
+In order to make API requests we need to learn about a few gems that can help us do that, first HTTParty.
 
 ```
 require('httparty')
