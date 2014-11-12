@@ -16,6 +16,12 @@ Author.
 
 [https://github.com/wdi-sf-fall/nested_resources](https://github.com/wdi-sf-fall/nested_resources)
 
+    git clone https://github.com/wdi-sf-fall/nested_resources.git
+    cd nested_resources
+    bundle install
+    rake db:create
+    rake db:migrate
+
 Routes
 ------
 
