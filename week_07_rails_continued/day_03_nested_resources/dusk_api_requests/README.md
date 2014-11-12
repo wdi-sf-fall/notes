@@ -14,7 +14,9 @@ API Calls in Ruby/Rails
 We'll start with an overview of curl, next we'll hop into a binding.pry session with a goal of making a simple API request, finally we'll take part in a pair programming excersise to reinforce what we just learned.
 
 ##Curl
-Curl allows you to make requests from your terminal. It can be particularly helpful in simulating post requests. Our goal here will be to use curl in order to step into a binding.pry session.
+Curl allows you to make requests from your terminal. `curl http://www.example.com`
+
+It can be particularly helpful in simulating post requests.  `curl -X POST -d "name=billy" localhost:3000/curlme`
 
 ##Advanced Binding
 Let's examine how we can use binding.pry to peak behind the scenes and get deeper understanding of how the methods we're using work.

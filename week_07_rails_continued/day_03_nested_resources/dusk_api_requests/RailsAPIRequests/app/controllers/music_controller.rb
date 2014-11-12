@@ -1,5 +1,5 @@
 class MusicController < ApplicationController
-  skip_before_filter :verify_authenticity_token, :only => [:test]
+  skip_before_filter :verify_authenticity_token, :only => [:curlMe]
 
   def index
   end
@@ -15,7 +15,7 @@ class MusicController < ApplicationController
     @first_song_preview = res_obj["results"][0]["previewUrl"]
   end
 
-  def curlMe
+  def curlme
     binding.pry
   end
 
