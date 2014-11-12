@@ -40,11 +40,12 @@ res["results"][0]["previewUrl"]
 ##Typheous Pair Programming
 Objective:
 
-* Build a page with an input that allows users to search music related queries via the iTunes API
-* Make an API request in your Rails controller using Typheous or HTTParty
-* As needed reference the iTunes APi [documentation](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
-* Parse the response into JSON
-* Render a page displays the first song's title, previewurl in an audio tag, and artwork image in an image tag
+* Assign and your teammeber as Person X and Person Y respectively
+* Build a page with an input that allows users to search music related queries via the iTunes API **Person X Drives**
+* Make an API request in your Rails controller using Typheous or HTTParty **Person Y Drives**
+    * As needed reference the iTunes APi [documentation](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
+* Parse the response into JSON **Person X Drives**
+* Render a page displays the first song's title, previewurl in an audio tag, and artwork image in an image tag **Person Y Drives**
 * Bonus, render all the results onto the page and style it
 
 
