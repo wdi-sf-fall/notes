@@ -4,8 +4,8 @@
 
 ####Goals
 
-- Learn how to send emails from rails **and** rails
-- Understand basic mail server configuration
+- Learn how to send emails from rails **and** the command line
+- Understand basic mail configuration
 - Practice adding new feature to exisiting code base
 
 ###Brief history
