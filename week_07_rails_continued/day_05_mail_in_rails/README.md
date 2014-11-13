@@ -125,7 +125,7 @@ First, create a new [initializer file](http://guides.rubyonrails.org/configuring
 
 	/config/initializers/setup_mail.rb
 	
-Add `ActionMailer` configuration like this:
+Add `ActionMailer` configuration to something like this:
 
 	
 ```
@@ -140,7 +140,7 @@ ActionMailer::Base.smtp_settings = {
 }
 ```
 
-To reveal my password, I placed it in `secrets.yml` ... and my ENV variables.
+To not reveal my password, I placed it in `secrets.yml` ... and my ENV variables.
 
 	
 
