@@ -19,9 +19,9 @@ Implement a **reset password** feature in simple login app (or app of your choic
 
 **Tips:**
 
-- You will need to generate a random **reset token** that becomes part of the reset url in the **reset password email**. The reset password url in **reset password email** should look something like this: 
+You will need to generate a random **reset token** that becomes part of the reset url in the **reset password email**. The reset password url in **reset password email** should look something like this: 
 
-```http://localhost:3000/reset/JFJNJHRQFQUNAOKP```
+http://localhost:3000/reset/JFJNJHRQFQUNAOKP
 
 - The system needs to persist the user's **reset token**. Add a column **reset_token** to the users table (migration!)
 
