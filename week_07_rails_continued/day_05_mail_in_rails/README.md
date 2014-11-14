@@ -27,9 +27,9 @@ A [diagram](http://www.ponderweasel.com/wp-content/uploads/2014/03/how-email-wor
 
 ##Mail in rails
 
-Sending email from Rails applications is easy thanks to **ActionMailer**. 
+Sending email from Rails applications is easy thanks to [**ActionMailer**](http://guides.rubyonrails.org/action_mailer_basics.html). 
 
-ActionMailer behaves like a controller. You create methods that create emails, rather than rendering pages. 
+Instances of ActionMailer behave like controllers. The difference is that they have methods representing emails, rather than pages. 
 
 ###practice
 
@@ -39,20 +39,22 @@ Feel free to use your lab code or clone this [solution](https://github.com/wdi-s
 
 ####1) Create ActionMailer instance
 
+Just like controllers, the best way to create an ActionMailer instances is asking rails to generate one:
+
 	rails g mailer user_mailer signup_confirmation
 	
-This command creates an app/mailers directory with a user_mailer.rb file in it and we can use this to send out our signup confirmation email. The generator also creates two views for the message which contains some default text. One view for plain text emails, another formatted in html.
+This command creates an app/mailers directory with a user_mailer.rb file in it and we can use this to send out our signup confirmation email. The generator also creates two views for the message which contains default text. One view for plain text emails, another formatted in html. This is to support **multi-part emails**.
 
 	/app/views/user_mailer/signup_confirmation.text.erb
 	/app/views/user_mailer/signup_confirmation.html.erb
 
-Not all clients prefer HTML emails, and so sending both is best practice. ActionMailer takes care of sending both version in the message body, the mail client picks the preferred.
+Not all clients prefer HTML emails, and so sending a plain text vcersion is best practice. ActionMailer sends **multi-part emails**, the mail client picks the preferred.
 	
 ####2) Writing the email method
 	
 Note that we can share instance variables between the view and the mailer itself much like we can with a controller.
 		
-It’s important that the signup_confirmation method ends with a call to mail as this will generate the email and return it. 
+It’s important that the **signup_confirmation method** ends with a call to mail as this will generate the email and return it. 
 
 We can pass a variety of options to this method including who we send it to and the message’s subject. 
 
