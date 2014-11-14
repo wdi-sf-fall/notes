@@ -29,7 +29,7 @@ A [diagram](http://www.ponderweasel.com/wp-content/uploads/2014/03/how-email-wor
 
 Sending email from Rails applications is easy thanks to **ActionMailer**. 
 
-ActionMailer behaves like a controller. You create methods that represent emails, rather than pages. 
+ActionMailer behaves like a controller. You create methods that create emails, rather than rendering pages. 
 
 ###practice
 
@@ -68,7 +68,7 @@ Here's the `signup_confirmation` email:
   
 See the [API documentation](http://api.rubyonrails.org/classes/ActionMailer/Base.html) for a list of all the options we can pass in to the mail method, for example, how to send attachments.
 
-We still need to specify who to send the email to; this should be the email specified in the form. 
+We still need to specify who to send the email to; this should be the email/username specified in the form. 
 
 By design mailer classes don’t have access to request parameters so we’ll have to pass in the User model in different way. 
 
@@ -96,7 +96,7 @@ Thank you for signing up!
 
 Our email is now pretty much complete and we just need to send it from our `access_controller`.
 
-Decide when you want to send the email and add call to `UserMailer` accordingly:
+Decide when you want to send the email and ask `UserMailer` to deliver the email:
 
 
     UserMailer.signup_confirmation(@user).deliver

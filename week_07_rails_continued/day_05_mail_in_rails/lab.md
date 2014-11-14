@@ -1,35 +1,35 @@
 **Action Mailer Lab / Homework**
 
-Implement reset password feature in simple login app (or app of your choice)
-
-**Prerequisite:** 
-
--  The welcome email feature works
--  Action Mailer is configured and sending emails
+Implement a **reset password** feature in simple login app (or app of your choice)
 
 
 **Requirements:**
 
-- On signin view, user should be able to click a **forgot password link** rendering a forgot password view
+- On the **login view**, user should be able to click a **forgot password link** rendering a **forgot password view**
 
-- On the **forgot password view**, user should be able to enter and submit username (which is an email) to request a new password.
+- On the **forgot password view**, user should be able to submit email (i.e. username) to request resetting password.
 
-- System sends **reset password** email containing unique link to reset user's password on the site 
+- In response, the system sends **reset password email** containing a url that takes the user to a **reset password view**.
 
-- On **reset password view**, user should be able to enter new password and password confirmation and submit it.
+- On the **reset password view**, user should be able to enter a new password and password confirmation and submit it. The system updates the user with the new password. 
 
-- Upon success, user is logged in and redirected to profile page
+- The system checks that password and password confirmation match.
+
+- Upon success, user is redirected to **login view** where she can try out new password.
 
 **Tips:**
 
-- Use the user's remember_token to generate unique reset password link in reset password email. The link should look something like this: 
+- You will need to generate a random **reset token** that becomes part of the reset url in the **reset password email**. The reset password url in **reset password email** should look something like this: 
 
-```http://localhost:3000/reset/xmbCPqeCfqxossoOcxciSw```
+```http://localhost:3000/reset/JFJNJHRQFQUNAOKP```
 
+- The system needs to persist the user's **reset token**. Add a column **reset_token** to the users table (migration!)
 
-- You will need at least three new routes backed up by three new controller methods (tip: why not use `access_controller` ?)
-  - A route responding to forgot password link => renders forgot password view
-  - A route responding to the 'Reset password' click in the forgot password view
-  - A route responding to the 'reset password' link contained in reset password email => renders reset password view with password/password confirmation inputs (and shows the username)
-
+- You will need a bunch of new routes, views and methods in access_controller:
+  - A route for the **forgot password link** => renders a forgot password view
+  - A route (post!) for the form in **forgot Password view** => responds to form submit 
+  - A route for the **reset password** url contained in **reset password email** => renders reset password view with password/password confirmation inputs (and shows the username)
+  - A route for saving the new password in the system
+  
+So this is four new routes, that means you will need at least four new controller methods responding to the routes and rendering/redirecting the next step.
 
