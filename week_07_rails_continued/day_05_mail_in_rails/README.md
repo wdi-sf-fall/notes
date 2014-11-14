@@ -78,7 +78,7 @@ We’ll alter the signup_confirmation method so that it takes a user argument an
 def signup_confirmation(user)
   @user = user
 
-  mail to: user.email, subject: "Sign Up Confirmation"
+  mail to: user.username, subject: "Sign Up Confirmation"
 end
 ```
 
@@ -87,7 +87,7 @@ end
 Let's go to the views. It's just a view, so we can use instance variables.
 
 ```
-<%= @user.name %>,
+<%= @user.username %>,
 
 Thank you for signing up!
 ```
