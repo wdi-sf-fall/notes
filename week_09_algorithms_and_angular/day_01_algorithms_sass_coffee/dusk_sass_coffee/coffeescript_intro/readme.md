@@ -55,8 +55,7 @@
 	$ coffee -bcw name.coffee
 
 
-## Functions, List Comprehensions, Conditionals (30 min):
-## Functions
+## Functions, List Comprehensions, Conditionals:
 * Functions are declared with the "Skinny Arrow": ->
 	* "->" converts to "function(){ }"
 	* functions use "Fat Arrow" => to bind the current value of "this"
