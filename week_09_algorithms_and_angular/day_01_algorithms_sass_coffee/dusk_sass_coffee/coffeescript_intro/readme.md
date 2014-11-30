@@ -12,9 +12,9 @@
 * CoffeeScript is easier to write and easier to read than JavaScript (for some....)
 * Very well documented.
 
-		* http://jashkenas.github.io/coffee-script/
-		* http://js2coffee.org/
-		* http://arcturo.github.io/library/coffeescript/index.html
+		* [http://jashkenas.github.io/coffee-script/](http://jashkenas.github.io/coffee-script/)
+		* [http://js2coffee.org/]http://js2coffee.org/](http://js2coffee.org/]http://js2coffee.org/)
+		* [http://arcturo.github.io/library/coffeescript/index.html](http://arcturo.github.io/library/coffeescript/index.html)
 
 ### Installation (not necessary, but useful if you would like to mess around with coffeescript outside of Rails and without a tool like Grunt/Gulp)
 
