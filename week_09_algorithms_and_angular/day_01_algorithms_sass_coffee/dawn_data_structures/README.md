@@ -71,7 +71,7 @@ An Array requests access to mailboxes that are at sequential
 addresses.  If I want to have an Array with 10 elements in it, I
 reserve 10 mailboxes that are all right next to each other.
 
-This is nice because it's very fast to find the nth element in an
+This is nice because it's very fast to find the _nth_ element in an
 Array. You just take the starting address and move over _n_ spots.
 
 This is bad because if you want to add an element to the array, you
@@ -79,6 +79,11 @@ need to acquire an additional mailbox, but one that is next to your
 existing mailboxes might not be available. In that case you'll need to
 request 11 sequential addresses and copy your whole array into the new
 space.
+
+_This is an oversimplification but it is close enough of a model to
+illustrate the tradeoffs being made with a theoretical Array. In
+practice, Arrays in JavaScript or Ruby will be smarter than this and
+do a better job of managing memory._
 
 -------------------------------------------------------------------------
 
