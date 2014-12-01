@@ -131,13 +131,30 @@ Tree
 In a way, a [Tree][wiki_trees] is like a more generalized version of a
 Linked List where each Node can have more than one child.
 
+* Tree nodes have a parent-child relationship.
+* Trees cannot contain cycles (i.e., branches can't intertwine)
+* There is a starting node called a `root node`.
+* A `leaf node` is one that has no children.
+
+### Traversal ###
+
+Searching a Tree is more complicated than searching a linear data
+structure such as an Array or Linked List.
+
+The two main approaches are:
+
+* [Depth-first search][wiki_dfs], and
+* [Breadth-first search][wiki_bfs]
+
+DFS is the easiest to implement is the one you should tackle first.
+
 ### Exercise ###
 
 __Implement a Tree__
 
 1. Need to create a representation of a Node (or Vertex).
-2. Write a function to add one Node as a child of another.
-3. Write a function to search a Tree for a value.
+2. Write a method `add_child` to add a new child with the given value.
+3. Write a method `find` to search a Tree for a value. (Hint: DFS)
 
 ### Specific Types of Trees ###
 
@@ -204,3 +221,5 @@ Resources
 [wiki_bigo]: http://en.wikipedia.org/wiki/Big_O_notation
 [bigo_cheat]: http://bigocheatsheet.com/
 [wiki_64_bit]: http://en.wikipedia.org/wiki/64-bit_computing
+[wiki_dfs]: http://en.wikipedia.org/wiki/Depth-first_search
+[wiki_bfs]: http://en.wikipedia.org/wiki/Breadth-first_search
