@@ -133,7 +133,7 @@ where each Node can have more than one child.
 
 ### Exercise ###
 
-__ Implement a Tree__
+__Implement a Tree__
 
 1. Need to create a representation of a Node (or Vertex).
 2. Write a function to add one Node as a child of another.
