@@ -146,7 +146,8 @@ The two main approaches are:
 * [Depth-first search][wiki_dfs], and
 * [Breadth-first search][wiki_bfs]
 
-DFS is the easiest to implement is the one you should tackle first.
+DFS is the easiest to implement is the one you should tackle first in
+your programming careers.
 
 ### Exercise ###
 
