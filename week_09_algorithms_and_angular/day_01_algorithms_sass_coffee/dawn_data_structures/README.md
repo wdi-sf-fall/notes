@@ -167,8 +167,7 @@ Since a big issue when discussing data structures is their efficiency
 in the face of certain tasks, we want to use a common language to
 discuss such (in)efficiencies. Normally, we are interested in how much
 memory or processing time is needed to complete the task depending on
-the size of the input. We often let _n_ be a stand in for the input
-size.
+the size of the input. We often let _n_ represent the input size.
 
 So, an algorithm that is O(1), is said to be "Big O of 1" or
 "constant", and does not vary depending on the size of the input. This
