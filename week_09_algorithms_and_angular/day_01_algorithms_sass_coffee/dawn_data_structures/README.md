@@ -128,8 +128,8 @@ __Implement a Linked List__
 Tree
 ----
 
-In a way, a Tree is like a more generalized version of a Linked List
-where each Node can have more than one child.
+In a way, a [Tree][wiki_trees] is like a more generalized version of a
+Linked List where each Node can have more than one child.
 
 ### Exercise ###
 
