@@ -90,8 +90,8 @@ that.
 Linked List
 -----------
 
-A __Linked List__ (or __Singly Linked List__) is another way of
-organizing a list of elements.
+A [__Linked List__][wiki_list] (or __Singly Linked List__) is another
+way of organizing a list of elements.
 
 Instead of requesting _n_ contiguous memory locations, you just create
 _n_ nodes (or vertices) and link them yourself.  Each node can be
@@ -197,6 +197,7 @@ Resources
 [data_structure]: http://en.wikipedia.org/wiki/Data_structure
 [list_of_structures]: http://en.wikipedia.org/wiki/List_of_data_structures
 [wiki_array]: http://en.wikipedia.org/wiki/Array_data_structure
+[wiki_list]: http://en.wikipedia.org/wiki/Linked_list
 [wiki_trees]: http://en.wikibooks.org/wiki/Data_Structures/Trees
 [wiki_heaps]: http://en.wikibooks.org/wiki/Data_Structures/Min_and_Max_Heaps
 [wiki_tries]: http://en.wikipedia.org/wiki/Trie
