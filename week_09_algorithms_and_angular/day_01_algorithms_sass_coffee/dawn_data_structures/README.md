@@ -14,9 +14,6 @@ __Common Data Structures__
 and [more][list_of_structures], including
 
 * Hashes
-* Stacks/Queues
-* Graphs
-* Sets
 
 A couple of those look familiar from JavaScript and Ruby. `Arrays` and
 `Hashes` are present in both languages. (In JavaScript, hashes are
