@@ -34,7 +34,7 @@
 	* indent two spaces to start a new block
 	* improper indentation is the source of __lots__ of problems the __hardest__ part by far when learning coffeescript
 
-### 	Now is a good time to go to Sublime Text > Preferences > Settings-User and make sure you have `"tab_size": 2` in there :)
+### 	Now is a good time to go to Sublime Text > Preferences > Settings-User and make sure you have `"tab_size": 2`, `"translate_tabs_to_spaces": true` and `"trim_trailing_white_space_on_save": true` in there :)
 
 * Parenthesis are not required:
 	* CoffeeScript convention is to use parenthesis on everything except the outermost one
