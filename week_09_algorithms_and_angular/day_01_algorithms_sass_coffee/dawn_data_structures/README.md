@@ -62,32 +62,23 @@ stored in memory. What _is_ an Array, really?
 
 #### Memory ####
 
-Q: What's a bit?  
-A: A _binary digit_. A `0` or a `1`.
+Your computer's memory can be thought of as a place to store
+stuff. Maybe we can think of them as mailboxes. Depending on how much
+memory you have, you might have X mailboxes, each with their own
+address.
 
-Q: What's a byte?  
-A: Eight bits.
+An Array requests access to mailboxes that are at sequential
+addresses.  If I want to have an Array with 10 elements in it, I
+reserve 10 mailboxes that are all right next to each other.
 
-Q: What is a word?  
-A. It's a slot in memory. Computers rarely give you control over
-individual bits or even bytes. On a 32-bit machine, you get access to
-words of 32 bits. On a 64-bit machine, you get access to words that
-are 64 bits. (32 bits => 4 bytes, 64 bits => 8 bytes).
+This is nice because it's very fast to find the nth element in an
+Array. You just take the starting address and move over _n_ spots.
 
-Put another way, an array of 10 integers needs 10 sequential memory
-_slots_ (or _words_) to store the data. On a 64-bit machine, this
-would be 640 sequential bits (or 80 bytes). On a 32-bit machine, it
-would be half that.
-
-In Wikipedia's words:,
-> ... an array of 10 32-bit integer variables, with indices 0 through
-> 9, may be stored as 10 words at memory addresses 2000, 2004, 2008,
-> ... 2036, so that the element with index i has the address 2000 +
-> 4 × i.
-> -- <cite>[Wikipedia][wiki_array]</cite>
-
-
-See also: [64-bit architecture][wiki_64_bit]
+This is bad because if you want to add an element to the array, you
+need to acquire an additional mailbox, but one that is next to your
+existing mailboxes might not be available. In that case you'll need to
+request 11 sequential addresses and copy your whole array into the new
+space.
 
 -------------------------------------------------------------------------
 
