@@ -194,12 +194,11 @@ Resources
 * [Heaps on Wikibooks][wiki_heaps]
 * [Big-O Cheat Sheet][bigo_cheat]
 
-
-[data_structure]:[http://en.wikipedia.org/wiki/Data_structure]
-[list_of_structures]:[http://en.wikipedia.org/wiki/List_of_data_structures]
-[wiki_array]:[http://en.wikipedia.org/wiki/Array_data_structure]
-[wiki_trees]:[http://en.wikibooks.org/wiki/Data_Structures/Trees]
-[wiki_heaps]:[http://en.wikibooks.org/wiki/Data_Structures/Min_and_Max_Heaps]
-[wiki_tries]:[http://en.wikipedia.org/wiki/Trie]
-[wiki_bigo]:[http://en.wikipedia.org/wiki/Big_O_notation]
-[bigo_cheat]:[http://bigocheatsheet.com/]
+[data_structure]: http://en.wikipedia.org/wiki/Data_structure
+[list_of_structures]: http://en.wikipedia.org/wiki/List_of_data_structures
+[wiki_array]: http://en.wikipedia.org/wiki/Array_data_structure
+[wiki_trees]: http://en.wikibooks.org/wiki/Data_Structures/Trees
+[wiki_heaps]: http://en.wikibooks.org/wiki/Data_Structures/Min_and_Max_Heaps
+[wiki_tries]: http://en.wikipedia.org/wiki/Trie
+[wiki_bigo]: http://en.wikipedia.org/wiki/Big_O_notation
+[bigo_cheat]: http://bigocheatsheet.com/
