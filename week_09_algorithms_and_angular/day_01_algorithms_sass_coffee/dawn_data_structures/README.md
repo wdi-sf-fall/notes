@@ -120,10 +120,10 @@ following for Arrays.  How do they compare for Linked Lists?
 __Implement a Linked List__
 
 1. Need to create a representation of a Node (or Vertex).
-2. Create a linked list consisting of 3 vertices.
-3. Write a function to calculate the length of a list.
-4. Write a function to add an element.
-5. Write a function to remove an element.
+2. Write a function `add` that appends a new value to the end of the list.
+3. Write a function `length` that returns the length of a list.
+4. Write a function `print` that nicely prints the list.
+5. Bonus: Write a function `remove` to remove a node from the list.
 
 Tree
 ----
