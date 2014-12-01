@@ -192,6 +192,7 @@ Resources
 * [Trees on Wikibooks][wiki_trees]
 * [Heaps on Wikibooks][wiki_heaps]
 * [Big-O Cheat Sheet][bigo_cheat]
+* [64-bit Computing][wiki_64_bit]
 
 [data_structure]: http://en.wikipedia.org/wiki/Data_structure
 [list_of_structures]: http://en.wikipedia.org/wiki/List_of_data_structures
@@ -202,3 +203,4 @@ Resources
 [wiki_tries]: http://en.wikipedia.org/wiki/Trie
 [wiki_bigo]: http://en.wikipedia.org/wiki/Big_O_notation
 [bigo_cheat]: http://bigocheatsheet.com/
+[wiki_64_bit]: http://en.wikipedia.org/wiki/64-bit_computing
