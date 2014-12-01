@@ -193,7 +193,7 @@ is good. This is fast even for very large _n_.
 
 An algorithm that is O(n), is said to be "Big O of _n_" or "linear", and
 this indicates that the resources required grow proportionally to the
-size of the input. This is reasonable performace.
+size of the input. This is reasonable performance.
 
 Another that is O(n^2), is said to be "Big O of _n_ squared" and it means
 the resources grow in proportion to the square of the input. This is
