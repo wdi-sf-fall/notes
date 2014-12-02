@@ -96,7 +96,7 @@ To catch up:
 	
 ##Step 4 - arrays and loops
 
-Loops are also directives!
+Loops are directives!
 
 1) setup array. ``ng-init`` is like ``ng-model`` but allows to initialize model.
 
