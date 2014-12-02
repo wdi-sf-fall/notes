@@ -32,7 +32,7 @@ AngularJS is a full-featured SPA framework that lets you extend HTML vocabulary 
 
 Fork & clone: 
 
-	https://github.com/wdi-sf-fall/angular-in-eight-steps
+	https://github.com/wdi-sf-fall/intro-to-angular-in-eight-steps
 
 	
 Fire up webserver:
