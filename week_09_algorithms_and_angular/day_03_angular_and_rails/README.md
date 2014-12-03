@@ -9,7 +9,7 @@ Building a raffler application: Randomly pick winners from a list of players. Tu
 
 ####1) Getting started:
 
-Clone this repo and explore application.
+Clone [this repo](https://github.com/wdi-sf-fall/angular-and-rails) and explore application.
 
 	bundle
 	rake db:create
