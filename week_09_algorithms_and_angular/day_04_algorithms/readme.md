@@ -333,14 +333,6 @@ Worst case of insertion sort -> O(n^2)
 
 Best case of insertion sort -> O(n)
 
-### Quicksort
-
-Choose a random number as the pivot, and then look at then we look at 2 things, the lowest index (to the right of the wall), and the left most element (current element) - we want to look at all the elements < pivot to the left and all the elements > pivot to the right. Then we drop the pivot on the wall to put it between all the numbers smaller and all the numbers larger.
-
-![http://upload.wikimedia.org/wikipedia/commons/9/9c/Quicksort-example.gif](http://upload.wikimedia.org/wikipedia/commons/9/9c/Quicksort-example.gif)
-
-How to pick a pivot - [http://stackoverflow.com/questions/164163/quicksort-choosing-the-pivot](http://stackoverflow.com/questions/164163/quicksort-choosing-the-pivot)
-
 ## Merge Sort
 
 Similar to quick sort, This is one of the most efficient ways of sorting an array. It has three steps, divide, conquer(sort) and then combine(merge). 
