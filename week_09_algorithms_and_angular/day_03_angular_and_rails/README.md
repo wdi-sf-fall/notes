@@ -102,14 +102,14 @@ Test it!
 
 ####3) Replace server side ERB with client side Angular
 
-a) We go back to plain HTMl:
+a) We go back to plain HTML:
 
-* Remove `.erb` from `views/players/index.html.erb`
+* Remove `.erb` from `views/raffler/index.html.erb`
 
 
 b) In raffler.js, create angular app module
 
-	var app = angular.module("Raffler", []);
+	var app = angular.module("raffler", []);
 	
 c) Add application name to `ng-app` tag
 
