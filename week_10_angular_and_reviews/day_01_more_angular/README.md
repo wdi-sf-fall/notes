@@ -154,7 +154,7 @@ When should I use `$location`? Any time your application needs to react to a cha
 *The $location service parses the URL in the browser address bar (based on the window.location) and makes the URL available to your application. Changes to the URL in the address bar are reflected into $location service and changes to $location are reflected into the browser address bar.*
 
 
-Use html5 URL mode - [Here's why](http://html5demos.com/history/third). Add this inside the config function:
+Use html5 URL mode - [Here's why](http://html5demos.com/history). Add this inside the config function:
 
 	$locationProvider.html5Mode({
 		enabled: true
