@@ -198,7 +198,8 @@ Some tree facts:
 
 ### So where do we see trees in the real world?
 
-- __Everywhere Everywhere?? Everywhere!!__ (for that reference - [http://www.youtube.com/watch?v=a_ZwHJOi_XY&t=0m56s](http://www.youtube.com/watch?v=a_ZwHJOi_XY&t=0m56s)
+Everywhere! Including:
+
 - The file system on your disk is hierarchical data
 - Organizing data for quick search insertion deletion, (BST is O(log n))
 - Storing dictionary for spellchecking - Trie
