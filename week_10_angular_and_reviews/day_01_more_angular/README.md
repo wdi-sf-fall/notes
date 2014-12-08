@@ -208,7 +208,7 @@ It's because in our routes we're using HTML5 mode, but when we send a request to
 
 If we want to use the Angular router, we have to tell Rails to send missing URLs to us. This needs to be the very last route
 
-	match '*path' => "popcorn#index", :via => [:get, :post]
+	match '*path' => "raffler#index", :via => [:get, :post]
 
 Try again, now it should work. Let's add a link on 
 
