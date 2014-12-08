@@ -26,7 +26,7 @@ Clone [this repo](https://github.com/wdi-sf-fall/angular-and-rails-part-two) and
 
 ####1) Refactoring
 
-Take a quick look at the new folder strcuture under `app/assets/javascripts`
+Take a quick look at the new folder structure under `app/assets/javascripts`
 
 * app.js
 * controllers directory
