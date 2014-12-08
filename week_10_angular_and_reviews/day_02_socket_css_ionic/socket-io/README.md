@@ -10,7 +10,18 @@ What are WebSockets?
 First of all, we need to know a bit about WebSockets before Socket.IO
 will make sense.
 
+WebSockets are in the realm of HTTP or AJAX. They are a method for two
+computers to talk to each other. In the common case where you have
+your web browser talk to your server, the browser had to initiate all
+the requests and the server could merely respond. WebSockets allow
+for both sides to send messages back and forth.
+
 ![WebSocket Graphic](websocket-client-server.png)
+
+Ignore the SSE portion of the below graphic.  XHR is like your AJAX
+(XmlHttpRequest). Note the difference between AJAX and WebSocket. In
+AJAX all interaction need to be initiated by the client. In the
+WebSocket example, the server is able to send messages at its leisure.
 
 ![WebSockets vs Poll](websocket-vs-poll.png)
 
