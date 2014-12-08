@@ -9,6 +9,7 @@
 * Add more pages, controllers, factories
 * Understand Angular routing and links
 * Integrate external APIs
+* Doing Ajax and using *promises* in Angular
 
 Let's start with a quick overview of what we are going to build.
 
