@@ -461,3 +461,26 @@ $scope.movie.youtubeUrl = $sce.trustAsResourceUrl("http://www.youtube.com/embed/
 $scope.movie.youtubeId + "?rel=0"); 
 ```
 
+###LAB:
+
+* Extend application and add another page that renders result of a 3rd party API - or write another *respond_to :json* api in Rails and call that. Use a factory to wrap API call.
+
+* Add a filter 'fullname' that displays the Southpark character's full name. For example:
+
+
+```
+{{ Stan | fullname }} 
+```
+	
+should result in
+
+	Stan Broflovski
+	
+Or come up with a more meaningful filter, if you can.
+	
+	
+	 
+	
+
+
+
