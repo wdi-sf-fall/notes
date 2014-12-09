@@ -3,9 +3,7 @@
 ![Pig](http://msjacoby.com/wilbur.gif)
 
 ##Objective
-Using your knowledege of **animations** in CSS, you should be able to create cool animations in any browser.
-
-Today we will be creating a animation of a pig walking. You can see a gif of what the [final product](http://imgur.com/mwOvBSA) should look like.
+Using your knowledege of **animations** in CSS, we will be creating a animation of a pig walking. You can see a gif of what the [final product](http://imgur.com/mwOvBSA) should look like.
 
 ###1) Open the HTML file `pigAnimation`
 	
