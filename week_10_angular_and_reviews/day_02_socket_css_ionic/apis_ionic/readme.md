@@ -40,7 +40,7 @@ To learn more about headers...head on over [here](http://code.tutsplus.com/tutor
 
 If you want to play around with a very small API example - you can check out this repo [here](https://github.com/wdi-sf-fall/sample_rails_api). The next steps in building this API would be to enable CORS as well as changing the CSRF to null_session (when you start adding POST requests).
 
-If you would like to learn more about API and API security, this [codeschool](https://www.codeschool.com/courses/surviving-apis-with-rails) course is phoenominal on teaching how to build secure APIs using Token Authentication. 
+If you would like to learn more about API and API security, this [codeschool](https://www.codeschool.com/courses/surviving-apis-with-rails) course is phenomenal on teaching how to build secure APIs using Token Authentication. 
 
 This [railscast](http://railscasts.com/episodes/352-securing-an-api?view=asciicast) is also another great resource for learning more about API security
 
