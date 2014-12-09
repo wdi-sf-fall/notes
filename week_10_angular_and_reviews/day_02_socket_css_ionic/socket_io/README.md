@@ -37,7 +37,7 @@ shows code snippets in JavaScript and Node.js. Now I can rule out
 other things, like it being a Ruby framework or a Python library. The
 demos aren't very helpful in determining if it's server-side,
 client-side, or both. I'm also not sure how it's different from raw
-WebSockets. Getting Started looks like it will walk me through some
+WebSockets. "Getting Started" looks like it will walk me through some
 tutorials, but I'm not ready for that level of committment. The
 [docs](http://socket.io/docs/) help narrow the scope since I see `npm`
 and `Express` mentioned, which tie into things I know.  I also see
@@ -53,8 +53,8 @@ to be very helpful in getting a high-level overview. It clarifies:
 - uses WebSockets (with a fallback if WebSockets is unsupported)
 - adds some additional features on top of WebSockets
 
-Time to try out Socket.IO
--------------------------
+Time to try it out
+------------------
 
 You never really understand something until you try it.
 
