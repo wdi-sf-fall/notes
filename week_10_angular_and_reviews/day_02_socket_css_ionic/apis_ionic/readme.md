@@ -9,7 +9,7 @@
 
 #### Same origin policy and CORS
 
-When you build a public API, you quickly run into the issue of the Same Origin Policy. The same-origin policy restricts how a document or script loaded from one origin can interact with a resource from another origin. Same-origin Policy is used as a means to prevent Cross-site Request Forgery (or XSS) attacks.
+When you build a public API, you quickly run into the issue of the Same Origin Policy. The same-origin policy restricts how a document or script loaded from one origin can interact with a resource from another origin. Same-origin Policy is used as a means to prevent Cross-site scripting (or XSS) attacks.
 
 You can read more about it [here](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)
 
