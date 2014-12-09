@@ -1,0 +1,10 @@
+/*Container*/
+#the-scene {
+  width: 800px;
+  height: 600px;
+  background: url('images/background.png') top left no-repeat;
+  border-radius: 30px;
+  margin: 0 auto;
+  position: relative;
+  /*overflow: hidden;*/
+}
