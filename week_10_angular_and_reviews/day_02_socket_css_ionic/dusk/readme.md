@@ -47,7 +47,7 @@ We are looking to create two animations here. Unfortunely if we write two animat
 ###Bonus
 
 * Write this in SCSS
-
+* Go help the students in week 4!
 
 
 
