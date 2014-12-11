@@ -25,7 +25,8 @@ Mini-example: counting the number of times a user has visited a page
 if(!localStorage.pageLoadCount) {
 	localStorage.pageLoadCount = 0;
 }
-localStorage.pageLoadCount = parseInt(localStorage.pageLoadCount) + 1;                document.getElementById('count').textContent = localStorage.pageLoadCount;
+localStorage.pageLoadCount = parseInt(localStorage.pageLoadCount) + 1;
+document.getElementById('count').textContent = localStorage.pageLoadCount;
 ```
 `</script>`
 
