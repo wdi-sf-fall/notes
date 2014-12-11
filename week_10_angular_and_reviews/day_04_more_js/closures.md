@@ -97,7 +97,6 @@ Closures
 > languages, even ones that don't explicitly contain let
 > or lambda, such as Perl or JavaScript.
 >
-> -
 > <cite>[Let Over Lambda](http://www.amazon.com/Let-Over-Lambda-Doug-Hoyte/dp/1435712757) -
 > Doug Hoyte</cite>
 
