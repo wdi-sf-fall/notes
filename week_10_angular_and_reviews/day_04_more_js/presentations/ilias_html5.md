@@ -55,6 +55,6 @@ document.addEventListener("click", function(e){
   document.documentElement.webkitRequestFullScreen(); //this is chrome specific
 })
 ```
-###Stay Up to Date
+##Stay Up to Date
 * Reference [HTML5 Rocks](http://updates.html5rocks.com/) for all updates
 * Checkout Chrome's latest experimential features by typing `chrome://flags` into the Chrome's url field and/or use [Canary](https://www.google.com/chrome/browser/canary.html)
