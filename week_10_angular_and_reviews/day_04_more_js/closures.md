@@ -15,7 +15,7 @@ First-Class Functions
 > and I do. In Javaland, you see, nouns [objects] are very
 > important, by order of the King himself. Nouns are the most
 > important citizens in the Kingdom. They parade around looking
-> distinguished in their showy finery , which is provided by
+> distinguished in their showy finery, which is provided by
 > the Adjectives, who are quite relieved at their lot in life.
 > The Adjectives are nowhere near as high-class as the Nouns,
 > but they consider themselves quite lucky that they weren't
@@ -103,7 +103,7 @@ Closures
 ![Patrick asks a question about closures](img/closure.jpg)
 
 Patrick is pretty close to being correct. Actually, by some
-definitions, he may be correct. A function with a function
+definitions, he may be correct. A function within a function
 does create the conditions for a closure, but you have to
 return the inner function from the outer one to get the
 benefit(s).
