@@ -2,7 +2,7 @@
 
 ##History
 * Developed by [W3C](http://en.wikipedia.org/wiki/World_Wide_Web_Consortium) and [WHATWG](http://en.wikipedia.org/wiki/WHATWG)
-* Stable [release] in October 2014 [ref](http://techcrunch.com/2014/10/28/w3c-declares-html5-standard-done/)
+* Stable [release](http://techcrunch.com/2014/10/28/w3c-declares-html5-standard-done/) in October 2014
 
 
 ##References
