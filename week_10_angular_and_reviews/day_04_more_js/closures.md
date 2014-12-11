@@ -34,7 +34,7 @@ citizens? Yes, Java (see above) is one example. Functions can
 only be methods of Objects, and cannot exist on their own.
 
 #### Examples of First-Class Functions
-```
+```javascript
 // Store a function in a variable. You could store any
 // datatype in the `sayHi` variable, including a string,
 // a boolean, or even a function!
@@ -43,14 +43,14 @@ var sayHi = function () {
 };
 ```
 
-```
+```javascript
 // Pass one function to another function. Here I'm passing
 // two arguments to `setTimeout`: a Number and a Function.
 // Meaning the Function is first-class, just like Number.
 setTimeout(sayHi, 1000);
 ```
 
-```
+```javascript
 // You can even return a function from another function.
 var outer = function () {
   console.log("i am outer");
@@ -72,7 +72,7 @@ Lexical Scope
 Scope determines what variables are visiable / available
 where.
 
-```
+```javascript
 var name = "Tim";
 var sayHi = function () {
   console.log("Hi, my name is " + name);
@@ -115,7 +115,7 @@ Create an inner function within an outer function.
 Use __lexical scope__ to access variable in outer scope
 from the inner scope. _Easy peasy_.
 
-```
+```javascript
 var outer = function () {
 
   var name = "Tim";
@@ -134,7 +134,7 @@ outer();  // prints "name is Tim"
 
 Return the created function. _First-class functions_.
 
-```
+```javascript
 var outer = function () {
 
   var name = "Tim";
@@ -153,7 +153,7 @@ Access variables from the outer function in the inner
 function __after__ the outer function has returned.
 _Closure_.
 
-```
+```javascript
 var outer = function () {
 
   var name = "Tim";
