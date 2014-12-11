@@ -167,6 +167,6 @@ var outer = function () {
 var fn = outer();
 fn(); // prints "name is Tim"
 
-// This is a closure. How in the hell is `name` still
-// available for use even _outside_ of `outer`?
+// This is a closure. It allows `name` to be available
+// for use even outside of the `outer` function.
 ```
