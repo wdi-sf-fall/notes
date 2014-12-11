@@ -88,9 +88,9 @@ environment_ to find the variable `name`.
 Closures
 --------
 
-> Sometimes it's called a __closure__, other times a saved
-> lexical environment. Or, as some of us like to say, __let
-> over lambda__. Whatever terminology you use, mastering
+> Sometimes it's called a _closure_, other times a saved
+> lexical environment. Or, as some of us like to say, _let
+> over lambda_. Whatever terminology you use, mastering
 > this concept of a closure is the first step to becoming
 > a professional lisp programmer. In fact, this skill is
 > vital for the proper use of many modern programming
