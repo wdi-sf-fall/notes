@@ -8,7 +8,7 @@ clashes with a
 First-Class Functions
 ---------------------
 
-![High Class](high-society.jpg)
+![High Class](img/high-society.jpg)
 
 > In the Kingdom of Javaland, where King Java rules with a
 > silicon fist, people aren't allowed to think the way you
@@ -67,7 +67,7 @@ result();             // prints "i am inner"
 Lexical Scope
 -------------
 
-![Lexical Scope](lexical-scope.png)
+![Lexical Scope](img/lexical-scope.png)
 
 Scope determines what variables are visiable / available
 where.
@@ -100,7 +100,7 @@ Closures
 > <cite>[Let Over Lambda](http://www.amazon.com/Let-Over-Lambda-Doug-Hoyte/dp/1435712757) -
 > Doug Hoyte</cite>
 
-![Patrick asks a question about closures](closure.jpg)
+![Patrick asks a question about closures](img/closure.jpg)
 
 Patrick is pretty close to being correct. Actually, by some
 definitions, he may be correct. A function with a function
