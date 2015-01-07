@@ -126,7 +126,11 @@ One of the most useful features of Sublime is the ability to create snippets. To
 
 ### ZSH/Shell/Git (moving around faster and other useful commands - this part is for ZSH Users)
 
-ZSH comes with a bevy of wonderful shortcuts especially for git. If you ever want to see them, just type in `alias` and you will see a whole list.
+#### Installing ZSH
+
+In terminal, type this command and enter your password when prompted `curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh - See more at: http://whaaat.com/content/update-shell-zsh-osx-unix#sthash.CRCJ6q9Z.dpuf`
+
+This will install oh-my-zsh and make Z-shell your default shell. ZSH comes with a bevy of wonderful shortcuts especially for git. If you ever want to see them, just type in `alias` and you will see a whole list.
 
 ### Aliasing in terminal
 
